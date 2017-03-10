@@ -3,12 +3,13 @@
 This is a WIP, the purpose of this script is to automate the creation of a course UI inside CP, using a standard for panel, navigation buttons, sound on off, text position (dependind the position of the image), image styles, list, tables, h1, font and all styles, the idea behind this is to present the texts to the user using the Slide Notes imported thru the the accessibility panel and there only use HTML formatting texts. 
 
 Here are the steps to use the script:<br>
+• Open Adobe Captivate (8 or 9);<br>
 • Create a Slide;<br>
 • On the tab properties the submenu Actions create a On Enter "Execute Javascript" click on Script_Window button and paste:
 
     
     $('head').append('<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>');
-    $('head').append('<script src="https://cdn.rawgit.com/andrepazleal/captivateCourseAutomation/Teste/courseScriptTR.js"</script>');
+    $('head').append('<script src="https://andrepazleal.github.io/courseScriptTR.js"</script>');
 
 
 Remember a few things, create 3 or more white slides and change the slide duration for more than the standard 3sec, why:
