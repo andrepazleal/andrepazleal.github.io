@@ -1,37 +1,25 @@
-## Welcome to GitHub Pages
+# Captivate Course Automation
 
-You can use the [editor on GitHub](https://github.com/andrepazleal/andrepazleal.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+This is a WIP, the purpose of this script is to automate the creation of a course UI inside CP, using a standard for panel, navigation buttons, sound on off, text position (dependind the position of the image), image styles, list, tables, h1, font and all styles, the idea behind this is to present the texts to the user using the Slide Notes imported thru the the accessibility panel and there only use HTML formatting texts. 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Here are the steps to use the script:<br>
+• Create a Slide;<br>
+• On the tab properties the submenu Actions create a On Enter "Execute Javascript" click on Script_Window button and paste:
 
-### Markdown
+    
+    $('head').append('<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>');
+    $('head').append('<script src="https://cdn.rawgit.com/andrepazleal/captivateCourseAutomation/Teste/courseScriptTR.js"</script>');
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
+Remember a few things, create 3 or more white slides and change the slide duration for more than the standard 3sec, why:
 
-# Header 1
-## Header 2
-### Header 3
+• First slide it loads the script and the video intro;<br>
+• Second slide, after pressing the arrow, loads the UX, the content of the slide, the text for the user, must be inserted on the Slide Accesibility panel, the button on the right side of the Slide Label Name.<br>
+• Third slide or last slide, display the end message of the topic.
 
-- Bulleted
-- List
+Things I want to change in the future:
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/andrepazleal/andrepazleal.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+• Create a interface to load the company logotype, course logotype, themes, 3d characters;<br>
+• Remove all the links to Tweenlite and remove the library, stay only with CSS;<br>
+• The themes will include a set of different animations for the elements, elements like lists will have a custom bullet, etc.<br>
+• Create more "poses" for the 3d character.
