@@ -1,7 +1,7 @@
 /* PRODUCTION SCRIPT FOR COURSES 02/03/2017 */
 $('head').append('<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">');
 $('head').append('<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">');
-$('head').append('<link rel="stylesheet" type="text/css" href="https://moodle.dominiosistemas.com.br/assets/css/courseStyle.css">');
+$('head').append('<link rel="stylesheet" type="text/css" href="https://andrepazleal.github.io/courseStyle.css">');
 
 cp.movie.am.pauseCurrentSlideAudioForInteractiveClick();
 
@@ -25,24 +25,6 @@ var introType;
 var timeStamp = (new Date()).getTime();
 var languageSystem = window.navigator.userLanguage || window.navigator.language;
 var cpinfoEmailTR = cpInfoEmail!='tutor@dsmail.com.br' ? cpInfoEmail : 'tutor.dominio@thomsonreuters.com';
-/*var cpinfoEmailTR = (function() {
-if(cpinfoEmail=="tutor@dsmail.com.br")
-{
-	cpinfoEmailTR = 'tutor.dominio@thomsonreuters.com'
-}else{}	
-});*/
-
-//var cpinfoEmailTR += (cpinfoEmailTR ? "Link 2" : "")
-
-//var cpInfoEmail = cpinfoEmailTR = 'tutor@dsmail.com.br' ? "Yep" : "Nope";
-//cpinfoEmailTR = if(cpinfoEmailTR="tutor@dsmail.com.br"){cpinfoEmailTR="tutor.dominio@thomsonreuters.com"}
-
-//var cpinfoEmailTR = (cpInfoEmail = 'tutor@dsmail.com.br') ? "Too young":"Old enough";
-
-//var cpinfoEmailTR = cpInfoEmail || 'tutor@dsmail.com.br';
-
-
-
 
 function showPainelContent(){
 	var isIOs = ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPad/i))) != null;
@@ -173,36 +155,16 @@ function carregandoTela(){
 	}catch(e){}
 }
 
-
-
-
 function companyName(){
 	companyName = (cpInfoCompany.split(' '));
-	if(companyName[0] == 'Thomson')
+	if(companyName[0] == 'Simples')
 	{
-		companyName = 'logoThomson.png';
-	}
-	if(companyName[0] == 'Domínio')
-	{
-		companyName = 'logoDominio.png';
-	}
-	if(companyName[0] == 'Novajus')
-	{
-		companyName = 'logoNovaprolink.png';
-	}
-	if(companyName[0] == 'Mastersaf')
-	{
-		companyName = 'logoMastersaf.svg';
-	}
-	if(companyName[0] == 'Fiscosoft')
-	{
-		companyName = 'fiscosoftLogo.png';
+		companyName = 'simplesVeiculo.png';
 	}
 }
 
 function courseName(){
 	courseName = (cpInfoProjectName.split(' '));
-	//console.log(courseName)
 	if(courseName[1] == 'Impress')
 	{
 		courseName = 'impress.png';
@@ -452,40 +414,19 @@ function courseName(){
 	{	
 		courseName = 'excel.png';
 	}
-	
 }
 
 function createElements(){
 	var logoCompanyContainer = document.createElement("div");
 	logoCompanyContainer.setAttribute("id", "logoCompanyContainer");	
-	//added
-	//document.getElementById("div_Slide").appendChild(logoCompanyContainer);
 	companyName();
 	document.getElementById("project_main").appendChild(logoCompanyContainer);
-	//logoCompanyContainer.setAttribute("style", "position:absolute; z-index:2");
-	//$(logoCompanyContainer).css('position','absolute');
-	//$(logoCompanyContainer).css('height','100%');
-	//$(logoCompanyContainer).css('width','100%');
-	//$(logoCompanyContainer).css('top','88%');
-	//$(logoCompanyContainer).css('opacity',0);
-	$(logoCompanyContainer).css('background-image','url(https://moodle.dominiosistemas.com.br/assets/imagesTR/'+companyName+')');
-	//$(logoCompanyContainer).css('background-repeat','no-repeat');
-	//$(logoCompanyContainer).css('background-position','50% 0');
-	//$(logoCompanyContainer).css('background-size','35%');
-
+	$(logoCompanyContainer).css('background-image','url(https://andrepazleal.github.io/company/'+companyName+')');
 	var logoCourse = document.createElement("img");
 	logoCourse.setAttribute("id", "logoCourse");
 	document.getElementById("project_main").appendChild(logoCourse);
 	courseName();
-	logoCourse.setAttribute("src", "https://moodle.dominiosistemas.com.br/assets/logos/"+courseName);
-	
-	//logoCourse.setAttribute("height", "59.5%");
-	//logoCourse.setAttribute("width", "45%");
-	//logoCourse.setAttribute("style", "position:absolute;");
-	//$(logoCourse).css('top','18%');
-	//$(logoCourse).css('z-index',70);
-	//$(logoCourse).css('opacity',0);
-
+	logoCourse.setAttribute("src", "https://andrepazleal.github.io/company/"+courseName);
 	var nomeTopicoText = document.createElement("p");
 	nomeTopicoText.setAttribute("id", "nomeTopicoText");
 	$(nomeTopicoText).css('display',"table-cell");
@@ -514,7 +455,6 @@ function createElements(){
 	$(nomeTopicoContainer).css('top','18%');
 	$(nomeTopicoContainer).css('left','50%');
 	$(nomeTopicoContainer).css('font-size',24);
-	//$(nomeTopicoContainer).css('font-family',"Knowledge, Segoe UI Light, Avenir-Light, Arial, Segoe UI Light, Avenir-Light, Arial");
 	$(nomeTopicoContainer).css('color',"#ffffff");
 	$(nomeTopicoContainer).css('display',"table");
 
@@ -531,7 +471,6 @@ function createElements(){
 		$(nomeTopicoNovidade).css("border-top","100px solid #FF8300");
 		$(nomeTopicoNovidade).css("border-right","100px solid transparent");
 		$(nomeTopicoNovidade).css('font-size',"105%");
-		//$(nomeTopicoNovidade).css('font-family',"Knowledge, Segoe UI Light, Avenir-Light, Arial")
 		$(nomeTopicoNovidade).css('color',"#000000");
 		$(nomeTopicoNovidade).html('<div style="color:white; margin-top:-60px;margin-left:20px;-webkit-transform:rotate(-45deg);vertical-align:top;text-align:center;pointer-events:none;">NOVO</div>');
 		$(nomeTopicoNovidade).css('opacity',"0");
@@ -548,7 +487,6 @@ function createElements(){
 	$(message).css('top',160);
 	$(message).css('left',0);
 	$(message).css('vertical-align',"middle");
-	//$(message).css('font-family',"Knowledge, Segoe UI Light, Avenir-Light, Arial, Segoe UI Light, Avenir-Light, Arial");
 	$(message).css('color',"#ffffff");
 	$(message).css('margin',0);
 	$(message).css("background",'grey')
@@ -558,12 +496,7 @@ function createElements(){
 	var fvmMessageTexto = document.createElement("p");	
 	fvmMessageTexto.setAttribute("id", "fvmMessageTexto");
 	message.appendChild(fvmMessageTexto);
-	//$(fvmMessageTexto).css('text-align',"center");
-	//$(fvmMessageTexto).css('line-height',"90%");
 	$(fvmMessageTexto).css('font-size',28);
-	//$(fvmMessageTexto).css('width','100%');
-	//$(fvmMessageTexto).css('position','absolute');
-	//$(fvmMessageTexto).css('margin',0);
 	$(fvmMessageTexto).css('display','table-cell');
 	$(fvmMessageTexto).css('vertical-align','middle');
 	$(fvmMessageTexto).css('text-align','center');
@@ -584,7 +517,6 @@ function createElements(){
 	messageFinalElement.appendChild(messageFinalElementText);
 	$(messageFinalElementText).css("font-size", '125%');
 	$(messageFinalElementText).css('margin-top',"25vh");
-	//$(messageFinalElementText).css('font-family',"Knowledge, Segoe UI Light, Avenir-Light, Arial, Segoe UI Light, Avenir-Light, Arial");
 	$(messageFinalElementText).css('color',"#ffffff");
 	$(messageFinalElementText).css('text-align',"center");
 
@@ -598,7 +530,6 @@ function createElements(){
 	$(messageFinalElementIcon).css("display","table");
 	$(messageFinalElementIcon).css('top','55%');
 	$(messageFinalElementIcon).css("font-size",16);
-	//$(messageFinalElementIcon).css("font-family","Knowledge, Segoe UI Light, Avenir-Light, Arial, Segoe UI Light, Avenir-Light, Arial");
 	$(messageFinalElementIcon).css("color","#ffffff");
 	$(messageFinalElementIcon).html('<p style="display:table-cell;vertical-align:middle;text-align:center;pointer-events:none;"><i class="fa fa-angle-left fa-3x"></i></p>');
 }	
@@ -664,7 +595,6 @@ function introVideos(){
 			$(videoIntroElementIconLoading).css("font-size",24);
 			$(videoIntroElementIconLoading).css("color","#bebebe");
 			$(videoIntroElementIconLoading).html('<p style="display:table-cell;vertical-align:middle;text-align:center;pointer-events:none;"><i class="fa fa-cog fa-spin fa-3x"></i></p>');
-			//TweenLite.to(videoIntroElementIconLoading, .5, {opacity:1,scale:.8});
             videoIntroElementIconLoading.className="fadeIn";
 			$(videoIntroElementIconLoading).bind(changeClick,function(e){
 				TweenLite.to(videoIntroElementIconLoading, 1, {opacity:0, scale:1.5,onComplete:function(){
@@ -675,11 +605,7 @@ function introVideos(){
 			videoIntroElement.addEventListener("progress",function()
 			{
 				$(videoIntroElementIconLoading).html('<p style="display:table-cell;vertical-align:middle;text-align:center;pointer-events:none;"><i class="fa fa-play-circle-o fa-3x"></i></p>');
-					//TweenLite.to(videoIntroElementIconLoading, .5, {opacity:0,onComplete:function(){
-					   //$(videoIntroElementIconLoading).css("visibility",'hidden');	
-				    //}});
 				$(videoIntroElementIconLoading).css("visibility",'visible');
-				//TweenLite.to(videoIntroElementIconLoading, .3, {opacity:1,'color':'black',scale:1});
 			});
 			videoIntroElement.addEventListener("playing", function () 
 			{
@@ -723,14 +649,10 @@ function fimIntro(){
 	$(messageFinalElementText).css('margin-left',"35%");
 	$(messageFinalElementText).css('margin-top','20%');
     messageFinalElement.className="fadeIn"
-    messageFinalElementText.className="fadeIn"
-	//TweenLite.to(messageFinalElement, 1, {opacity:1,onComplete:function(){
-	//	TweenLite.to(messageFinalElementText, 1, {opacity:1});	
-	//}});	
+    messageFinalElementText.className="fadeIn"	
 	$(messageFinalElementIcon).css('display','none');
 	$(logoCompanyContainer).css('display','block');
 	$(logoCompanyContainer).css('z-Index',5000);
-	//TweenLite.to(logoCompanyContainer, .5, {opacity:1});	
     logoCompanyContainer.className="fadeIn"
     feedback();
 }
@@ -739,7 +661,6 @@ function feedback(){
 	var feedback = document.createElement('div');
 	document.getElementById("div_Slide").appendChild(feedback);
 	feedback.setAttribute('id','feedback');
-	//feedback.setAttribute('style','border-radius:5px;position:absolute;top:60%;left:15%;background-color:rgba(255,255,255,1);z-index:200;width:700px;height:100px;display:table;');
 	feedback.style.display="flex";
 	feedback.style.borderRadius="5px";
 	feedback.style.position="relative";
@@ -748,18 +669,14 @@ function feedback(){
 	feedback.style.backgroundColor="white";
 	feedback.style.flexWrap="wrap"
 
-
 	var feedbackTitle = document.createElement('div')
 	feedback.appendChild(feedbackTitle)
 	feedbackTitle.setAttribute('id','feedbackTitle')
-	//feedbackTitle.setAttribute('style','padding:10px;color:white;top:0;left:0;background-color:#666666;vertical-align:middle;text-align:center;')
 	feedbackTitle.style.padding="10px";
 	feedbackTitle.style.color="white";
 	feedbackTitle.style.flexGrow="1"
 	feedbackTitle.style.backgroundColor="#666666";
 	feedbackTitle.style.textAlign="center"
-
-	//$(feedbackTitle).css("font-family","Knowledge, Segoe UI Light, Avenir-Light, Arial, Segoe UI Light, Avenir-Light, Arial");
 	$(feedbackTitle).css("font-size","14px");
 	feedbackTitle.innerHTML = "COM 144 LETRAS DEIXE SUA OPINIÃO DE COMO PODEMOS MELHORAR OS CURSOS!"
 
@@ -774,7 +691,6 @@ function feedback(){
 	feedbackText.setAttribute('placeholder','Digite sua mensagem aqui.')
 	feedbackText.style.width="100%";
 	feedbackText.style.height="100%";
-	//$(feedbackTextarea).css("font-family","Knowledge, Segoe UI Light, Avenir-Light, Arial, Segoe UI Light, Avenir-Light, Arial");
 	$(feedbackTextarea).css("font-size","16px");
 	$(feedbackTextarea).css("font-weight","200");
 	$(feedbackTextarea).css("margin","15px");
@@ -941,12 +857,9 @@ function chooseTopicAndContinue(){
 	else if(cpInfoCurrentSlideLabel != "Faça Você Mesmo!" && cpInfoCurrentSlideLabel != "Seja Bem Vindo!")
 	{
 		$(nomeTopicoText).html(cpInfoCurrentSlideLabel);
-		//TweenLite.to(logoCourse,.3,{opacity:1,left:'4.3%'});
 		logoCourse.className='topicoNormalLogoCourse'
 	}
-	//////////////////////////////////////017//////////////////////////////////////	
 	if(cpInfoCurrentSlideLabel == 'Faça Você Mesmo!') {
-	//////////////////////////////////////007//////////////////////////////////////	
 		var avaliacaoPratica = document.createElement("div")
 		avaliacaoPratica.setAttribute("id", "avaliacaoPratica");
 		document.getElementById("project_main").appendChild(avaliacaoPratica);
@@ -996,40 +909,33 @@ function chooseTopicAndContinue(){
 };
 
 function fvm(){
-
-	//$(logoCourse).animate({opacity:0},200, function(){	
-		//TODO: virtualKey when an interaction is set to null and the user in a tablet must hit a function key.
-		//$(logoCourse).css("display", 'none');
+	var virtualKey = document.createElement("div");
+	virtualKey.setAttribute("id", "virtualKey");
+	document.getElementById("project_main").appendChild(virtualKey);
+	$(virtualKey).css("display", 'none');
+	$(virtualKey).css('font-size',14);
+	$(virtualKey).css('color',"#ffffff");
+	$(virtualKey).css('top',0);
+	$(virtualKey).css('margin-left','25%');
+	$(virtualKey).css('margin-left','25%');
+	$(virtualKey).css('z-index',100);
+	$(virtualKey).css('text-align','center');
+	$(virtualKey).css('vertical-align',"middle");	
+	$(virtualKey).css('position',"absolute");
 		
-
-		var virtualKey = document.createElement("div");
-		virtualKey.setAttribute("id", "virtualKey");
-		document.getElementById("project_main").appendChild(virtualKey);
-		$(virtualKey).css("display", 'none');
-		//$(virtualKey).css('font-family',"Knowledge, Segoe UI Light, Avenir-Light, Arial, Segoe UI Light, Avenir-Light, Arial");
-		$(virtualKey).css('font-size',14);
-		$(virtualKey).css('color',"#ffffff");
-		$(virtualKey).css('top',0);
-		$(virtualKey).css('margin-left','25%');
-		$(virtualKey).css('margin-left','25%');
-		$(virtualKey).css('z-index',100);
-		$(virtualKey).css('text-align','center');
-		$(virtualKey).css('vertical-align',"middle");	
-		$(virtualKey).css('position',"absolute");
-		
-		var keyEsc = document.createElement("div");
-		keyEsc.setAttribute("id", "keyEsc");
-		virtualKey.appendChild(keyEsc);
-		$(keyEsc).html('ESC');
-		$(keyEsc).css('font-size',25);
-		$(keyEsc).css('left',0);
-		$(keyEsc).css("background","#0099FF");
-		$(keyEsc).css('opacity',1);
-		$(keyEsc).css('width',80);
-		$(keyEsc).css('height',80);
-		$(keyEsc).css('position',"absolute");
-		$(keyEsc).css('vertical-align','middle');
-		$(keyEsc).css('border-style','solid');
+	var keyEsc = document.createElement("div");
+	keyEsc.setAttribute("id", "keyEsc");
+	virtualKey.appendChild(keyEsc);
+	$(keyEsc).html('ESC');
+	$(keyEsc).css('font-size',25);
+	$(keyEsc).css('left',0);
+	$(keyEsc).css("background","#0099FF");
+	$(keyEsc).css('opacity',1);
+	$(keyEsc).css('width',80);
+	$(keyEsc).css('height',80);
+	$(keyEsc).css('position',"absolute");
+	$(keyEsc).css('vertical-align','middle');
+	$(keyEsc).css('border-style','solid');
 		$(keyEsc).css('border-width','1px');
 		$(keyEsc).css('border-color','#0088FF');
 
@@ -1721,33 +1627,6 @@ function sejaBemVindo(){
 	$(logoCompanyContainer).css('z-index',2000);
 	$(logoCompanyContainer).css('display',"block");
 }
-
-/*function saibaMais(){	
-	$(logoCourse).animate({opacity:0,left:-50},500, function()
-	{
-		cp.jumpToNextSlide();
-		var interval2 = window.setInterval(checkLastSlide, 200);
-		function checkLastSlide()
-		{
-			if(cpInfoCurrentSlide == cpInfoSlideCount)			
-			{
-				//$(introducao).animate({opacity:0,left:800},1200);
-				//$(logoCourse).animate({opacity:0,left:800},1000);
-				clearInterval(interval2);
-				$(messageFinalElement).css("background-color",'#ffffff')
-				$(messageFinalElementText).css('color',"#999999");
-				$(messageFinalElement).css('display',"block");
-				$(messageFinalElement).css('visibility',"visible");
-				$(messageFinalElement).css('opacity',0);
-				TweenLite.to(messageFinalElement,1,{opacity:1});
-				$(messageFinalElementText).html(msgFinalTopico);
-				//$(messageFinalElementText).css('display',"block");
-				//$(messageFinalElementText).css('opacity',0);
-				TweenLite.to(messageFinalElementText,.3,{top:200,opacity:1});
-			}
-		}
-	});
-}*/
 
 function createPainel(){
 	var painel = document.createElement("div");
