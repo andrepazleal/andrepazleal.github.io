@@ -1,66 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-	<style>
-	body {
-		display: -webkit-flex;  
-		display: flex;       
-		-webkit-justify-content: center;
-		justify-content: center;
-	}
-	#tar_box {
-		width: 500px;
-		height: 500px;
-		border: 1px solid red;
-	}
-	</style>
+	<title></title>
 </head>
 <body>
-<div class="wrapper">
-
-      <section>
-        <div id="title">
-          <h1>andrepazleal.github.io</h1>
-          <p></p>
-          <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/andrepazleal">andrepazleal</a></span>
-          <span class="credits right">Hosted on GitHub Pages — Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
-        </div>
-
-        <h1 id="captivate-course-automation">Captivate Course Automation</h1>
-
-<p>This is a WIP, the purpose of this script is to automate the creation of a course UI inside CP, using a standard for panel, navigation buttons, sound on off, text position (dependind the position of the image), image styles, list, tables, h1, font and all styles, the idea behind this is to present the texts to the user using the Slide Notes imported thru the the accessibility panel and there only use HTML formatting texts.</p>
-
-<p>Here are the steps to use the script:<br>
-• Open Adobe Captivate (8 or 9);<br>
-• Create a Slide;<br>
-• On the tab properties the submenu Actions create a On Enter “Execute Javascript” click on Script_Window button and paste:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>$('head').append('&lt;script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"&gt;&lt;/script&gt;');
-$('head').append('&lt;script src="https://andrepazleal.github.io/courseScriptTR.js"&lt;/script&gt;');
-</code></pre>
-</div>
-
-<p>Remember a few things, create 3 or more white slides and change the slide duration for more than the standard 3sec, why:</p>
-
-<p>• First slide it loads the script and the video intro;<br>
-• Second slide, after pressing the arrow, loads the UX, the content of the slide, the text for the user, must be inserted on the Slide Accesibility panel, the button on the right side of the Slide Label Name.<br>
-• Third slide or last slide, display the end message of the topic.</p>
-
-<p>Things I want to change in the future:</p>
-
-<p>• Create a interface to load the company logotype, course logotype, themes, 3d characters;<br>
-• Remove all the links to Tweenlite and remove the library, stay only with CSS;<br>
-• The themes will include a set of different animations for the elements, elements like lists will have a custom bullet, etc.<br>
-• Create more “poses” for the 3d character.</p>
-
-<div contenteditable="" id="tar_box"></div>
-
-
-      </section>
-
-    </div><div contenteditable id='tar_box'></div>
-	
+	<div contenteditable="" id="tar_box"></div>
+</body>
+</html>
 </div>
