@@ -25,4 +25,13 @@ Things I want to change in the future:
 • The themes will include a set of different animations for the elements, elements like lists will have a custom bullet, etc.<br>
 • Create more "poses" for the 3d character.
 
-<div contenteditable id='tar_box'></div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-96037500-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
