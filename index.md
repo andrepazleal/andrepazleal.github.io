@@ -24,5 +24,3 @@ Things I want to change in the future:
 • Remove all the links to Tweenlite and remove the library, stay only with CSS;<br>
 • The themes will include a set of different animations for the elements, elements like lists will have a custom bullet, etc.<br>
 • Create more "poses" for the 3d character.
-
-<div contenteditable id='tar_box'></div>
