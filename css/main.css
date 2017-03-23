@@ -6,17 +6,24 @@
     transition: all 2s;
 
 }
-.section input{
+.section textarea{
     font-size:5em;
     text-align:center;
     border:transparent;
+     word-wrap: break-word;
+    word-break: break-all;
+}
+
+::-webkit-input-placeholder {
+   text-align: center;
 }
 .section button{
     width:80px;
     height:80px;
-    font-size:2em;
+    font-size:3em;
     text-align:center;
-    color:white;
+    color:grey;
+    background-color:transparent;
 }
  .slider-change
 {
