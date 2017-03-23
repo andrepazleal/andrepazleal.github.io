@@ -6,16 +6,14 @@
     transition: all 2s;
 
 }
+.section small{
+    width:100%;
+}
 .section textarea{
     font-size:5em;
+    width:100%;
     text-align:center;
     border:transparent;
-     word-wrap: break-word;
-    word-break: break-all;
-}
-
-::-webkit-input-placeholder {
-   text-align: center;
 }
 .section button{
     width:80px;
