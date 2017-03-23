@@ -2,32 +2,45 @@
 <html>
 <head>
 	<title></title>
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<link href="css/main.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
 </head>
 <body>
-<div id="fullPage">
-    <section class="vertical-scrolling">
-        <h2>fullPage.js</h2>
-        <h3>This is the first section</h3>
-        <div class="scroll-icon">
-            <p>Jump into the last slide</p>
-            <a href="#fifthSection/1" class="icon-up-open-big"></a
-        </div>
-    </section>
-    <section class="vertical-scrolling">
-        <!-- content here -->
-    </section>
-    <section class="vertical-scrolling">
-        <!-- content here -->
-    </section>
-    <section class="vertical-scrolling">
-        <!-- content here -->
-    </section>  
-    <section class="vertical-scrolling">
-        <!-- content here -->
-    </section> 
+<div id="fullPage" class="fullpage">
+	<div class="contentContainer">
+	    <section id="firstStep" class="section">
+	        <small>Select the logo from your computer</small><br>
+	     	<button type="button" class="btn btn-default">
+	     	<span class="lnr lnr-upload"></span>
+			</button>
+	    </section>
+	    <section id="secondStep" class="section">
+	    	<small>Type here the</small>
+	    	<input id="companyName" type="text" placeHolder="Company name"/>
+	    </section>
+	    <section id="thirdStep" class="section">
+	    	<small>Type here the</small>
+	    	<input id="courseName" type="text" placeHolder="Course name"/>
+	    </section>
+	    <section id="fourthStep" class="section">
+	    	<small>Type here the</small>
+	    	<input id="topicName" type="text" placeHolder="Topic name"/>
+	    </section>  
+	    <section id="lastStep" class="section">
+	    	<small>Type here the</small>
+	    	<input id="companyEmail" type="text" placeHolder="Company email"/>
+	    </section>
+	</div> 
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.js"></script>
+<div id="navLinks">
+    <a href="#firstStep" class="slider-change"></a>
+    <a href="#secondStep" class="slider-change"></a>
+     <a href="#thirdStep" class="slider-change"></a>
+     <a href="#fourthStep" class="slider-change"></a>
+     <a href="#lastStep" class="slider-change"></a>
+</div>
 </body>
 </html>
