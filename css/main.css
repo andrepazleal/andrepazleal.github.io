@@ -4,7 +4,6 @@
     -webkit-transition: all 2s;
     -moz-transition: all 2s;
     transition: all 2s;
-
 }
 .section a{
     text-decoration: none;
@@ -48,4 +47,28 @@ top: 90%;
     height: 400px;
     text-align: center;
     overflow: hidden;
+}
+.thumb{
+    width:300px;
+}
+input[type="file" i]{
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+.inputFile + label {
+    font-size: 1.25em;
+    font-weight: 700;
+    color: white;
+    background-color: grey;
+    display: inline-block;
+    padding:10px;
+}
+
+.inputFile:focus + label,
+.inputFile + label:hover {
+    background-color: #0095de;
 }
