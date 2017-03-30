@@ -1,0 +1,20 @@
+.fotoTurma{
+	background-image:url("turma.jpg");
+	background-size:cover;
+	width:100%;
+	height:100%;
+}
+.filho{
+	border-radius:100%;
+	background-color:blue;
+	width:400px;
+	height:400px;
+	background-image:url("guto.png");
+	background-size:cover;
+	background-position:center;
+}
+.filhoNome{
+	font-size:5em;
+	text-align:center;
+	width:100%;
+}
