@@ -1,20 +1,67 @@
 .fotoTurma{
-	background-image:url("turma.jpg");
-	background-size:cover;
-	width:100%;
-	height:100%;
+	overflow: auto;
+	position:relative;
 }
-.filho{
+.fotoTurma:before {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
+
+  display: block;
+  background-image:url("turma.jpg");
+  background-size:cover;
+  width: 100%;
+  height: 100%;
+
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+.filhoFoto{
 	border-radius:100%;
 	background-color:blue;
-	width:400px;
-	height:400px;
+	width:215px;
+	height:215px;
 	background-image:url("guto.png");
 	background-size:cover;
 	background-position:center;
 }
 .filhoNome{
-	font-size:5em;
+	font-size:2em;
 	text-align:center;
 	width:100%;
+	color:white;
+}
+.topInfo{
+	background-color:#4096A2;
+	height:180px;
+	display:flex;
+	justify-content: space-between;
+}
+.title{
+	font-size:20px;
+	color:white;
+	font-weight:400px;
+}
+.topInfoClose{
+	float:right;
+}
+.topInfoMenu{
+	float:left;
+}
+.topInfoDate{
+	text-align:center;
+	width:203px;
+	float:left;
+}
+.middleInfo{
+	margin-top:-100px;
+	display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
