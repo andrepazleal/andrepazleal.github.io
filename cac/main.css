@@ -8,9 +8,10 @@
   left: 0;
   right: 0;
   z-index: -1;
-
   display: block;
   background-image:url("turma.jpg");
+  background-color: #8C409F;
+  background-blend-mode: luminosity;
   background-size:cover;
   width: 100%;
   height: 100%;
@@ -23,18 +24,21 @@
 }
 .filhoFoto{
 	border-radius:100%;
-	background-color:blue;
+	border:white 2px;
 	width:215px;
 	height:215px;
+
 	background-image:url("guto.png");
 	background-size:cover;
 	background-position:center;
+	box-shadow: inset 0px 10px 20px rgba(0,0,0,0.8);
 }
 .filhoNome{
-	font-size:2em;
+	font-size:3em;
 	text-align:center;
 	width:100%;
 	color:white;
+	font-family: 'Vidaloka', serif;
 }
 .topInfo{
 	background-color:#4096A2;
@@ -43,9 +47,10 @@
 	justify-content: space-between;
 }
 .title{
-	font-size:20px;
+	font-size:24px;
 	color:white;
-	font-weight:400px;
+	font-family: 'Vidaloka', serif;
+	padding:20px;
 }
 .topInfoClose{
 	float:right;
@@ -63,5 +68,14 @@
 	display: flex;
     justify-content: center;
     flex-direction: column;
+    align-items: center;
+}
+.bottomInfo{
+	position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
     align-items: center;
 }
