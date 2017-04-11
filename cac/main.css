@@ -15,7 +15,6 @@
   background-size:cover;
   width: 100%;
   height: 100%;
-
   -webkit-filter: blur(5px);
   -moz-filter: blur(5px);
   -o-filter: blur(5px);
@@ -27,7 +26,6 @@
 	border:white 2px;
 	width:215px;
 	height:215px;
-
 	background-image:url("guto.png");
 	background-size:cover;
 	background-position:center;
@@ -45,12 +43,17 @@
 	height:180px;
 	display:flex;
 	justify-content: space-between;
+	width:100%;
 }
 .title{
-	font-size:24px;
+	font-size:20px;
 	color:white;
 	font-family: 'Vidaloka', serif;
 	padding:20px;
+}
+.title:hover{
+	-webkit-transition:all .2s ease-in;
+	transform:scale(1.1);
 }
 .topInfoClose{
 	float:right;
@@ -78,4 +81,22 @@
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
+}
+.warning{
+	background-color:white;
+	border:1px grey solid;
+	padding:20px;
+	width:50%;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.09);
+}
+.fab{
+	border-radius: 100%;
+    background-color: #4096A2;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 25%;
 }
