@@ -9,7 +9,7 @@
   right: 0;
   z-index: -1;
   display: block;
-  background-image:url("turma.jpg");
+  background-image:url("images/turma.jpg");
   background-color: #8C409F;
   background-blend-mode: luminosity;
   background-size:cover;
@@ -26,7 +26,7 @@
 	border:white 2px;
 	width:215px;
 	height:215px;
-	background-image:url("guto.png");
+	background-image:url("images/guto.png");
 	background-size:cover;
 	background-position:center;
 	box-shadow: inset 0px 10px 20px rgba(0,0,0,0.8);
