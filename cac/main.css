@@ -21,7 +21,29 @@
   -ms-filter: blur(5px);
   filter: blur(5px);
 }
-.filhoFoto{
+.btn-primary.outline {
+	border: 2px solid white;
+	color: white;
+}
+.btn.outline {
+	background: none;
+	padding: 12px 22px;
+}
+.fotoLogin{
+	border-radius:100%;
+	border:white 2px;
+	width:150px;
+	height:150px;
+	background:white;
+	background-size:cover;
+	background-position:center;
+	box-shadow: inset 0px 5px 10px rgba(0,0,0,0.4);
+	transition: background-color 0.5s ease;
+}
+.fotoLogin:target{
+	transition: background-color 0.5s ease;
+}
+.fotoFilho{
 	border-radius:100%;
 	border:white 2px;
 	width:215px;
@@ -30,6 +52,7 @@
 	background-size:cover;
 	background-position:center;
 	box-shadow: inset 0px 10px 20px rgba(0,0,0,0.8);
+	transition: all 0.5s ease;
 }
 .filhoNome{
 	font-size:3em;
@@ -72,6 +95,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    width:100%;
 }
 .bottomInfo{
 	position: fixed;
