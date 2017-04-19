@@ -10,6 +10,7 @@
   z-index: -1;
   display: block;
   background-image:url("images/turma.jpg");
+  background-attachment: fixed;
   background-color: #8C409F;
   background-blend-mode: luminosity;
   background-size:cover;
@@ -46,18 +47,22 @@
 .fotoFilho{
 	border-radius:100%;
 	border:white 2px;
-	width:215px;
-	height:215px;
+	width:150px;
+	height:150px;
 	background-image:url("images/guto.png");
 	background-size:cover;
 	background-position:center;
 	box-shadow: inset 0px 10px 20px rgba(0,0,0,0.8);
 	transition: all 0.5s ease;
+	margin:20px;
+}
+.fotoFilho2{
+	background-image:url("images/benjamin.png");
 }
 .filhoNome{
-	font-size:3em;
+	font-size:2em;
 	text-align:center;
-	width:100%;
+	width:50%;
 	color:white;
 	font-family: 'Vidaloka', serif;
 }
@@ -95,7 +100,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    width:100%;
+    padding:20px;
 }
 .bottomInfo{
 	position: fixed;
