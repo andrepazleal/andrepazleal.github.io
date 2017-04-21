@@ -22,8 +22,21 @@
   filter: blur(5px);
 }
 .btn-primary.outline {
-	border: 2px solid white;
-	color: white;
+border: 1px solid #FFF;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    height: 40px;
+    line-height: 38px;
+    text-align: center;
+    color: #FFF;
+    display: block;
+    font-size: 16px;
+    line-height: 16px;
+    -webkit-transition: all 0.15s ease-out 0s;
+    -moz-transition: all 0.15s ease-out 0s;
+    -o-transition: all 0.15s ease-out 0s;
+    transition: all 0.15s ease-out 0s;
 }
 .btn.outline {
 	background: none;
