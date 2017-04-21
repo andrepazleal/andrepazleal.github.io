@@ -13,7 +13,6 @@
   background-attachment: fixed;
   background-color: #8C409F;
   background-blend-mode: luminosity;
-  background-size:cover;
   width: 100%;
   height: 100%;
   -webkit-filter: blur(5px);
@@ -44,6 +43,9 @@
 .fotoLogin:target{
 	transition: background-color 0.5s ease;
 }
+.filho{
+
+}
 .fotoFilho{
 	border-radius:100%;
 	border:white 2px;
@@ -60,7 +62,7 @@
 	background-image:url("images/benjamin.png");
 }
 .filhoNome{
-	font-size:2em;
+	font-size:24px;
 	text-align:center;
 	width:50%;
 	color:white;
@@ -74,14 +76,13 @@
 	width:100%;
 }
 .title{
-	font-size:20px;
+	font-size:16px;
 	color:white;
 	font-family: 'Vidaloka', serif;
 	padding:20px;
 }
 .title:hover{
 	-webkit-transition:all .2s ease-in;
-	transform:scale(1.1);
 }
 .topInfoClose{
 	float:right;
@@ -95,12 +96,13 @@
 	float:left;
 }
 .middleInfo{
-	margin-top:-100px;
+	margin-top:-100px!important;
 	display: flex;
     justify-content: center;
-    flex-direction: column;
+    flex-wrap:wrap;
     align-items: center;
-    padding:20px;
+    margin:20px;
+    height:80%;
 }
 .bottomInfo{
 	position: fixed;
