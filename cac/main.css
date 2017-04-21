@@ -104,6 +104,9 @@
     margin:20px;
     height:80%;
 }
+.middleInfoColumn{
+	flex-direction: column;
+}
 .bottomInfo{
 	position: fixed;
     bottom: 0;
