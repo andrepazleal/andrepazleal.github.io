@@ -120,7 +120,7 @@
 	background-color:white;
 	border:1px grey solid;
 	padding:20px;
-	width:50%;
+	width:80%;
 	box-shadow: 0 1px 2px rgba(0,0,0,0.09);
 }
 .fab{
@@ -131,6 +131,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
-    right: 25%;
+    position: absolute;
+    right: 20%;
+    bottom:0;
 }
