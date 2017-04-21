@@ -68,6 +68,9 @@ border: 1px solid #FFF;
 	transition: all 0.5s ease;
 	margin:20px;
 }
+p{
+	text-align:center;
+}
 .fotoFilho2{
 	background-image:url("images/benjamin.png");
 }
@@ -90,6 +93,7 @@ border: 1px solid #FFF;
 	color:white;
 	font-family: 'Vidaloka', serif;
 	padding:20px;
+	text
 }
 .title:hover{
 	-webkit-transition:all .2s ease-in;
