@@ -106,7 +106,6 @@ p{
     justify-content: center;
     flex-wrap:wrap;
     align-items: center;
-    margin:20px;
     height:80%;
 }
 .middleInfoColumn{
@@ -140,6 +139,7 @@ p{
 	margin:20px;
 	overflow:scroll;
 	overflow-wrap: break-word;
+	border-radius: 3px;
 }
 .fab{
 	border-radius: 100%;
