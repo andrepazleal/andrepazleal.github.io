@@ -150,3 +150,45 @@ p{
     justify-content: center;
     align-items: center;  
 }
+.dateRange{
+
+}
+.dateMonth{
+	display: flex;
+    justify-content: center;
+    flex-wrap:wrap;
+    align-items: center;
+    width:10%;
+}
+input[type="range"] {
+  -webkit-appearance: none !important;
+
+  height: 2px;
+  background-color: #4096A2;
+  border-radius: 10px;
+  margin: auto;
+  transition: all 0.3s ease;
+}
+input[type="range"]:hover {
+  background-color: #FFFFFF;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  width: 20px;
+  height: 20px;
+  background-color: #FFFFFF;
+  border-radius: 30px;
+  border-color:#FFFFFF;
+  border-width: 3px;
+  transition: all 0.5s ease;
+}
+input[type="range"]::-webkit-slider-thumb:hover {
+  background-color: #4096A2;
+  	box-shadow: 0 2px 2px rgba(0,0,0,0.5);
+
+
+}
+input[type="range"]::-webkit-slider-thumb:active {
+
+  outline:none;
+}
