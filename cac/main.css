@@ -107,6 +107,7 @@ p{
     flex-wrap:wrap;
     align-items: center;
     height:80%;
+    padding-top:50px;
 }
 .middleInfoColumn{
 	flex-direction: column;
@@ -191,4 +192,8 @@ input[type="range"]::-webkit-slider-thumb:hover {
 input[type="range"]::-webkit-slider-thumb:active {
 
   outline:none;
+}
+.header{
+	position:fixed;
+	width:100%;
 }
