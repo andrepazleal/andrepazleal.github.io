@@ -120,6 +120,7 @@ p{
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
+    background: -webkit-linear-gradient(transparent, #4c005f);
 }
 .warnings{
 	display: flex;
@@ -134,8 +135,7 @@ p{
 	background-color:white;
 	border:1px #999999;
 	padding:20px;
-	width:200px;
-	height:200px;
+
 	box-shadow: 0 1px 2px rgba(0,0,0,0.09);
 	margin:20px;
 	overflow:scroll;
@@ -152,7 +152,11 @@ p{
     align-items: center;  
 }
 .dateRange{
-
+	width:90%;
+	display: flex;
+    justify-content: center;
+    flex-wrap:wrap;
+    align-items: center;
 }
 .dateMonth{
 	display: flex;
@@ -161,11 +165,10 @@ p{
     align-items: center;
     width:10%;
 }
+
 input[type="range"] {
   -webkit-appearance: none !important;
-
   height: 2px;
-  background-color: #4096A2;
   border-radius: 10px;
   margin: auto;
   transition: all 0.3s ease;
