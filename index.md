@@ -24,3 +24,7 @@ Things I want to change in the future:
 • Remove all the links to Tweenlite and remove the library, stay only with CSS;<br>
 • The themes will include a set of different animations for the elements, elements like lists will have a custom bullet, etc.<br>
 • Create more "poses" for the 3d character.
+
+You can see a test package with the script on this link:
+
+[a link](https://andrepazleal.github.io/courses/demo/)
