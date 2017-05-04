@@ -2,9 +2,9 @@
 
 This is my personal github page where I have few personal projects, you can check them below.
 
-# Captivate Course Automation
+# Captivate Course Automation (2016)
 
-This is a WIP, the purpose of this script is to automate the creation of a course UI inside CP, using a standard for panel, navigation buttons, sound on off, text position (dependind the position of the image), image styles, list, tables, h1, font and all styles, the idea behind this is to present the texts to the user using the Slide Notes imported thru the the accessibility panel and there only use HTML formatting texts. 
+The purpose of this script is to automate the creation of a course UI inside Adobe Captivate, using standard elements for panels, navigation buttons, sound on off, text position (dependind the position of the image), image styles, list, tables, h1, font and all styles, the idea behind this is to present the texts to the user using the Slide Notes imported thru the the accessibility panel and there only use HTML formatting texts. 
 
 Here are the steps to use the script:<br>
 • Open Adobe Captivate (8 or 9);<br>
@@ -33,7 +33,7 @@ You can see a test package with the script on this link, you can see it on a mob
 
 [Click here](https://andrepazleal.github.io/courses/demo/)
 
-# Agenda Escolar
+# Agenda Escolar (2015)
 
 The intention is to create an app out of this, let's see it how will end up, haha.
 
@@ -41,7 +41,7 @@ You can access that content here:
 
 [Click here](https://andrepazleal.github.io/cac)
 
-# CtrlMe
+# CtrlMe (2011)
 
 Those are the final files of my term paper for college. Created an app using JS/CSS and published thru Phonegap to present an app that control the diet and nutrition of the user, giving the ability to add new meals according to the BMI of the user.
 This was my first experience creating something for HTML5 before that only knew actionscript, it was an awesome experience and most of all lead to complete college.
