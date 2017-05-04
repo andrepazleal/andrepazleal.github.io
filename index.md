@@ -1,3 +1,7 @@
+# My Wips
+
+This is my personal github page where I have few personal projects, you can check them below.
+
 # Captivate Course Automation
 
 This is a WIP, the purpose of this script is to automate the creation of a course UI inside CP, using a standard for panel, navigation buttons, sound on off, text position (dependind the position of the image), image styles, list, tables, h1, font and all styles, the idea behind this is to present the texts to the user using the Slide Notes imported thru the the accessibility panel and there only use HTML formatting texts. 
@@ -28,3 +32,12 @@ Things I want to change in the future:
 You can see a test package with the script on this link, you can see it on a mobile device as well:
 
 [Click here](https://andrepazleal.github.io/courses/demo/)
+
+# Agenda Escolar
+
+The intention is to create an app out of this, let's see it how will end up, haha.
+
+You can access that content here:
+
+
+[Click here](https://andrepazleal.github.io/cac)
