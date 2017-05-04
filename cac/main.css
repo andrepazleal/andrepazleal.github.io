@@ -62,14 +62,11 @@ p{
 	background-color:white;
 }
 .filhos{
-	position:relative;
 	display: flex;
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
     margin: 20px;
-    height: 80%;
-    width:80%;
     flex-direction: column;
 }
 .filhoNome{
@@ -206,6 +203,7 @@ input[type="range"]::-webkit-slider-thumb:active {
 .header{
 	position:fixed;
 	width:100%;
+	z-index:100;
 }
 
 .stars{
