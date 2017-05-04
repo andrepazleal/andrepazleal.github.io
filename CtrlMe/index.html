@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Index</title>
+    <meta name="description" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
+
+    <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+</head>
+<body>
+<div id="main" role="main">
+  <div id="toolbar">
+    <a href="#home" id="back_button" class="" ></a>
+  </div>     
+  <div id="home" class="screen">  
+    <ul class="buttons">
+    <li>
+    <a href="#viewDados" class="switch_screen"><img src="images/btnMeusDados.png"/>Meus Dados</a>
+    </li>
+    <li>
+    <a href="#viewCardapio" class="switch_screen"><img src="images/btnCardapios.png"/>Meus Cardápios</a>
+    </li>
+    <li>
+    <a href="#viewRegistroPeso" class="switch_screen"><img src="images/btnRegistro.png"/>Registro de Peso</a>
+    </li>
+    <li>
+    <a href="#viewAdmin" class="switch_screen"><img src="images/btnNutricionista.png"/>Nutricionista</a>
+    </li>
+    <li>
+		<a href="#viewRelatorio" class="switch_screen"><img src="images/btnRelatorio.png"/>Relatório</a>
+   	</li>
+    <div id="viewAlarme">
+        <div class="myNotif">
+        <h2 class="notif-title"><div id="notificationTitle"></div></h2>
+        <p><div id="alarmeCardapio"/></div></p>
+    </div>
+    </ul>
+</div>
+
+<div class="screen hidden" id="viewHorarios">
+  <ul class="buttons">  
+  <li>
+    <div><img src="images/btnHorarios.png"/>Horários</div>
+  </li>
+  <li>
+  <div class="blockLeft">
+    <h7>Cafe da Manha</h7><br>
+    <input type="number" id="horaCafe"></input> :
+    <input type="number" id="minutoCafe"></input><br>
+    <h7>Lanche da Manha</h7><br>
+    <input type="number" id="horaLancheManha"></input> :
+    <input type="number" id="minutoLancheManha"></input><br>
+    <h7>Almoco</h7><br>
+    <input type="number" id="horaAlmoco"></input> :
+    <input type="number" id="minutoAlmoco"></input><br>
+  </div>
+  <div class="blockRight" align="center">
+    <h7>Lanche da Tarde</h7><br>
+    <input type="number" id="horaLancheTarde"></input> :
+    <input type="number" id="minutoLancheTarde"></input><br>
+    <h7>Janta</h7><br>
+    <input type="number" id="horaJanta"></input> :
+    <input type="number" id="minutoJanta"></input><br>
+    <h7>Ceia</h7><br>
+    <input type="number" id="horaCeia"></input> :
+    <input type="number" id="minutoCeia"></input>
+  </div><br>
+</li>
+<div align="center"><p>
+    <a id="addToHorarios"  href="#home" class="myNotif switch_screen"><img src="images/add16.png"/>Adicionar</a>
+    <a href="#home" class="myNotif switch_screen"><img src="images/delete16.png"/>Cancelar</a><p>
+</div>
+</ul>
+</div>
+
+
+
+
+
+<!-- VIEW CADASTRO DE MEDIDAS -->    
+    <div class="screen hidden" id="viewDados">
+    <ul class="buttons">  
+  <li>
+    <div><img src="images/btnMeusDados.png"/>Meus Dados</div>
+</li>
+<li>
+  <h7>Nome</h7><br>
+  <input name="meuNome" id="meuNome" type="text" style="width: 100%; "></input><br/>
+  <h7>Email</h7><br>
+  <input name="meuMail" id="meuMail" type="text" style="width: 100%; "></input><br/>
+<div class="blockLeft" align="center">
+    <h7>Peso</h7><br>
+    <input name="meuPeso" id="meuPeso" type="number"></input>
+</div>
+<div class="blockRight" align="center">
+  <h7>Altura</h7><br>
+   <input name="meuPeso" id="altura" type="number"></input>
+</div>
+</li>
+<div align="center"><br>
+    <a id="calculaBtn" href="#viewAvisoImc" class="myNotif switch_screen"><img src="images/btnCalcular.png"/>Calcular</a>
+</ul>
+</div>
+
+
+<!-- VIEW AVISO IMC -->    
+<div class="screen hidden" id="viewAdmin">
+<ul class="buttons">  
+<li>
+    <a href="#viewEscolhaAbaixo" class="switch_screen"><img src="images/btnAbaixo.png"/>Cardápio Abaixo IMC</a>
+</li>
+<li>
+    <a href="#viewEscolhaNormal" class="switch_screen"><img src="images/btnNormal.png"/>Cardápio Normal IMC</a>
+</li>
+<li>
+    <a href="#viewEscolhaAcima" class="switch_screen"><img src="images/btnAcima.png"/>Cardápio Acima IMC</a>
+</li>
+<li>
+    <a href="#viewHorarios" class=" switch_screen"><img src="images/btnHorarios.png"/>Horários</a>
+</li>
+</ul>
+</div>
+
+<div class="screen hidden" id="viewEscolhaAbaixo">
+<ul class="buttons">  
+<li>
+    <a href="#viewCafeAbaixo1" class="switch_screen"><img src="images/1.png"/>Cardápio 1</a>
+</li>
+<li>
+    <a href="#viewCafeAbaixo2" class="switch_screen"><img src="images/1.png"/>Cardápio 2</a>
+</li>
+</ul>
+</div>
+
+<div class="screen hidden" id="viewEscolhaNormal">
+<ul class="buttons">  
+<li>
+    <a href="#viewCafeNormal1" class="switch_screen"><img src="images/1.png"/>Cardápio 1</a>
+</li>
+<li>
+    <a href="#viewCafeNormal2" class="switch_screen"><img src="images/1.png"/>Cardápio 2</a>
+</li>
+</ul>
+</div>
+
+<div class="screen hidden" id="viewEscolhaAcima">
+<ul class="buttons">  
+<li>
+    <a href="#viewCafeAcima1" class="switch_screen"><img src="images/1.png"/>Cardápio 1</a>
+</li>
+<li>
+    <a href="#viewCafeAcima2" class="switch_screen"><img src="images/1.png"/>Cardápio 2</a>
+</li>
+</ul>
+</div>
+
+
+
+
+
+<div class="screen hidden" id="viewCafeAbaixo1">
+<ul class="buttons">  
+<li>
+    <div><img src="images/1.png"/>Café da Manhã</div>
+   <h7><img src="images/btnCardapios.png"/>Alimentos</h7><textarea id="cafeAbaixo1"></textarea>
+    <h7><img src="images/btnCalorias.png"/>kCal</h7><br><input type="number" id="cafeAbaixo1Kcal"></input>
+</li>
+<div align="center">
+    <a href="#viewCeiaAbaixo1" class="roundButton switch_screen cardapioAnterior"></a>
+    <a id="addCardapioAbaixo1_1" href="#viewCafeAbaixo1" class="roundButton switch_screen cardapioAdiciona"></a>
+    <a href="#home" class="roundButton switch_screen cardapioCancela"></a>
+    <a href="#viewLancheManhaAbaixo1" class="roundButton switch_screen cardapioAvanca"></a></div>
+</ul>
+</div>
+
+<div class="screen hidden" id="viewLancheManhaAbaixo1">
+<ul class="buttons">  
+<li>
+    <div><img src="images/1.png"/>Lanche da Manhã</div>
+
+<h7><img src="images/btnCardapios.png"/>Alimentos</h7><textarea id="lancheAbaixo1"></textarea>
+    <h7><img src="images/btnCalorias.png"/>kCal</h7><br><input type="number" id="lancheAbaixo1Kcal"></input>
+</li>
+<div align="center">
+    <a href="#viewCafeAbaixo1" class="roundButton switch_screen cardapioAnterior"></a>
+    <a id="addCardapioAbaixo1_2" href="#viewLancheManhaAbaixo1" class="roundButton switch_screen cardapioAdiciona"></a>
+    <a href="#home" class="roundButton switch_screen cardapioCancela"></a>
+    <a href="#viewAlmocoAbaixo1" class="roundButton switch_screen cardapioAvanca"></a></h8>
+</ul>
+</div>
+
+<div class="screen hidden" id="viewAlmocoAbaixo1">
+<ul class="buttons">  
+<li>
+    <div><img src="images/1.png"/>Almoço</div>
+
+<h7><img src="images/btnCardapios.png"/>Alimentos</h7><textarea id="almocoAbaixo1"></textarea>
+    <h7><img src="images/btnCalorias.png"/>kCal</h7><br><input type="number" id="almocoAbaixo1Kcal"></input>
+</li>
+<div align="center">
+    <a href="#viewLancheManhaAbaixo1" class="roundButton switch_screen cardapioAnterior"></a>
+    <a id="addCardapioAbaixo1_3" href="#viewAlmocoAbaixo1" class="roundButton switch_screen cardapioAdiciona"></a>
+    <a href="#home" class="roundButton switch_screen cardapioCancela"></a>
+    <a href="#viewLancheTardeAbaixo1" class="roundButton switch_screen cardapioAvanca"></a></h8>
+</ul>
+</div>
+
+<div class="screen hidden" id="viewLancheTardeAbaixo1">
+<ul class="buttons">  
+<li>
+    <div><img src="images/1.png"/>Lanche da Tarde</div>
+
+<h7><img src="images/btnCardapios.png"/>Alimentos</h7><textarea id="lancheTardeAbaixo1"></textarea>
+    <h7><img src="images/btnCalorias.png"/>kCal</h7><br><input type="number" id="lancheTardeAbaixo1Kcal"></input>
+</li>
+<div align="center">
+    <a href="#viewAlmocoAbaixo1" class="roundButton switch_screen cardapioAnterior"></a>
+    <a id="addCardapioAbaixo1_4" href="#viewLancheTardeAbaixo1" class="roundButton switch_screen cardapioAdiciona"></a>
+    <a href="#home" class="roundButton switch_screen cardapioCancela"></a>
+    <a href="#viewJantaAbaixo1" class="roundButton switch_screen cardapioAvanca"></a></h8>
+</ul>
+</div>
+
+<div class="screen hidden" id="viewJantaAbaixo1">
+<ul class="buttons">  
+<li>
+    <div><img src="images/1.png"/>Janta</div>
+
+<h7><img src="images/btnCardapios.png"/>Alimentos</h7><textarea id="jantaAbaixo1"></textarea>
+    <h7><img src="images/btnCalorias.png"/>kCal</h7><br><input type="number" id="jantaAbaixo1Kcal"></input>
+</li>
+<div align="center">
+    <a href="#viewLancheTardeAbaixo1" class="roundButton switch_screen cardapioAnterior"></a>
+    <a id="addCardapioAbaixo1_5" href="#viewJantaAbaixo1" class="roundButton switch_screen cardapioAdiciona"></a>
+    <a href="#home" class="roundButton switch_screen cardapioCancela"></a>
+    <a href="#viewCeiaAbaixo1" class="roundButton switch_screen cardapioAvanca"></a></h8>
+</ul>
+</div>
+
+<div class="screen hidden" id="viewCeiaAbaixo1">
+<ul class="buttons">  
+<li>
+    <div><img src="images/1.png"/>Ceia</div>
+
+<h7><img src="images/btnCardapios.png"/>Alimentos</h7><textarea id="ceiaAbaixo1"></textarea>
+    <h7><img src="images/btnCalorias.png"/>kCal</h7><br><input type="number" id="ceiaAbaixo1Kcal"></input>
+</li>
+<div align="center">
+    <a href="#viewLancheTardeAbaixo1" class="roundButton switch_screen cardapioAnterior"></a>
+    <a id="addCardapioAbaixo1_6" href="#viewCeiaAbaixo1" class="roundButton switch_screen cardapioAdiciona"></a>
+    <a href="#home" class="roundButton switch_screen cardapioCancela"></a>
+    <a href="#viewCafeAbaixo1" class="roundButton switch_screen cardapioAvanca"></a></h8>
+</ul>
+</div>
+
+
+
+
+<div class="screen hidden" id="viewCafeAbaixo2">
+<ul class="buttons">  
+<li>
+    <div><img src="images/1.png"/>Café da Manhã</div>
+
+<h7><img src="images/btnCardapios.png"/>Alimentos</h7><textarea id="cafeAbaixo2"></textarea>
+    <h7><img src="images/btnCalorias.png"/>kCal</h7><br><input type="number" id="cafeAbaixo2Kcal"></input>
+</li>
+<div align="center">
+    <a href="#viewCeiaAbaixo2" class="roundButton switch_screen cardapioAnterior"></a>
+    <a id="addCardapioAbaixo2_1" href="#viewCafeAbaixo2" class="roundButton switch_screen cardapioAdiciona"></a>
+    <a href="#home" class="roundButton switch_screen cardapioCancela"></a>
+    <a href="#viewLancheManhaAbaixo2" class="roundButton switch_screen cardapioAvanca"></a></h8>
+</ul>
+</div>
+
+<div class="screen hidden" id="viewLancheManhaAbaixo2">
+<ul class="buttons">  
+<li>
+    <div><img src="images/1.png"/>Lanche da Manhã</div>
+
+<h7><img src="images/btnCardapios.png"/>Alimentos</h7><textarea id="lancheAbaixo2"></textarea>
+    <h7><img src="images/btnCalorias.png"/>kCal</h7><br><input type="number" id="lancheAbaixo2Kcal"></input>
+</li>
+<div align="center">
+    <a href="#viewCafeAbaixo2" class="roundButton switch_screen cardapioAnterior"></a>
+    <a id="addCardapioAbaixo2_2" href="#viewLancheManhaAbaixo2" class="roundButton switch_screen cardapioAdiciona"></a>
+    <a href="#home" class="roundButton switch_screen cardapioCancela"></a>
+    <a href="#viewAlmocoAbaixo2" class="roundButton switch_screen cardapioAvanca"></a></h8>
+</ul>
+</div>
+
+<div class="screen hidden" id="viewAlmocoAbaixo2">
+<ul class="buttons">  
+<li>
+    <div><img src="images/1.png"/>Almoço</div>
+
+<h7><img src="images/btnCardapios.png"/>Alimentos</h7><textarea id="almocoAbaixo2"></textarea>
+    <h7><img src="images/btnCalorias.png"/>kCal</h7><br><input type="number" id="almocoAbaixo2Kcal"></input>
+</li>
+<div align="center">
+    <a href="#viewLancheManhaAbaixo2" class="roundButton switch_screen cardapioAnterior"></a>
+    <a id="addCardapioAbaixo2_3" href="#viewAlmocoAbaixo2" class="roundButton switch_screen cardapioAdiciona"></a>
+    <a href="#home" class="roundButton switch_screen cardapioCancela"></a>
+    <a href="#viewLancheTardeAbaixo2" class="roundButton switch_screen cardapioAvanca"></a></h8>
+</ul>
+</div>
+
+<div class="screen hidden" id="viewLancheTardeAbaixo2">
+<ul class="buttons">  
+<li>
+    <div><img src="images/1.png"/>Lanche da Tarde</div>
+
+<h7><img src="images/btnCardapios.png"/>Alimentos</h7><textarea id="lancheTardeAbaixo2"></textarea>
+    <h7><img src="images/btnCalorias.png"/>kCal</h7><br><input type="number" id="lancheTardeAbaixo2Kcal"></input>
+</li>
+<div align="center">
+    <a href="#viewAlmocoAbaixo2" class="roundButton switch_screen cardapioAnterior"></a>
+    <a id="addCardapioAbaixo2_4" href="#viewLancheTardeAbaixo2" class="roundButton switch_screen cardapioAdiciona"></a>
+    <a href="#home" class="roundButton switch_screen cardapioCancela"></a>
+    <a href="#viewJantaAbaixo2" class="roundButton switch_screen cardapioAvanca"></a></h8>
+</ul>
+</div>
+
+<div class="screen hidden" id="viewJantaAbaixo2">
+<ul class="buttons">  
+<li>
+    <div><img src="images/1.png"/>Janta</div>
+
+<h7><img src="images/btnCardapios.png"/>Alimentos</h7><textarea id="jantaAbaixo2"></textarea>
+    <h7><img src="images/btnCalorias.png"/>kCal</h7><br><input type="number" id="jantaAbaixo2Kcal"></input>
+</li>
+<div align="center">
+    <a href="#viewLancheTardeAbaixo2" class="roundButton switch_screen cardapioAnterior"></a>
+    <a id="addCardapioAbaixo2_5" href="#viewJantaAbaixo2" class="roundButton switch_screen cardapioAdiciona"></a>
+    <a href="#home" class="roundButton switch_screen cardapioCancela"></a>
+    <a href="#viewCeiaAbaixo2" class="roundButton switch_screen cardapioAvanca"></a></h8>
+</ul>
+</div>
+
+<div class="screen hidden" id="viewCeiaAbaixo2">
+<ul class="buttons">  
+<li>
+    <div><img src="images/1.png"/>Ceia</div>
+
+<h7><img src="images/btnCardapios.png"/>Alimentos</h7><textarea id="ceiaAbaixo2"></textarea>
+    <h7><img src="images/btnCalorias.png"/>kCal</h7><br><input type="number" id="ceiaAbaixo2Kcal"></input>
+</li>
+<div align="center">
+    <a href="#viewLancheTardeAbaixo2" class="roundButton switch_screen cardapioAnterior"></a>
+    <a id="addCardapioAbaixo2_6" href="#viewCeiaAbaixo2" class="roundButton switch_screen cardapioAdiciona"></a>
+    <a href="#home" class="roundButton switch_screen cardapioCancela"></a>
+    <a href="#viewCafeAbaixo2" class="roundButton switch_screen cardapioAvanca"></a></h8>
+</ul>
+</div>
+
+
+<!---------------------------------------------------------------------------------------------->
+
+<div class="screen hidden" id="viewCafeNormal1">
+<ul class="buttons">  
+<li>
+    <div><img src="images/1.png"/>Café da Manhã</div>
+
+<h7><img src="images/btnCardapios.png"/>Alimentos</h7><textarea id="cafeNormal1"></textarea>
+    <h7><img src="images/btnCalorias.png"/>kCal</h7><br><input type="number" id="cafeNormal1Kcal"></input>
+</li>
+<div align="center">
+    <a href="#viewCeiaNormal1" class="roundButton switch_screen cardapioAnterior"></a>
+    <a id="addCardapioNormal1_1" href="#viewCafeNormal1" class="roundButton switch_screen cardapioAdiciona"></a>
+    <a href="#home" class="roundButton switch_screen cardapioCancela"></a>
+    <a href="#viewLancheManhaNormal1" class="roundButton switch_screen cardapioAvanca"></a></h8>
+</ul>
+</div>
+
+<div class="screen hidden" id="viewLancheManhaNormal1">
+<ul class="buttons">  
+<li>
+    <div><img src="images/1.png"/>Lanche da Manhã</div>
+
+<h7><img src="images/btnCardapios.png"/>Alimentos</h7><textarea id="lancheNormal1"></textarea>
+    <h7><img src="images/btnCalorias.png"/>kCal</h7><br><input type="number" id="lancheNormal1Kcal"></input>
+</li>
+<div align="center">
+    <a href="#viewCafeNormal1" class="roundButton switch_screen cardapioAnterior"></a>
+    <a id="addCardapioNormal1_2" href="#viewLancheManhaNormal1" class="roundButton switch_screen cardapioAdiciona"></a>
+    <a href="#home" class="roundButton switch_screen cardapioCancela"></a>
+    <a href="#viewAlmocoNormal1" class="roundButton switch_screen cardapioAvanca"></a></h8>
+</ul>
+</div>
+
+<div class="screen hidden" id="viewAlmocoNormal1">
+<ul class="buttons">  
+<li>
+    <div><img src="images/1.png"/>Almoço</div>
+
+<h7><img src="images/btnCardapios.png"/>Alimentos</h7><textarea id="almocoNormal1"></textarea>
+    <h7><img src="images/btnCalorias.png"/>kCal</h7><br><input type="number" id="almocoNormal1Kcal"></input>
+</li>
+<div align="center">
+    <a href="#viewLancheManhaNormal1" class="roundButton switch_screen cardapioAnterior"></a>
+    <a id="addCardapioNormal1_3" href="#viewAlmocoNormal1" class="roundButton switch_screen cardapioAdiciona"></a>
+    <a href="#home" class="roundButton switch_screen cardapioCancela"></a>
+    <a href="#viewLancheTardeNormal1" class="roundButton switch_screen cardapioAvanca"></a></h8>
+</ul>
+</div>
+
+<div class="screen hidden" id="viewLancheTardeNormal1">
+<ul class="buttons">  
+<li>
+    <div><img src="images/1.png"/>Lanche da Tarde</div>
+
+<h7><img src="images/btnCardapios.png"/>Alimentos</h7><textarea id="lancheTardeNormal1"></textarea>
+    <h7><img src="images/btnCalorias.png"/>kCal</h7><br><input type="number" id="lancheTardeNormal1Kcal"></input>
+</li>
+<div align="center">
+    <a href="#viewAlmocoNormal1" class="roundButton switch_screen cardapioAnterior"></a>
+    <a id="addCardapioNormal1_4" href="#viewLancheTardeNormal1" class="roundButton switch_screen cardapioAdiciona"></a>
+    <a href="#home" class="roundButton switch_screen cardapioCancela"></a>
+    <a href="#viewJantaNormal1" class="roundButton switch_screen cardapioAvanca"></a></h8>
+</ul>
+</div>
+
+<div class="screen hidden" id="viewJantaNormal1">
+<ul class="buttons">  
+<li>
+    <div><img src="images/1.png"/>Janta</div>
+
+<h7><img src="images/btnCardapios.png"/>Alimentos</h7><textarea id="jantaNormal1"></textarea>
+    <h7><img src="images/btnCalorias.png"/>kCal</h7><br><input type="number" id="jantaNormal1Kcal"></input>
+</li>
+<div align="center">
+    <a href="#viewLancheTardeNormal1" class="roundButton switch_screen cardapioAnterior"></a>
+    <a id="addCardapioNormal1_5" href="#viewJantaNormal1" class="roundButton switch_screen cardapioAdiciona"></a>
+    <a href="#home" class="roundButton switch_screen cardapioCancela"></a>
+    <a href="#viewCeiaNormal1" class="roundButton switch_screen cardapioAvanca"></a></h8>
+</ul>
+</div>
+
+<div class="screen hidden" id="viewCeiaNormal1">
+<ul class="buttons">  
+<li>
+    <div><img src="images/1.png"/>Ceia</div>
+
+<h7><img src="images/btnCardapios.png"/>Alimentos</h7><textarea id="ceiaNormal1"></textarea>
+    <h7><img src="images/btnCalorias.png"/>kCal</h7><br><input type="number" id="ceiaNormal1Kcal"></input>
+</li>
+<div align="center">
+    <a href="#viewLancheTardeNormal1" class="roundButton switch_screen cardapioAnterior"></a>
+    <a id="addCardapioNormal1_6" href="#viewCeiaNormal1" class="roundButton switch_screen cardapioAdiciona"></a>
+    <a href="#home" class="roundButton switch_screen cardapioCancela"></a>
+    <a href="#viewCafeNormal1" class="roundButton switch_screen cardapioAvanca"></a></h8>
+</ul>
+</div>
+
+<!---------------------------------------------------------------------------------------------->
+
+
+<div class="screen hidden" id="viewCafeNormal2">
+<ul class="buttons">  
+<li>
+    <div><img src="images/1.png"/>Café da Manhã</div>
+
+<h7><img src="images/btnCardapios.png"/>Alimentos</h7><textarea id="cafeNormal2"></textarea>
+    <h7><img src="images/btnCalorias.png"/>kCal</h7><br><input type="number" id="cafeNormal2Kcal"></input>
+</li>
+<div align="center">
+    <a href="#viewCeiaNormal2" class="roundButton switch_screen cardapioAnterior"></a>
+    <a id="addCardapioNormal2_1" href="#viewCafeNormal2" class="roundButton switch_screen cardapioAdiciona"></a>
+    <a href="#home" class="roundButton switch_screen cardapioCancela"></a>
+    <a href="#viewLancheManhaNormal2" class="roundButton switch_screen cardapioAvanca"></a></h8>
+</ul>
+</div>
+
+<div class="screen hidden" id="viewLancheManhaNormal2">
+<ul class="buttons">  
+<li>
+    <div><img src="images/1.png"/>Lanche da Manhã</div>
+
+<h7><img src="images/btnCardapios.png"/>Alimentos</h7><textarea id="lancheNormal2"></textarea>
+    <h7><img src="images/btnCalorias.png"/>kCal</h7><br><input type="number" id="lancheNormal2Kcal"></input>
+</li>
+<div align="center">
+    <a href="#viewCafeNormal2" class="roundButton switch_screen cardapioAnterior"></a>
+    <a id="addCardapioNormal2_2" href="#viewLancheManhaNormal2" class="roundButton switch_screen cardapioAdiciona"></a>
+    <a href="#home" class="roundButton switch_screen cardapioCancela"></a>
+    <a href="#viewAlmocoNormal2" class="roundButton switch_screen cardapioAvanca"></a></h8>
+</ul>
+</div>
+
+<div class="screen hidden" id="viewAlmocoNormal2">
+<ul class="buttons">  
+<li>
+    <div><img src="images/1.png"/>Almoço</div>
+
+<h7><img src="images/btnCardapios.png"/>Alimentos</h7><textarea id="almocoNormal2"></textarea>
+    <h7><img src="images/btnCalorias.png"/>kCal</h7><br><input type="number" id="almocoNormal2Kcal"></input>
+</li>
+<div align="center">
+    <a href="#viewLancheManhaNormal2" class="roundButton switch_screen cardapioAnterior"></a>
+    <a id="addCardapioNormal2_3" href="#viewAlmocoNormal2" class="roundButton switch_screen cardapioAdiciona"></a>
+    <a href="#home" class="roundButton switch_screen cardapioCancela"></a>
+    <a href="#viewLancheTardeNormal2" class="roundButton switch_screen cardapioAvanca"></a></h8>
+</ul>
+</div>
+
+<div class="screen hidden" id="viewLancheTardeNormal2">
+<ul class="buttons">  
+<li>
+    <div><img src="images/1.png"/>Lanche da Tarde</div>
+
+<h7><img src="images/btnCardapios.png"/>Alimentos</h7><textarea id="lancheTardeNormal2"></textarea>
+    <h7><img src="images/btnCalorias.png"/>kCal</h7><br><input type="number" id="lancheTardeNormal2Kcal"></input>
+</li>
+<div align="center">
+    <a href="#viewAlmocoNormal2" class="roundButton switch_screen cardapioAnterior"></a>
+    <a id="addCardapioNormal2_4" href="#viewLancheTardeNormal2" class="roundButton switch_screen cardapioAdiciona"></a>
+    <a href="#home" class="roundButton switch_screen cardapioCancela"></a>
+    <a href="#viewJantaNormal2" class="roundButton switch_screen cardapioAvanca"></a></h8>
+</ul>
+</div>
+
+<div class="screen hidden" id="viewJantaNormal2">
+<ul class="buttons">  
+<li>
+    <div><img src="images/1.png"/>Janta</div>
+
+<h7><img src="images/btnCardapios.png"/>Alimentos</h7><textarea id="jantaNormal2"></textarea>
+    <h7><img src="images/btnCalorias.png"/>kCal</h7><br><input type="number" id="jantaNormal2Kcal"></input>
+</li>
+<div align="center">
+    <a href="#viewLancheTardeNormal2" class="roundButton switch_screen cardapioAnterior"></a>
+    <a id="addCardapioNormal2_5" href="#viewJantaNormal2" class="roundButton switch_screen cardapioAdiciona"></a>
+    <a href="#home" class="roundButton switch_screen cardapioCancela"></a>
+    <a href="#viewCeiaNormal2" class="roundButton switch_screen cardapioAvanca"></a></h8>
+</ul>
+</div>
+
+<div class="screen hidden" id="viewCeiaNormal2">
+<ul class="buttons">  
+<li>
+    <div><img src="images/1.png"/>Ceia</div>
+
+<h7><img src="images/btnCardapios.png"/>Alimentos</h7><textarea id="ceiaNormal2"></textarea>
+    <h7><img src="images/btnCalorias.png"/>kCal</h7><br><input type="number" id="ceiaNormal2Kcal"></input>
+</li>
+<div align="center">
+    <a href="#viewLancheTardeNormal2" class="roundButton switch_screen cardapioAnterior"></a>
+    <a id="addCardapioNormal2_6" href="#viewCeiaNormal2" class="roundButton switch_screen cardapioAdiciona"></a>
+    <a href="#home" class="roundButton switch_screen cardapioCancela"></a>
+    <a href="#viewCafeNormal2" class="roundButton switch_screen cardapioAvanca"></a></h8>
+</ul>
+</div>
+<!---------------------------------------------------------------------------------------------->
+<div class="screen hidden" id="viewCafeAcima1">
+<ul class="buttons">  
+<li>
+    <div><img src="images/1.png"/>Café da Manhã</div>
+
+<h7><img src="images/btnCardapios.png"/>Alimentos</h7><textarea id="cafeAcima1"></textarea>
+    <h7><img src="images/btnCalorias.png"/>kCal</h7><br><input type="number" id="cafeAcima1Kcal"></input>
+</li>
+<div align="center">
+    <a href="#viewCeiaAcima1" class="roundButton switch_screen cardapioAnterior"></a>
+    <a id="addCardapioAcima1_1" href="#viewCafeAcima1" class="roundButton switch_screen cardapioAdiciona"></a>
+    <a href="#home" class="roundButton switch_screen cardapioCancela"></a>
+    <a href="#viewLancheManhaAcima1" class="roundButton switch_screen cardapioAvanca"></a></h8>
+</ul>
+</div>
+
+<div class="screen hidden" id="viewLancheManhaAcima1">
+<ul class="buttons">  
+<li>
+    <div><img src="images/1.png"/>Lanche da Manhã</div>
+
+<h7><img src="images/btnCardapios.png"/>Alimentos</h7><textarea id="lancheAcima1"></textarea>
+    <h7><img src="images/btnCalorias.png"/>kCal</h7><br><input type="number" id="lancheAcima1Kcal"></input>
+</li>
+<div align="center">
+    <a href="#viewCafeAcima1" class="roundButton switch_screen cardapioAnterior"></a>
+    <a id="addCardapioAcima1_2" href="#viewLancheManhaAcima1" class="roundButton switch_screen cardapioAdiciona"></a>
+    <a href="#home" class="roundButton switch_screen cardapioCancela"></a>
+    <a href="#viewAlmocoAcima1" class="roundButton switch_screen cardapioAvanca"></a></h8>
+</ul>
+</div>
+
+<div class="screen hidden" id="viewAlmocoAcima1">
+<ul class="buttons">  
+<li>
+    <div><img src="images/1.png"/>Almoço</div>
+
+<h7><img src="images/btnCardapios.png"/>Alimentos</h7><textarea id="almocoAcima1"></textarea>
+    <h7><img src="images/btnCalorias.png"/>kCal</h7><br><input type="number" id="almocoAcima1Kcal"></input>
+</li>
+<div align="center">
+    <a href="#viewLancheManhaAcima1" class="roundButton switch_screen cardapioAnterior"></a>
+    <a id="addCardapioAcima1_3" href="#viewAlmocoAcima1" class="roundButton switch_screen cardapioAdiciona"></a>
+    <a href="#home" class="roundButton switch_screen cardapioCancela"></a>
+    <a href="#viewLancheTardeAcima1" class="roundButton switch_screen cardapioAvanca"></a></h8>
+</ul>
+</div>
+
+<div class="screen hidden" id="viewLancheTardeAcima1">
+<ul class="buttons">  
+<li>
+    <div><img src="images/1.png"/>Lanche da Tarde</div>
+
+<h7><img src="images/btnCardapios.png"/>Alimentos</h7><textarea id="lancheTardeAcima1"></textarea>
+    <h7><img src="images/btnCalorias.png"/>kCal</h7><br><input type="number" id="lancheTardeAcima1Kcal"></input>
+</li>
+<div align="center">
+    <a href="#viewAlmocoAcima1" class="roundButton switch_screen cardapioAnterior"></a>
+    <a id="addCardapioAcima1_4" href="#viewLancheTardeAcima1" class="roundButton switch_screen cardapioAdiciona"></a>
+    <a href="#home" class="roundButton switch_screen cardapioCancela"></a>
+    <a href="#viewJantaAcima1" class="roundButton switch_screen cardapioAvanca"></a></h8>
+</ul>
+</div>
+
+<div class="screen hidden" id="viewJantaAcima1">
+<ul class="buttons">  
+<li>
+    <div><img src="images/1.png"/>Janta</div>
+
+<h7><img src="images/btnCardapios.png"/>Alimentos</h7><textarea id="jantaAcima1"></textarea>
+    <h7><img src="images/btnCalorias.png"/>kCal</h7><br><input type="number" id="jantaAcima1Kcal"></input>
+</li>
+<div align="center">
+    <a href="#viewLancheTardeAcima1" class="roundButton switch_screen cardapioAnterior"></a>
+    <a id="addCardapioAcima1_5" href="#viewJantaAcima1" class="roundButton switch_screen cardapioAdiciona"></a>
+    <a href="#home" class="roundButton switch_screen cardapioCancela"></a>
+    <a href="#viewCeiaAcima1" class="roundButton switch_screen cardapioAvanca"></a></h8>
+</ul>
+</div>
+
+<div class="screen hidden" id="viewCeiaAcima1">
+<ul class="buttons">  
+<li>
+    <div><img src="images/1.png"/>Ceia</div>
+
+<h7><img src="images/btnCardapios.png"/>Alimentos</h7><textarea id="ceiaAcima1"></textarea>
+    <h7><img src="images/btnCalorias.png"/>kCal</h7><br><input type="number" id="ceiaAcima1Kcal"></input>
+</li>
+<div align="center">
+    <a href="#viewLancheTardeAcima1" class="roundButton switch_screen cardapioAnterior"></a>
+    <a id="addCardapioAcima1_6" href="#viewCeiaAcima1" class="roundButton switch_screen cardapioAdiciona"></a>
+    <a href="#home" class="roundButton switch_screen cardapioCancela"></a>
+    <a href="#viewCafeAcima1" class="roundButton switch_screen cardapioAvanca"></a></h8>
+</ul>
+</div>
+
+<!---------------------------------------------------------------------------------------------->
+
+
+<div class="screen hidden" id="viewCafeAcima2">
+<ul class="buttons">  
+<li>
+    <div><img src="images/1.png"/>Café da Manhã</div>
+
+<h7><img src="images/btnCardapios.png"/>Alimentos</h7><textarea id="cafeAcima2"></textarea>
+    <h7><img src="images/btnCalorias.png"/>kCal</h7><br><input type="number" id="cafeAcima2Kcal"></input>
+</li>
+<div align="center">
+    <a href="#viewCeiaAcima2" class="roundButton switch_screen cardapioAnterior"></a>
+    <a id="addCardapioAcima2_1" href="#viewCafeAcima2" class="roundButton switch_screen cardapioAdiciona"></a>
+    <a href="#home" class="roundButton switch_screen cardapioCancela"></a>
+    <a href="#viewLancheManhaAcima2" class="roundButton switch_screen cardapioAvanca"></a></h8>
+</ul>
+</div>
+
+<div class="screen hidden" id="viewLancheManhaAcima2">
+<ul class="buttons">  
+<li>
+    <div><img src="images/1.png"/>Lanche da Manhã</div>
+
+<h7><img src="images/btnCardapios.png"/>Alimentos</h7><textarea id="lancheAcima2"></textarea>
+    <h7><img src="images/btnCalorias.png"/>kCal</h7><br><input type="number" id="lancheAcima2Kcal"></input>
+</li>
+<div align="center">
+    <a href="#viewCafeAcima2" class="roundButton switch_screen cardapioAnterior"></a>
+    <a id="addCardapioAcima2_2" href="#viewLancheManhaAcima2" class="roundButton switch_screen cardapioAdiciona"></a>
+    <a href="#home" class="roundButton switch_screen cardapioCancela"></a>
+    <a href="#viewAlmocoAcima2" class="roundButton switch_screen cardapioAvanca"></a></h8>
+</ul>
+</div>
+
+<div class="screen hidden" id="viewAlmocoAcima2">
+<ul class="buttons">  
+<li>
+    <div><img src="images/1.png"/>Almoço</div>
+
+<h7><img src="images/btnCardapios.png"/>Alimentos</h7><textarea id="almocoAcima2"></textarea>
+    <h7><img src="images/btnCalorias.png"/>kCal</h7><br><input type="number" id="almocoAcima2Kcal"></input>
+</li>
+<div align="center">
+    <a href="#viewLancheManhaAcima2" class="roundButton switch_screen cardapioAnterior"></a>
+    <a id="addCardapioAcima2_3" href="#viewAlmocoAcima2" class="roundButton switch_screen cardapioAdiciona"></a>
+    <a href="#home" class="roundButton switch_screen cardapioCancela"></a>
+    <a href="#viewLancheTardeAcima2" class="roundButton switch_screen cardapioAvanca"></a></h8>
+</ul>
+</div>
+
+<div class="screen hidden" id="viewLancheTardeAcima2">
+<ul class="buttons">  
+<li>
+    <div><img src="images/1.png"/>Lanche da Tarde</div>
+
+<h7><img src="images/btnCardapios.png"/>Alimentos</h7><textarea id="lancheTardeAcima2"></textarea>
+    <h7><img src="images/btnCalorias.png"/>kCal</h7><br><input type="number" id="lancheTardeAcima2Kcal"></input>
+</li>
+<div align="center">
+    <a href="#viewAlmocoAcima2" class="roundButton switch_screen cardapioAnterior"></a>
+    <a id="addCardapioAcima2_4" href="#viewLancheTardeAcima2" class="roundButton switch_screen cardapioAdiciona"></a>
+    <a href="#home" class="roundButton switch_screen cardapioCancela"></a>
+    <a href="#viewJantaAcima2" class="roundButton switch_screen cardapioAvanca"></a></h8>
+</ul>
+</div>
+
+<div class="screen hidden" id="viewJantaAcima2">
+<ul class="buttons">  
+<li>
+    <div><img src="images/1.png"/>Janta</div>
+
+<h7><img src="images/btnCardapios.png"/>Alimentos</h7><textarea id="jantaAcima2"></textarea>
+    <h7><img src="images/btnCalorias.png"/>kCal</h7><br><input type="number" id="jantaAcima2Kcal"></input>
+</li>
+<div align="center">
+    <a href="#viewLancheTardeAcima2" class="roundButton switch_screen cardapioAnterior"></a>
+    <a id="addCardapioAcima2_5" href="#viewJantaAcima2" class="roundButton switch_screen cardapioAdiciona"></a>
+    <a href="#home" class="roundButton switch_screen cardapioCancela"></a>
+    <a href="#viewCeiaAcima2" class="roundButton switch_screen cardapioAvanca"></a></h8>
+</ul>
+</div>
+
+<div class="screen hidden" id="viewCeiaAcima2">
+<ul class="buttons">  
+<li>
+    <div><img src="images/1.png"/>Ceia</div>
+
+<h7><img src="images/btnCardapios.png"/>Alimentos</h7><textarea id="ceiaAcima2"></textarea>
+    <h7><img src="images/btnCalorias.png"/>kCal</h7><br><input type="number" id="ceiaAcima2Kcal"></input>
+</li>
+<div align="center">
+    <a href="#viewLancheTardeAcima2" class="roundButton switch_screen cardapioAnterior"></a>
+    <a id="addCardapioAcima2_6" href="#viewCeiaAcima2" class="roundButton switch_screen cardapioAdiciona"></a>
+    <a href="#home" class="roundButton switch_screen cardapioCancela"></a>
+    <a href="#viewCafeAcima2" class="roundButton switch_screen cardapioAvanca"></a></h8>
+</ul>
+</div>
+<!---------------------------------------------------------------------------------------------->
+
+
+<!-- VIEW AVISO IMC -->    
+<div class="screen hidden" id="viewAvisoImc" align="center">
+  <ul class="buttons "> 
+     <div id="totalImcLabel"></div>
+     <div id="imcResultadoImagem"></div>
+     <div id="imcResultado"></div>
+   </ul>
+</div>
+
+
+<!-- VIEW ESCOLHA SEMANA -->    
+<div class="screen hidden" id="viewRegistroPeso">
+<ul class="buttons">
+<li>
+    <div><img src="images/btnRegistro.png"/>Registro de Peso</div>
+</li>
+<li align="center">
+    <input id="meuPeso2" type="number"></input> kg
+</li><br>
+<div align="center">
+    <h7>Abaixo escolha a semana ou mês (de acordo com seu nutricionista) a qual você deseja cadastrar o peso atual. Seu peso estará cadastrado, na opção relatório do menu acesse para ver como você se comportou com sua rotina.</h7><br>
+    <a href="" id="buttonSemana1" class="roundButton"></a> 
+    <a href="" id="buttonSemana2"  class="roundButton"></a> 
+    <a href="" id="buttonSemana3" class="roundButton"></a> 
+    <a href="" id="buttonSemana4"  class="roundButton"></a> 
+    <a href="" id="buttonSemana5" class="roundButton"></a><br><br><br>
+</div>
+</ul>
+</div>
+
+
+<!-- VIEW CARDAPIOS SEMANA -->    
+<div class="screen hidden" id="viewCardapio">
+    <div class="block progress" id="viewCardapioCafe">Café</div>
+    <div class="block  " id="viewCardapioLancheManha">Lanche</div>
+    <div class="block "id="viewCardapioAlmoco">Almoço</div>
+    <div class="block "id="viewCardapioLancheTarde">Lanche</div>
+    <div class="block "id="viewCardapioJanta">Janta</div>
+    <div class="block  " id="viewCardapioCeia">Ceia</div>
+    <div id="viewCardapio1"></div>
+    <div id="viewCardapio2"></div>
+    <div class="myNotif" id="cardapioConteudo">
+      <p align='center'>Escolha a opção de cardápio abaixo.
+    </div>
+</div>
+
+
+
+<!-- VIEW RELATÓRIO SEMANA -->    
+<div class="screen hidden" id="viewRelatorio">
+    <div id="viewGraficos">
+    <div  align="center" style="color:#ffffff;"><h7>Abaixo a evolução de seu peso durante o mês que passou, de acordo com os registros feitos por você.</h7></div>
+    <div class="progressBar orange glow">
+        <span id="content1" style="width: .5%"><p id="contentTip1"></p></span>
+    </div>
+    <div class="progressBar orange glow">
+        <span id="content2" style="width: .5%"><p id="contentTip2"></p></span>
+    </div>
+    <div class="progressBar orange glow">
+        <span id="content3"style="width: .5%"><p id="contentTip3"></p></span>
+    </div>
+    <div class="progressBar orange glow">
+        <span id="content4" style="width: .5%"><p id="contentTip4"></p></span>
+    </div>
+    <div class="progressBar orange glow">
+        <span id="content5" style="width: .5%"><p id="contentTip5"></p></span>
+    </div>
+    </div> 
+</div> 
+    <!-- <script type="text/javascript" charset="utf-8" src="js/phonegap-1.4.1.js"></script> -->
+  <script type="text/javascript" src="js/helper.js"></script>      
+  <script type="text/javascript" src="js/noclickdelay.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+
+</body>
+</html>
