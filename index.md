@@ -25,6 +25,6 @@ Things I want to change in the future:
 • The themes will include a set of different animations for the elements, elements like lists will have a custom bullet, etc.<br>
 • Create more "poses" for the 3d character.
 
-You can see a test package with the script on this link:
+You can see a test package with the script on this link, you can see it on a mobile device as well:
 
-[a link](https://andrepazleal.github.io/courses/demo/)
+[Click here](https://andrepazleal.github.io/courses/demo/)
