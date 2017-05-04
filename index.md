@@ -1,5 +1,3 @@
-# My Wips
-
 This is my personal github page where I have few personal projects, you can check them below.
 
 # Captivate Course Automation (2016)
