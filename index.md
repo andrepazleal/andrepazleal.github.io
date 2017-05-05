@@ -52,6 +52,4 @@ You can access that content here:
 
 This is some old stuff a few motions that I've created with Blender 3d. 
 
-[![ScreenShot](https://cdn.dribbble.com/users/165589/screenshots/938716/flat-video-player.png)](https://www.youtube.com/watch?v=NXK30Yyv9bg)
-
 [Click here](https://www.youtube.com/user/andrepazleal)
