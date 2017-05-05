@@ -1,6 +1,6 @@
 This is my personal github page where I have few personal projects, you can check them below.
 
-# Captivate Course Automation (2016)
+# Captivate Course Automation (2014)
 
 The purpose of this script is to automate the creation of a course UI inside Adobe Captivate, using standard elements for panels, navigation buttons, sound on off, text position (dependind the position of the image), image styles, list, tables, h1, font and all styles, the idea behind this is to present the texts to the user using the Slide Notes imported thru the the accessibility panel and there only use HTML formatting texts. 
 
@@ -17,7 +17,7 @@ Here are the steps to use the script:<br>
 Remember a few things, create 3 or more white slides and change the slide duration for more than the standard 3sec, why:
 
 • First slide it loads the script and the video intro;<br>
-• Second slide, after pressing the arrow, loads the UX, the content of the slide, the text for the user, must be inserted on the Slide Accesibility panel, the button on the right side of the Slide Label Name.<br>
+• Second slide, after pressing the arrow, loads the UI, the content of the slide, the text for the user, must be inserted on the Slide Accesibility panel, the button on the right side of the Slide Label Name.<br>
 • Third slide or last slide, display the end message of the topic.
 
 Things I want to change in the future:
@@ -31,7 +31,7 @@ You can see a test package with the script on this link, you can see it on a mob
 
 [Click here](https://andrepazleal.github.io/courses/demo/)
 
-# Agenda Escolar (2015)
+# Agenda Escolar (2017)
 
 The intention is to create an app out of this, let's see it how will end up, haha.
 
