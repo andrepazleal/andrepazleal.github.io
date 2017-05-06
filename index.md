@@ -78,6 +78,6 @@ You can access that content here:
 
 This is some old stuff a few motions that I've created with Blender 3d. 
 
-[![Screen Shot 2017-05-06 at 03.32.32.png](https://s24.postimg.org/ruhietdit/Screen_Shot_2017-05-06_at_03.32.32.png)](https://postimg.org/image/43i4wpdbl/)
+[![Screen Shot 2017-05-06 at 03.32.32.png](https://s24.postimg.org/ruhietdit/Screen_Shot_2017-05-06_at_03.32.32.png)](https://www.youtube.com/watch?v=NXK30Yyv9bg)
 
 [Click here](https://www.youtube.com/user/andrepazleal)
