@@ -568,8 +568,8 @@ function createElements(){
 	$(nomeTopicoContainer).css("z-index", 2);
 	$(nomeTopicoContainer).css("width", '22%');
 	$(nomeTopicoContainer).css("height", '29%');
-	$(nomeTopicoContainer).css('top','33%');
-	$(nomeTopicoContainer).css('left','39%');
+	$(nomeTopicoContainer).css('top','18%');
+	$(nomeTopicoContainer).css('left','50%');
 	$(nomeTopicoContainer).css('font-size',24);
 	//$(nomeTopicoContainer).css('font-family',"Knowledge, Segoe UI Light, Avenir-Light, Arial, Segoe UI Light, Avenir-Light, Arial");
 	$(nomeTopicoContainer).css('color',"#ffffff");
@@ -2487,7 +2487,7 @@ function createCharacter(){
 	//character.addEventListener("animationend", function(){
 		
 	//});
-	
+	console.log("character created")
 	characterStartInterval = setInterval(characterStart, 100);
 	//$(character).css("left",'75%');	
 	//$(character).css("display",'block');	
