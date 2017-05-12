@@ -1236,7 +1236,7 @@ color:white!important;
         width:35vw!important;
       }
       #logoCompanyContainer{
-      position: absolute; height: 15vh !important; width: 100vw !important; top: 85vh !important; opacity: 1; display: block; -webkit-filter: brightness(3.3) grayscale(1); background-image: url(../images/logoThomson.png) !important; background-size: 10vh !important; background-position: 42.5vw 0 !important;pointer-events:none;webkit-transition: opacity .5s ease-out; transition: opacity .5s ease-out;
+      position: absolute; height: 15vh !important; width: 100vw !important; top: 85vh !important; opacity: 1; display: block; -webkit-filter: brightness(3.3) grayscale(1); background-image: url(../images/logoCompanyMobile.png) !important; background-size: 10vh !important; background-position: 42.5vw 0 !important;pointer-events:none;webkit-transition: opacity .5s ease-out; transition: opacity .5s ease-out;
       }
       #warningElementText{
         width:100vw!important;height:100vh!important;
