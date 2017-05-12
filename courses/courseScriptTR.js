@@ -659,7 +659,7 @@ function createElements(){
 	$(messageFinalElementIcon).css("color","#ffffff");
 	$(messageFinalElementIcon).html('<p style="display:table-cell;vertical-align:middle;text-align:center;pointer-events:none;"><i class="fa fa-angle-left fa-3x"></i></p>');
 	//Create character if is a chracter
-	if(cpInfoDescription.split(' ')[0] == 'Character'){
+	if(cpInfoDescription.split(' ')[0] == 'Character!'){
 		createCharacter();
 	}
 }	
