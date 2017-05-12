@@ -256,9 +256,9 @@ function carregandoTela(){
 
 function companyName(){
 	companyName = (cpInfoCompany.split(' '));
-	if(companyName[0] == 'Thomson')
+	if(companyName[0] == 'Company')
 	{
-		companyName = 'logoThomson.png';
+		companyName = 'logoCompany.png';
 	}
 	if(companyName[0] == 'Domínio')
 	{
@@ -534,34 +534,15 @@ function courseName(){
 function createElements(){
 	var logoCompanyContainer = document.createElement("div");
 	logoCompanyContainer.setAttribute("id", "logoCompanyContainer");	
-	//added
-	//document.getElementById("div_Slide").appendChild(logoCompanyContainer);
-	companyName();
+	//companyName();
 	document.getElementById("project_main").appendChild(logoCompanyContainer);
-	//logoCompanyContainer.setAttribute("style", "position:absolute; z-index:2");
-	//$(logoCompanyContainer).css('position','absolute');
-	//$(logoCompanyContainer).css('height','100%');
-	//$(logoCompanyContainer).css('width','100%');
-	//$(logoCompanyContainer).css('top','88%');
-	//$(logoCompanyContainer).css('opacity',0);
-	$(logoCompanyContainer).css('background-image','url(../images/'+companyName+')');
-	//$(logoCompanyContainer).css('background-repeat','no-repeat');
-	//$(logoCompanyContainer).css('background-position','50% 0');
-	//$(logoCompanyContainer).css('background-size','35%');
-
+	//$(logoCompanyContainer).css('background-image','url(../images/'+companyName+')');
+	$(logoCompanyContainer).css('background-image','url(../images/logoCompany.png)');
 	var logoCourse = document.createElement("img");
 	logoCourse.setAttribute("id", "logoCourse");
 	document.getElementById("project_main").appendChild(logoCourse);
 	courseName();
 	logoCourse.setAttribute("src", "https://moodle.dominiosistemas.com.br/assets/logos/"+courseName);
-	
-	//logoCourse.setAttribute("height", "59.5%");
-	//logoCourse.setAttribute("width", "45%");
-	//logoCourse.setAttribute("style", "position:absolute;");
-	//$(logoCourse).css('top','18%');
-	//$(logoCourse).css('z-index',70);
-	//$(logoCourse).css('opacity',0);
-
 	var nomeTopicoText = document.createElement("p");
 	nomeTopicoText.setAttribute("id", "nomeTopicoText");
 	$(nomeTopicoText).css('display',"table-cell");
