@@ -1,7 +1,7 @@
 /*TEST SCRIPT FOR COURSES*/
 $('head').append('<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">');
 $('head').append('<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">');
-$('head').append('<link rel="stylesheet" type="text/css" href="/courses/css/courseStyle.css">');
+$('head').append('<link rel="stylesheet" type="text/css" href="../css/courseStyle.css">');
 
 cp.movie.am.pauseCurrentSlideAudioForInteractiveClick();
 
@@ -544,7 +544,7 @@ function createElements(){
 	//$(logoCompanyContainer).css('width','100%');
 	//$(logoCompanyContainer).css('top','88%');
 	//$(logoCompanyContainer).css('opacity',0);
-	$(logoCompanyContainer).css('background-image','url(https://moodle.dominiosistemas.com.br/assets/imagesTR/'+companyName+')');
+	$(logoCompanyContainer).css('background-image','url(../images/'+companyName+')');
 	//$(logoCompanyContainer).css('background-repeat','no-repeat');
 	//$(logoCompanyContainer).css('background-position','50% 0');
 	//$(logoCompanyContainer).css('background-size','35%');
@@ -1861,7 +1861,7 @@ function sejaBemVindo(){
 	var welcomeIcon = document.createElement("div");
 	welcomeIcon.setAttribute("id", "welcomeIcon");
 	document.getElementById("project_main").appendChild(welcomeIcon);
-	//welcomeIcon.setAttribute("src", "https://moodle.dominiosistemas.com.br/assets/imagesTR/introducaoIcon.png");
+	//welcomeIcon.setAttribute("src", "../images/introducaoIcon.png");
 	$(welcomeIcon).html('<p style="display:table-cell;vertical-align:middle;text-align:center;"><span class="big lnr lnr-select"></span></span></p>');
 	welcomeIcon.className='welcomeIcon fadeIn'
 	createSidePainel();
