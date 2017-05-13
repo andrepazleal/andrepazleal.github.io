@@ -293,7 +293,7 @@ center{
     position:absolute;
     width: 56px;
     height: 40px;
-    background: url(https://moodle.dominiosistemas.com.br/assets/imagesTR/spriteClickHere.png) no-repeat;
+    background: url(../images/spriteClickHere.png) no-repeat;
     right:0;
     bottom:0;
     -webkit-animation: blink .9s steps(30) infinite;
@@ -717,7 +717,7 @@ li{
 
 li:before {
     content: '';
-    background: url("https://moodle.dominiosistemas.com.br/assets/imagesTR/sprite.png") no-repeat left top;
+    background: url("../images/sprite.png") no-repeat left top;
     height: 20px;
     width: 20px;
     position: absolute;
