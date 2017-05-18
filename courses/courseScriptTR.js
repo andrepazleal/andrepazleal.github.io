@@ -1047,7 +1047,7 @@ function feedback(){
 		var feedbackStar = document.createElement('span')
 		feedbackStar.setAttribute('id','feedbackStar'+[i]);
 		feedbackStarContainer.appendChild(feedbackStar);
-		feedbackStar.innerHTML="â˜†"
+		feedbackStar.innerHTML="☆"
 		feedbackStarContainer.className="feedbackStarRating";
 	}
 
