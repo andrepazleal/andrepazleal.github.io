@@ -1,9 +1,7 @@
 /*TEST SCRIPT FOR COURSES*/
 $('head').append('<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">');
 $('head').append('<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">');
-$('head').append('<link rel="stylesheet" type="text/css" href="https://andrepazleal.github.io/courses/css/courseStyle.css">');
-
-console.log('andrepazleal')
+$('head').append('<link rel="stylesheet" type="text/css" href="../css/courseStyle.css">');
 
 cp.movie.am.pauseCurrentSlideAudioForInteractiveClick();
 
@@ -24,7 +22,7 @@ var screenSizeWidth = parseInt(screenSize.style.width)
 var screenSizeHeight = parseInt(screenSize.style.height)
 var pageUrl = window.location.hostname;
 var courseOptionsEn = '<h5>To access the course options,<br>access the icon on the bottom right corner.'
-var courseOptionsPt = '<h5>Para acesso as opções do curso,<br>toque no canto inferior direito.'
+var courseOptionsPt = '<h5>Para acesso as opÃ§Ãµes do curso,<br>toque no canto inferior direito.'
 var introType;
 var timeStamp = (new Date()).getTime();
 var languageSystem = window.navigator.userLanguage || window.navigator.language;
@@ -88,7 +86,6 @@ function showPainelContent(){
 		}
 	}
 	else{
-
 		try{
 			$(painelTitleSlide).css('display','none');			
 			painelTitleSlide.innerHTML='';
@@ -258,17 +255,17 @@ function carregandoTela(){
 
 function companyName(){
 	companyName = (cpInfoCompany.split(' '));
-	if(companyName[0] == 'Company')
+	if(companyName[0] == 'Thomson')
 	{
-		companyName = 'logoCompany.png';
+		companyName = 'logoThomson.png';
 	}
-	if(companyName[0] == 'Domínio')
+	if(companyName[0] == 'DomÃ­nio')
 	{
-		companyName = 'logoDominio.png';
+		companyName = 'logoDominio.svg';
 	}
 	if(companyName[0] == 'Novajus')
 	{
-		companyName = 'logoNovaprolink.png';
+		companyName = 'logoNovajus.svg';
 	}
 	if(companyName[0] == 'Mastersaf')
 	{
@@ -303,7 +300,7 @@ function courseName(){
 	{
 		courseName = 'ftp.png';
 	}
-	if(courseName[2] == 'Não')
+	if(courseName[2] == 'NÃ£o')
 	{
 		courseName = 'contabilidadeNaoContadores.png';
 	}	
@@ -327,11 +324,11 @@ function courseName(){
 	{
 		courseName = 'atendimento.png';
 	}
-	if(courseName[1] == 'Honorários')
+	if(courseName[1] == 'HonorÃ¡rios')
 	{
 		courseName = 'honorarios.png';
 	}
-	if(courseName[1] == 'Patrimônio')
+	if(courseName[1] == 'PatrimÃ´nio')
 	{
 		courseName = 'patrimonio.png';
 	}
@@ -351,19 +348,19 @@ function courseName(){
 	{
 		courseName = 'protocolo.png';
 	}
-	if(courseName[1] == 'Utilitários')
+	if(courseName[1] == 'UtilitÃ¡rios')
 	{
 		courseName = 'utilitarios.png';
 	}
-	if(courseName[0] == 'Informática')
+	if(courseName[0] == 'InformÃ¡tica')
 	{
 		courseName = 'informatica.png';
 	}
-	if(courseName[0] == 'Instalação')
+	if(courseName[0] == 'InstalaÃ§Ã£o')
 	{
 		courseName = 'instalacao.png';
 	}
-	if(courseName[1] == 'Folha' && courseName[3] == 'Integração')
+	if(courseName[1] == 'Folha' && courseName[3] == 'IntegraÃ§Ã£o')
 	{
 		courseName = 'folhaIntegracao.png';
 	}
@@ -371,7 +368,7 @@ function courseName(){
 	{
 		courseName = 'folhaEsocial.png';
 	}
-	if(courseName[1] == 'Folha' && courseName[3] == 'Médias')
+	if(courseName[1] == 'Folha' && courseName[3] == 'MÃ©dias')
 	{
 		courseName = 'folhaMedias.png';
 	}
@@ -379,7 +376,7 @@ function courseName(){
 	{
 		courseName = 'folhaCAGED.png';
 	}
-	if(courseName[1] == 'Folha' && courseName[3] == '13º')
+	if(courseName[1] == 'Folha' && courseName[3] == '13Âº')
 	{
 		courseName = 'folhaDecimo.png';
 	}
@@ -411,7 +408,7 @@ function courseName(){
 	{
 		courseName = 'escritaAtividade.png';
 	}
-	if(courseName[1] == 'Escrita' && courseName[4] == 'São')
+	if(courseName[1] == 'Escrita' && courseName[4] == 'SÃ£o')
 	{
 		courseName = 'escritaSp.png';
 	}
@@ -447,11 +444,11 @@ function courseName(){
 	{
 		courseName = 'institucional.jpg';
 	}
-	if(courseName[0] == 'Conteúdo' && courseName[2] == 'Tributário')
+	if(courseName[0] == 'ConteÃºdo' && courseName[2] == 'TributÃ¡rio')
 	{	
 		courseName = 'conteudoContabilTributario.png';
 	}
-	if(courseName[1] == 'Contábil')
+	if(courseName[1] == 'ContÃ¡bil')
 	{
 		courseName = 'contabilPlus.png';
 	}
@@ -467,7 +464,7 @@ function courseName(){
 	{
 		courseName = 'MyExpenses.png';
 	}
-	if(courseName[1] == 'Imóvel')
+	if(courseName[1] == 'ImÃ³vel')
 	{
 		courseName = 'Dominio Imovel.png';
 	}
@@ -495,11 +492,11 @@ function courseName(){
 	{	
 		courseName = 'dominioWebsites.png';
 	}
-	if(courseName[0] == 'Introdução' && courseName[2] == 'Escrita')
+	if(courseName[0] == 'IntroduÃ§Ã£o' && courseName[2] == 'Escrita')
 	{	
 		courseName = 'Introducao-EF.png';
 	}
-	if(courseName[0] == 'Contábil' && courseName[1] == 'Plus')
+	if(courseName[0] == 'ContÃ¡bil' && courseName[1] == 'Plus')
 	{	
 		courseName = 'contabilPlus10.png';
 	}
@@ -536,15 +533,34 @@ function courseName(){
 function createElements(){
 	var logoCompanyContainer = document.createElement("div");
 	logoCompanyContainer.setAttribute("id", "logoCompanyContainer");	
-	//companyName();
+	//added
+	//document.getElementById("div_Slide").appendChild(logoCompanyContainer);
+	companyName();
 	document.getElementById("project_main").appendChild(logoCompanyContainer);
-	//$(logoCompanyContainer).css('background-image','url(../images/'+companyName+')');
-	$(logoCompanyContainer).css('background-image','url(../images/logoCompany.png)');
+	//logoCompanyContainer.setAttribute("style", "position:absolute; z-index:2");
+	//$(logoCompanyContainer).css('position','absolute');
+	//$(logoCompanyContainer).css('height','100%');
+	//$(logoCompanyContainer).css('width','100%');
+	//$(logoCompanyContainer).css('top','88%');
+	//$(logoCompanyContainer).css('opacity',0);
+	$(logoCompanyContainer).css('background-image','url(https://moodle.dominiosistemas.com.br/assets/imagesTR/'+companyName+')');
+	//$(logoCompanyContainer).css('background-repeat','no-repeat');
+	//$(logoCompanyContainer).css('background-position','50% 0');
+	//$(logoCompanyContainer).css('background-size','35%');
+
 	var logoCourse = document.createElement("img");
 	logoCourse.setAttribute("id", "logoCourse");
 	document.getElementById("project_main").appendChild(logoCourse);
 	courseName();
 	logoCourse.setAttribute("src", "https://moodle.dominiosistemas.com.br/assets/logos/"+courseName);
+	
+	//logoCourse.setAttribute("height", "59.5%");
+	//logoCourse.setAttribute("width", "45%");
+	//logoCourse.setAttribute("style", "position:absolute;");
+	//$(logoCourse).css('top','18%');
+	//$(logoCourse).css('z-index',70);
+	//$(logoCourse).css('opacity',0);
+
 	var nomeTopicoText = document.createElement("p");
 	nomeTopicoText.setAttribute("id", "nomeTopicoText");
 	$(nomeTopicoText).css('display',"table-cell");
@@ -570,8 +586,8 @@ function createElements(){
 	$(nomeTopicoContainer).css("z-index", 2);
 	$(nomeTopicoContainer).css("width", '22%');
 	$(nomeTopicoContainer).css("height", '29%');
-	$(nomeTopicoContainer).css('top','18%');
-	$(nomeTopicoContainer).css('left','50%');
+	$(nomeTopicoContainer).css('top','33%');
+	$(nomeTopicoContainer).css('left','39%');
 	$(nomeTopicoContainer).css('font-size',24);
 	//$(nomeTopicoContainer).css('font-family',"Knowledge, Segoe UI Light, Avenir-Light, Arial, Segoe UI Light, Avenir-Light, Arial");
 	$(nomeTopicoContainer).css('color',"#ffffff");
@@ -661,7 +677,7 @@ function createElements(){
 	$(messageFinalElementIcon).css("color","#ffffff");
 	$(messageFinalElementIcon).html('<p style="display:table-cell;vertical-align:middle;text-align:center;pointer-events:none;"><i class="fa fa-angle-left fa-3x"></i></p>');
 	//Create character if is a chracter
-	if(cpInfoDescription.split(' ')[0] == 'Character!'){
+	if(cpInfoDescription.split(' ')[0] == 'Character'){
 		createCharacter();
 	}
 }	
@@ -704,7 +720,7 @@ function introVideos(){
 		{
 			introType = 'introLmsOut.mp4';	
 		}
-		if(cpInfoCurrentSlideLabel == "Seja Bem Vindo!" || cpInfoCurrentSlideLabel == "Faça Você Mesmo!" || cpInfoCurrentSlideLabel != "Fim!"){	
+		if(cpInfoCurrentSlideLabel == "Seja Bem Vindo!" || cpInfoCurrentSlideLabel == "FaÃ§a VocÃª Mesmo!" || cpInfoCurrentSlideLabel != "Fim!"){	
 			var videoIntroElement = document.createElement("video")
 			document.getElementById("div_Slide").appendChild(videoIntroElement);
 			videoIntroElement.setAttribute("id", "videoIntroElement");
@@ -772,6 +788,9 @@ function certification(){
 	console.log("Certification")
 	createSidePainel();
 	createPainel();
+
+	
+
 	div_Slide.className='moveInDivSlide';
 	videoIntroElement.style.opacity="0"
 	//logoCompanyContainer.className="fadeIn";
@@ -804,29 +823,59 @@ function certification(){
 	//var logoCourseClone = logoCourse.cloneNode(true);
 	document.getElementById("painelTextoSlide").appendChild(logoCourse);
 	//logoCourseClone.setAttribute("id", "logoCourseClone");
-	logoCourse.className="beneficiosCourseLogo ";
+	logoCourse.className="certificationLogo";
+
+	var progressBarContainer = document.createElement('div')
+	progressBarContainer.setAttribute('id','progressBarContainer')
+	painelTextoSlide.appendChild(progressBarContainer);
+	progressBarContainer.className="progressBarContainer"
+	
+	var progressBar = document.createElement('div')
+	progressBar.setAttribute("id","progressBar")
+	progressBarContainer.appendChild(progressBar)
+	progressBar.className="progressBar"
+	
+	var progressBarText = document.createElement('span')
+	progressBarText.setAttribute('id','progressBarText')
+	progressBar.appendChild(progressBarText)
+	progressBarText.className="progressBarText"
 
 	nameAlunoString();
 	var certificationGroup = document.createElement("div");
 	certificationGroup.setAttribute("id", "certificationGroup");
 	certificationGroup.setAttribute("style","display:flex;width:100%;height:400px;flex-wrap: wrap;align-self: center;justify-content: center;font-size:17px;margin-left: inherit;max-width: inherit;")
 	$(painelTextoSlide).append(certificationGroup);
-	certificationGroup.innerHTML="<span><b>"+nomeAluno+" preparado para iniciar esta certificação?"+"</b><br>Escolha seu nível abaixo:";
+	certificationGroup.className="certification"
+
+
+	var certificationGroupText = document.createElement("span")
+	certificationGroupText.setAttribute('id','certificationGroupText')
+	//$(certificationGroup).append(certificationGroupText);
+	certificationGroup.appendChild(certificationGroupText)
+	certificationGroupText.innerHTML="<b>"+nomeAluno+" preparado para iniciar esta certificaÃ§Ã£o?"+"</b><br>Escolha seu nÃ­vel abaixo:";
+
+
+
+
 
 	var certification1 = document.createElement("div");
 	certification1.setAttribute("id", "certification1");
+	certification1.className="certification"
 	$(certificationGroup).append(certification1);
 
 	var certification2 = document.createElement("div");
 	certification2.setAttribute("id", "certification2");
+	certification2.className="certification"
 	$(certificationGroup).append(certification2);
 
 	var certification3 = document.createElement("div");
 	certification3.setAttribute("id", "certification3");
+	certification3.className="certification";
 	$(certificationGroup).append(certification3);
 
 	var certification4 = document.createElement("div");
 	certification4.setAttribute("id", "certification4");
+	certification4.className="certification";
 	$(certificationGroup).append(certification4);
 
 	var certification1text = document.querySelectorAll('div[id*="Slide"] + div[id*="accStr"]')[0].children[0].innerHTML.replace('Certification!','').split('  ')[0];
@@ -840,20 +889,59 @@ function certification(){
 
 	var certification4text = document.querySelectorAll('div[id*="Slide"] + div[id*="accStr"]')[0].children[0].innerHTML.replace('Certification!','').split('  ')[3]
 	certification4.innerHTML='<span class="lnr lnr-spell-check"></span><br><br>'+certification4text;	
+
+
+
+
+
+
+	certification4.addEventListener(changeClick, function(e){
+		progressBarContainer.className="progressBarContainerStart";
+
+		try{
+			SCORM_CallLMSSetValue('cmi.comments', 'ParabÃ©ns vocÃª Ã© agora um tÃ©cnico de nÃ­vel II');
+			SCORM_CallLMSSetValue('cmi.suspended_data', 'Achei o curso muito interessante');
+			SCORM_CallLMSSetValue('cmi.core.lesson_status', 'failed');
+		}catch(e){}
+
+		certification1.className="certificationOut";
+		certification2.className="certificationOut";
+		certification3.className="certificationOut";
+		logoCourse.className="certificationOut";
+		logoCourse.addEventListener("animationend", function(){
+			nextSlide();
+		})
+		//certificationGroupText.innerHTML="<b>Vamos lÃ¡ entÃ£o!</b><br>Abaixo selecione a opÃ§Ã£o correta.";
+
+		/*document.addEventListener("mouseleave", function(){
+			console.log('andre')	
+			certification1.className="certification";
+			certification2.className="certification";
+			certification3.className="certification";
+			certification4.className="certification";
+			logoCourse.className="certificationLogo"
+
+			certificationGroupText.innerHTML="<b>"+nomeAluno+" preparado para iniciar esta certificaÃ§Ã£o?"+"</b><br>Escolha seu nÃ­vel abaixo:";
+		});*/
+	})
 }
 
 introVideos();
 
 
 function fimIntro(){
+	//createPainel();
+	painel.className="opacityIn"
 	var fimContainer = document.createElement('div');
 	document.getElementById("div_Slide").appendChild(fimContainer);
+	//painelTextoSlide.appendChild(fimContainer)
+
 	fimContainer.className="fimContainer";
 
 	var fimText = document.createElement('div');	
 	fimText.setAttribute('id','fimText');
     fimText.className="fimText blurIn";
-    fimText.innerHTML='<p>Parabéns! Você concluiu o curso <br><br><strong>'+cpInfoProjectName+'</strong><br><br>Dúvidas? Envie um e-mail para <br>'+cpinfoEmailTR+'<p>';
+    fimText.innerHTML='<p>ParabÃ©ns! VocÃª concluiu o curso <br><br><strong>'+cpInfoProjectName+'</strong><br><br>DÃºvidas? Envie um e-mail para <br>'+cpinfoEmailTR+'<p>';
 
 	var fimMarketingContainer = document.createElement('div');
     fimMarketingContainer.setAttribute('id','fimMarketingContainer');
@@ -863,15 +951,19 @@ function fimIntro(){
     var fimMarketingIconText = document.createElement('div');
     fimMarketingIconText.setAttribute('id','fimMarketingIconText');
     fimMarketingIconText.className="fimMarketingIconText";
-    fimMarketingIconText.innerHTML='<div><span class="">Agora que você concluiu o curso, visite nosso e-commerce.<br><b>Veja quanto conhecimento você pode estar adquirindo!</span></div>';
+    fimMarketingIconText.innerHTML='<div><span class="">Agora que vocÃª concluiu o curso, visite nosso e-commerce.<br><b>Veja quanto conhecimento vocÃª pode estar adquirindo!</span></div>';
 
     var fimMarketingBackground = document.createElement('div');
     fimMarketingBackground.setAttribute('id','fimMarketingbackground');
     fimMarketingBackground.className="fimMarketingBackgroundStart"
 
-    logoCourse.className="fimLogo"
+   
 
-    fimContainer.appendChild(logoCourse)
+    var logoCourseClone = logoCourse.cloneNode(true);
+	document.getElementById("painelTextoSlide").appendChild(logoCourseClone);
+	logoCourseClone.className="fimLogo"
+    fimContainer.appendChild(logoCourseClone)
+
     fimText.appendChild(fimMarketingContainer)
     fimContainer.appendChild(fimText)
     fimContainer.appendChild(fimMarketingBackground)
@@ -888,7 +980,7 @@ function fimIntro(){
     var fimMarketingCurso2 = document.createElement('div');
     fimMarketingCurso2.setAttribute('id','fimMarketingCurso2');    
     fimMarketingCurso2.className="fimMarketingCurso";
-    fimMarketingCurso2.innerHTML="<a onclick='window.open(this.href)' href='http://www.dominiosistemas.com.br/ctd_detalhes/99' target='_blank'><img src='https://moodle.dominiosistemas.com.br/assets/logos/contabilidadeNaoContadores.png'>"+"<span>Contabilidade para não contadores</span>";
+    fimMarketingCurso2.innerHTML="<a onclick='window.open(this.href)' href='http://www.dominiosistemas.com.br/ctd_detalhes/99' target='_blank'><img src='https://moodle.dominiosistemas.com.br/assets/logos/contabilidadeNaoContadores.png'>"+"<span>Contabilidade para nÃ£o contadores</span>";
 
     var fimMarketingCurso3 = document.createElement('div');
     fimMarketingCurso3.setAttribute('id','fimMarketingCurso3');   
@@ -911,71 +1003,68 @@ function fimIntro(){
 		fimMarketingCursosContainer.appendChild(fimMarketingCurso2);
 		fimMarketingCursosContainer.appendChild(fimMarketingCurso3);
     });
-    //feedback();
+    feedback();
     changeColors();
 }
 
 function feedback(){
 	var feedback = document.createElement('div');
-	document.getElementById("div_Slide").appendChild(feedback);
-	feedback.setAttribute('id','feedback');
-	//feedback.setAttribute('style','border-radius:5px;position:absolute;top:60%;left:15%;background-color:rgba(255,255,255,1);z-index:200;width:700px;height:100px;display:table;');
-	feedback.style.display="flex";
-	feedback.style.borderRadius="5px";
-	feedback.style.position="relative";
-	feedback.style.zIndex=200;
-	feedback.style.width="100vw"
-	feedback.style.backgroundColor="white";
-	feedback.style.flexWrap="wrap"
+	painel.appendChild(feedback);
 
+	feedback.setAttribute('id','feedback');
+	feedback.className="feedbackContainer"
 
 	var feedbackTitle = document.createElement('div')
 	feedback.appendChild(feedbackTitle)
 	feedbackTitle.setAttribute('id','feedbackTitle')
-	//feedbackTitle.setAttribute('style','padding:10px;color:white;top:0;left:0;background-color:#666666;vertical-align:middle;text-align:center;')
 	feedbackTitle.style.padding="10px";
 	feedbackTitle.style.color="white";
 	feedbackTitle.style.flexGrow="1"
 	feedbackTitle.style.backgroundColor="#666666";
 	feedbackTitle.style.textAlign="center"
 
-	//$(feedbackTitle).css("font-family","Knowledge, Segoe UI Light, Avenir-Light, Arial, Segoe UI Light, Avenir-Light, Arial");
 	$(feedbackTitle).css("font-size","14px");
-	feedbackTitle.innerHTML = "COM 144 LETRAS DEIXE SUA OPINIÃO DE COMO PODEMOS MELHORAR OS CURSOS!"
+	feedbackTitle.innerHTML = "COM 144 LETRAS DEIXE SUA OPINIÃƒO DE COMO PODEMOS MELHORAR OS CURSOS!"
 
 	var feedbackTextarea = document.createElement('div')
 	feedback.appendChild(feedbackTextarea)
 	feedbackTextarea.setAttribute('id','feedbackTextarea')
-	feedbackTextarea.style.flexGrow="1";
+	feedbackTextarea.className="feedbackTextareaStart"
+	
 	var feedbackText = document.createElement('textarea')
 	feedbackTextarea.appendChild(feedbackText)
 	feedbackText.setAttribute('id','feedbackText')
 	feedbackText.setAttribute('maxlength','144')
 	feedbackText.setAttribute('placeholder','Digite sua mensagem aqui.')
-	feedbackText.style.width="100%";
-	feedbackText.style.height="100%";
-	//$(feedbackTextarea).css("font-family","Knowledge, Segoe UI Light, Avenir-Light, Arial, Segoe UI Light, Avenir-Light, Arial");
-	$(feedbackTextarea).css("font-size","16px");
-	$(feedbackTextarea).css("font-weight","200");
-	$(feedbackTextarea).css("margin","15px");
+	feedbackText.className="feedbackText"
 	
-	var feedbackStars = document.createElement('div')
-	feedbackTitle.appendChild(feedbackStars)
-	feedbackStars.setAttribute('id','feedbackStars')
-	feedbackStars.setAttribute('style','color:#FFCC00;top:20px;padding:10px')
-	//feedbackStars.innerHTML = "<i class='fa fa-star fa-3x'></i>"
+	var feedbackStarContainer = document.createElement('div')
+	feedbackTitle.appendChild(feedbackStarContainer)
+	feedbackStarContainer.setAttribute('id','feedbackStarContainer')
+	feedbackStarContainer.setAttribute('style','color:#FFCC00;top:20px;padding:10px')
 
-	//var feedbackStar1 = document.createElement('div')
-	//feedbackStars.appendChild(feedbackStar1)
-	//feedbackStar1.setAttribute('id','feedbackStar1')
-	//feedbackStar1.setAttribute('style','display:inline;color:#FFCC00')
-	//feedbackStar1.innerHTML = "<i class='fa fa-star fa-3x'></i>"
+	for(var i=0;i<5;i++){
+		var feedbackStar = document.createElement('span')
+		feedbackStar.setAttribute('id','feedbackStar'+[i]);
+		feedbackStarContainer.appendChild(feedbackStar);
+		feedbackStar.innerHTML="â˜†"
+		feedbackStarContainer.className="feedbackStarRating";
+	}
 
-	var feedbackStar1 = document.createElement('input')
+	feedbackStar4.addEventListener(changeClick, function(e){
+		feedbackTextarea.className="feedbackTextareaFinish"
+	});
+	feedbackStar0.addEventListener(changeClick, function(e){
+		feedbackTextarea.className="feedbackTextareaStart";
+	});
+
+	
+
+	/*var feedbackStar1 = document.createElement('input')
 	feedbackStar1.setAttribute('id','feedbackStar1')
 	//feedbackStar1.setAttribute('type','radio')
 	feedbackStar1.type = 'radio'
-	feedbackStars.appendChild(feedbackStar1)
+	feedbackStarContainer.appendChild(feedbackStar1)
 	feedbackStar1.setAttribute('style','width:16px;height:16px;color:#FFCC00;overflow:hidden;-webkit-appearance:radio;')
 	//var feedbackStar1Label = document.createElement('label')
 	//feedbackStar1.appendChild(feedbackStar1Label)
@@ -983,25 +1072,25 @@ function feedback(){
 	//feedbackStar1Label.innerHTML = "TEST"
 
 	var feedbackStar2 = document.createElement('div')
-	feedbackStars.appendChild(feedbackStar2)
+	feedbackStarContainer.appendChild(feedbackStar2)
 	feedbackStar2.setAttribute('id','feedbackStar1')
 	feedbackStar2.setAttribute('style','display:inline;color:#BEBEBE')
 	feedbackStar2.innerHTML = "<i class='fa fa-star fa-3x'></i>"
 
 	var feedbackStar3 = document.createElement('div')
-	feedbackStars.appendChild(feedbackStar3)
+	feedbackStarContainer.appendChild(feedbackStar3)
 	feedbackStar3.setAttribute('id','feedbackStar1')
 	feedbackStar3.setAttribute('style','display:inline;color:#BEBEBE')
 	feedbackStar3.innerHTML = "<i class='fa fa-star fa-3x'></i>"
 
 	var feedbackStar4 = document.createElement('div')
-	feedbackStars.appendChild(feedbackStar4)
+	feedbackStarContainer.appendChild(feedbackStar4)
 	feedbackStar4.setAttribute('id','feedbackStar1')
 	feedbackStar4.setAttribute('style','display:inline;color:#BEBEBE')
 	feedbackStar4.innerHTML = "<i class='fa fa-star fa-3x'></i>"
 
 	var feedbackStar5 = document.createElement('div')
-	feedbackStars.appendChild(feedbackStar5)
+	feedbackStarContainer.appendChild(feedbackStar5)
 	feedbackStar5.setAttribute('id','feedbackStar5')
 	$(feedbackStar5).bind(changeClick,function(e){
 	//feedbackStar5.addEventListener('click',function(){
@@ -1009,7 +1098,7 @@ function feedback(){
 		//console.log(feedbackTextarea.value)
 	})
 	feedbackStar5.setAttribute('style','display:inline;color:#BEBEBE')
-	feedbackStar5.innerHTML = "<i class='fa fa-star fa-3x'></i>"
+	feedbackStar5.innerHTML = "<i class='fa fa-star fa-3x'></i>"*/
 	logoCourse.parentNode.insertBefore(feedback, logoCourse.nextSibling);
 }
 
@@ -1072,7 +1161,7 @@ function messageRefresh(){
 		$(messageFinalElementText).html('<i class="fa fa-meh-o fa-4x"></i><br>You did not interact for a few moments,<br> please refresh your browser window.');	
 	}
 	else if(languageSystem == "pt-br" || languageSystem == "pt-BR"){
-		$(messageFinalElementText).html('<i class="fa fa-meh-o fa-4x"></i><br>Você ficou alguns minutos sem utilizar a plataforma,<br> atualize seu navegador.');	
+		$(messageFinalElementText).html('<i class="fa fa-meh-o fa-4x"></i><br>VocÃª ficou alguns minutos sem utilizar a plataforma,<br> atualize seu navegador.');	
 	}
 	
 	//$(document).css("pointer-events",'none')
@@ -1087,9 +1176,9 @@ function chooseTopicAndContinue(){
 		//$(messageFinalElementText).html('<i class="fa fa-meh-o fa-4x"></i><br>You did not interact for a few moments,<br> please refresh your browser window.');	
 	}
 	else if(languageSystem == "pt-br" || languageSystem == "pt-BR"){
-		//warningElement('<i class="fa fa-meh-o fa-4x"></i><br>Você ficou alguns minutos sem utilizar a plataforma,<br> atualize seu navegador.',10000,0)
+		//warningElement('<i class="fa fa-meh-o fa-4x"></i><br>VocÃª ficou alguns minutos sem utilizar a plataforma,<br> atualize seu navegador.',10000,0)
 		//cpCmndPause=1;
-		//$(messageFinalElementText).html('<i class="fa fa-meh-o fa-4x"></i><br>Você ficou alguns minutos sem utilizar a plataforma,<br> atualize seu navegador.');	
+		//$(messageFinalElementText).html('<i class="fa fa-meh-o fa-4x"></i><br>VocÃª ficou alguns minutos sem utilizar a plataforma,<br> atualize seu navegador.');	
 	}
 	cp.movie.am.mute(false);
 	cp.jumpToPreviousSlide();
@@ -1118,7 +1207,7 @@ function chooseTopicAndContinue(){
 		$(nomeTopicoText).html(cpInfoCurrentSlideLabel+"<br>"+nomeAluno);
 		logoCourse.className='topicoNormalLogoCourse'
 	}
-	else if(cpInfoCurrentSlideLabel != "Faça Você Mesmo!" && cpInfoCurrentSlideLabel != "Seja Bem Vindo!")
+	else if(cpInfoCurrentSlideLabel != "FaÃ§a VocÃª Mesmo!" && cpInfoCurrentSlideLabel != "Seja Bem Vindo!")
 	{
 		$(nomeTopicoText).html(cpInfoCurrentSlideLabel);
 		//TweenLite.to(logoCourse,.3,{opacity:1,left:'4.3%'});
@@ -1126,12 +1215,12 @@ function chooseTopicAndContinue(){
 	}
 	
 	//////////////////////////////////////017//////////////////////////////////////	
-	if(cpInfoCurrentSlideLabel == 'Faça Você Mesmo!') {
+	if(cpInfoCurrentSlideLabel == 'FaÃ§a VocÃª Mesmo!') {
 	//////////////////////////////////////007//////////////////////////////////////	
 		var avaliacaoPratica = document.createElement("div")
 		avaliacaoPratica.setAttribute("id", "avaliacaoPratica");
 		document.getElementById("project_main").appendChild(avaliacaoPratica);
-        $(avaliacaoPratica).html('<p style="display:table-cell;vertical-align:middle;text-align:center;pointer-events:none;"><i class="fa fa-star fa-3x"></i><br>AVALIAÇÃO<br>PRÁTICA</p>');
+        $(avaliacaoPratica).html('<p style="display:table-cell;vertical-align:middle;text-align:center;pointer-events:none;"><i class="fa fa-star fa-3x"></i><br>AVALIAÃ‡ÃƒO<br>PRÃTICA</p>');
         avaliacaoPratica.className="avaliacaoPratica blurIn"
         nomeTopicoContainer.className="blurIn"
         try{
@@ -1146,7 +1235,7 @@ function chooseTopicAndContinue(){
 
         var fvmIntroNull = document.querySelectorAll('div[id*="Slide"] + div[id*="accStr"]')[0].children[0].children[0]!=null;
         if(fvmIntroNull==true){
-	        var slideNotesTitle = document.querySelectorAll('div[id*="Slide"] + div[id*="accStr"]')[0].children[0].innerHTML.replace('Faça Você Mesmo!','<h1>').replace('<title>','</h1>').replace('</title>','').split('</h1>')[0];
+	        var slideNotesTitle = document.querySelectorAll('div[id*="Slide"] + div[id*="accStr"]')[0].children[0].innerHTML.replace('FaÃ§a VocÃª Mesmo!','<h1>').replace('<title>','</h1>').replace('</title>','').split('</h1>')[0];
 			var slideNotesText = document.querySelectorAll('div[id*="Slide"] + div[id*="accStr"]')[0].children[0].children[0].textContent;		
 
 			var fvmIntro = document.createElement("div")
@@ -1175,7 +1264,7 @@ function chooseTopicAndContinue(){
 			//logoCourse.className='welcomeLogoCourse rotateDoor'
 			sejaBemVindo();
 		}
-		else if(cpInfoCurrentSlideLabel == "Faça Você Mesmo!")
+		else if(cpInfoCurrentSlideLabel == "FaÃ§a VocÃª Mesmo!")
 		{
             try{textoQuery.className="fadeOut";}catch(e){}
 			logoCompanyContainer.className="fadeOut"
@@ -1191,7 +1280,7 @@ function chooseTopicAndContinue(){
 			    fvm();    
             });
 		}
-		else if(cpInfoCurrentSlideLabel != "Faça Você Mesmo!" && cpInfoCurrentSlideLabel != "Seja Bem Vindo!") 
+		else if(cpInfoCurrentSlideLabel != "FaÃ§a VocÃª Mesmo!" && cpInfoCurrentSlideLabel != "Seja Bem Vindo!") 
 		{
 			$(logoCompanyContainer).css('display','none');
 			logoCourse.className='topicoNormalLogoCourse fadeOut'
@@ -1418,7 +1507,7 @@ function fvm(){
 			{
 				////console.log("Tecla Pressionada: "+keyPress)
 				////console.log("Tecla a ser pressionada: "+keyName)
-				//TODO: create a counter because captivate can´t handle the function only key press;
+				//TODO: create a counter because captivate canÂ´t handle the function only key press;
 				var textEntry = $('[id*=Text_Entry]');
 				$(textEntry).css("z-index",-100);
 				//console.log(cp.model.data[questionName].currentAttempt)
@@ -1596,7 +1685,7 @@ function fvm(){
 
 		try{
 			successElement = document.querySelectorAll("[id*='Success_Caption_']")
-			successElement.innerHTML = "<p style='font-size:150px;color:#FFCC00;'>★<p/>"+"<p style='margin-top:-170px;font-size:50px,color:white'>PARABÉNS VOCÊ FEZ <br><b>"+ cpInfoPercentage+' PONTOS!';
+			successElement.innerHTML = "<p style='font-size:150px;color:#FFCC00;'>â˜…<p/>"+"<p style='margin-top:-170px;font-size:50px,color:white'>PARABÃ‰NS VOCÃŠ FEZ <br><b>"+ cpInfoPercentage+' PONTOS!';
 			successElement.style.left='35%';
 			successElement.style.top='0%';
 			//$(successElement).css('font-family',"Knowledge, Segoe UI Light, Avenir-Light, Arial, Segoe UI Light, Avenir-Light, Arial");
@@ -1640,7 +1729,7 @@ function fvm(){
 		}
 		if(numberOfTries >= 3)
 		 {
-			//captivate do not sum the content when the interaction it is a typebox but it shows as success for the user if the user type the right option at the last choice, that´s why the success message will have to only when it´s different from typebox;
+			//captivate do not sum the content when the interaction it is a typebox but it shows as success for the user if the user type the right option at the last choice, thatÂ´s why the success message will have to only when itÂ´s different from typebox;
 			//TODO: the DI must change the number off attempts inside captivate from 3 that they are used to for 4 attempts when the type of interaction is typebox, trying to change that by modifying for the DI automatically.
 			try{
 			if(questionType[0] == 'Click' || keyContent != undefined)
@@ -1746,7 +1835,7 @@ function fvm(){
 			fvmMessageFinal.setAttribute("id", "messageFinal");
 			document.getElementById("div_Slide").appendChild(fvmMessageFinal);
 			fvmMessageFinal.setAttribute("id", "messageFinal");
-			$(fvmMessageFinal).html('<b>Você concluiu o Faça Você Mesmo!</b><br><br>Para continuar, na barra superior,</br> clique no botão Avançar.');
+			$(fvmMessageFinal).html('<b>VocÃª concluiu o FaÃ§a VocÃª Mesmo!</b><br><br>Para continuar, na barra superior,</br> clique no botÃ£o AvanÃ§ar.');
 			messageFinal.setAttribute("style", "position:absolute; z-index:100");
 			$(fvmMessageFinal).css("font-size", 24);
 			$(fvmMessageFinal).css("height", '100%');
@@ -1776,7 +1865,7 @@ function fvm(){
 
             logoCourse.className="logoCoursefvmEndAnimation"
             
-			$(avaliacaoPratica).html('<p style="line-height:120%;display:table-cell;font-size:24px;vertical-align:middle;text-align:center;pointer-events:none;">VOCÊ ACERTOU<br>'+cpInfoPercentage+'%</p>');
+			$(avaliacaoPratica).html('<p style="line-height:120%;display:table-cell;font-size:24px;vertical-align:middle;text-align:center;pointer-events:none;">VOCÃŠ ACERTOU<br>'+cpInfoPercentage+'%</p>');
 			avaliacaoPratica.className="avaliacaoPraticafvmEndAnimation"
             changeColors();
 		}
@@ -1831,11 +1920,11 @@ function fvm(){
 function finalMessage(){
 	if(pageUrl == 'moodle.dominiosistemas.com.br' || pageUrl == 'qamoodle.dominiosistemas.com.br')
 	{
-		msgFinalTopico = 'Para continuar, selecione o <br>próximo tópico no campo acima.<br><br>Dúvidas? Envie um e-mail para<br>'+cpinfoEmailTR+'';
+		msgFinalTopico = 'Para continuar, selecione o <br>prÃ³ximo tÃ³pico no campo acima.<br><br>DÃºvidas? Envie um e-mail para<br>'+cpinfoEmailTR+'';
 	}
 	else
 	{
-		msgFinalTopico = 'Para continuar, na barra superior,<br>clique no botão Avançar.<br><br>Dúvidas? Envie um e-mail para<br>'+cpinfoEmailTR+''
+		msgFinalTopico = 'Para continuar, na barra superior,<br>clique no botÃ£o AvanÃ§ar.<br><br>DÃºvidas? Envie um e-mail para<br>'+cpinfoEmailTR+''
 	}
 }
 
@@ -1844,7 +1933,7 @@ function sejaBemVindo(){
 	var welcomeIcon = document.createElement("div");
 	welcomeIcon.setAttribute("id", "welcomeIcon");
 	document.getElementById("project_main").appendChild(welcomeIcon);
-	//welcomeIcon.setAttribute("src", "../images/introducaoIcon.png");
+	//welcomeIcon.setAttribute("src", "https://moodle.dominiosistemas.com.br/assets/imagesTR/introducaoIcon.png");
 	$(welcomeIcon).html('<p style="display:table-cell;vertical-align:middle;text-align:center;"><span class="big lnr lnr-select"></span></span></p>');
 	welcomeIcon.className='welcomeIcon fadeIn'
 	createSidePainel();
@@ -2330,14 +2419,14 @@ function nextSlide(){
 			$(messageFinalElement).css("display", 'none');	
 			$(showSidePainel).css("opacity", 1);
 			{
-				if(languageSystem == "en-US")
-				{
-					warningElement(courseOptionsEn,1000,3000,screenSizeHeight-50+'px',screenSizeWidth-50+'px',-45)
-				}
-				else
-				{
-					warningElement(courseOptionsPt,1000,3000,screenSizeHeight-50+'px',screenSizeWidth-50+'px',-45)
-				}
+				//if(languageSystem == "en-US")
+				//{
+					//warningElement(courseOptionsEn,1000,3000,screenSizeHeight-50+'px',screenSizeWidth-50+'px',-45)
+				//}
+				//else
+				//{
+					//warningElement(courseOptionsPt,1000,3000,screenSizeHeight-50+'px',screenSizeWidth-50+'px',-45)
+				//}
 			}
 		}
 		else
@@ -2350,8 +2439,8 @@ function nextSlide(){
 			var painelMostra= true;
 			$(ccText).css('opacity',0);
 			TweenLite.to(ccText,.3,{opacity:1});
-			$(showSidePainel).css("visibility", 'visible');
-			$(showSidePainel).css("opacity", 0);
+			//$(showSidePainel).css("visibility", 'visible');
+			//$(showSidePainel).css("opacity", 0);
 			$(messageFinalElement).css("display", 'none');	
 			
 		}
@@ -2454,8 +2543,8 @@ function changeColors(){
 		var backgroundColorIpad = document.getElementById('__bgDiv__').className;
 
 	}catch(e){}
-	console.log("Background Slide Color: "+backgroundColorSlide);
-	console.log(" Background Color: "+backgroundColor,"/ Ipad Background Color: "+backgroundColorIpad);
+	//console.log("Background Slide Color: "+backgroundColorSlide);
+	//console.log(" Background Color: "+backgroundColor,"/ Ipad Background Color: "+backgroundColorIpad);
 
 	if(backgroundColorSlide != 'rgb(255, 255, 255)' || backgroundColor != false || backgroundColorIpad == 'cp-gf' || cpInfoCurrentSlide == cpInfoSlideCount){
 	//if(backgroundColorSlide == 'rgb(255, 255, 255)' || backgroundColorIpad == 'cp-gf' || cpInfoCurrentSlide == cpInfoSlideCount){
@@ -2489,7 +2578,7 @@ function createCharacter(){
 	//character.addEventListener("animationend", function(){
 		
 	//});
-	console.log("character created")
+	
 	characterStartInterval = setInterval(characterStart, 100);
 	//$(character).css("left",'75%');	
 	//$(character).css("display",'block');	
@@ -2525,8 +2614,8 @@ function createCharacter(){
 
 function topicType(){
 	
-    if(painelNomeTopico.innerHTML == 'SEJA BEM VINDO!' && painelNomeTopico.innerHTML == "Faça Você Mesmo!"){
-		console.log('Seja Bem vindo / Faça Você Mesmo')
+    if(painelNomeTopico.innerHTML == 'SEJA BEM VINDO!' && painelNomeTopico.innerHTML == "FaÃ§a VocÃª Mesmo!"){
+		console.log('Seja Bem vindo / FaÃ§a VocÃª Mesmo')
 		$(character).css("display",'none');	
 		painel.className='painelLateralWelcome'
 		painelTextoSlide.className='painelLateralTextoSlide'
@@ -2549,6 +2638,15 @@ function topicType(){
 		changeColors();
         
 	}*/
+	else if(cpInfoCurrentSlideLabel == "Multiple Question!"){
+		multipleQuestions();
+	}
+	else if(cpInfoCurrentSlideLabel == "Feedback!"){
+		feedback();
+	}	
+	else if(cpInfoCurrentSlideLabel == "Fim!"){
+		fimIntro();
+	}	
 	else if(cpInfoCurrentSlideLabel == "Beneficios!"){
 		beneficios();
 	}
@@ -2604,6 +2702,143 @@ function topicType(){
 	}
 }
 
+function microLearning(){
+	//console.log(cp.model.data)
+
+	var Obj = cp.model.data;
+
+	var results = [];
+
+	var toSearch = "tarefas";
+
+
+	for(var i=0; i<Object.keys(Obj).length; i++) {
+		var searchContent = Object.values(Obj)[i].accstr;
+
+
+	  	/*for(key in objects[i]) {
+	    if(objects[i][key].indexOf(toSearch)!=-1) {
+	      	console.log(results.push(objects[i]));
+	    }
+	  }*/
+	}
+
+	//console.log(objects.length)
+
+	/*for(var i=0; i<Object.keys(objects).length; i++) {
+	  for(key in objects){
+	  	//console.log(key.indexOf('correta') > -1);
+	  	console.log(key)
+	  }
+	}*/
+       
+}
+
+var scoreSlides = 0;
+
+function multipleQuestions(){
+	try{
+		console.log(SCORM_CallLMSGetValue('cmi.core.score.raw'));
+		if(SCORM_CallLMSGetValue('cmi.core.score.raw') <= 0){
+			console.log('Restart?')
+		}
+	}catch(e){}
+
+	var multipleQuestionsNodes = document.querySelectorAll('div[id*="Slide"] + div[id*="accStr"]')[0].children[0].innerHTML.replace('Multiple Question!','').split('  ')
+	var questionNode = document.querySelectorAll('div[id*="Slide"] + div[id*="accStr"]')[0].children[0].innerHTML.replace('Multiple Question!','').split('  ')[0];
+	
+	painelNomeTopico.style.visibility="hidden";
+
+	painel.className='painelLateral';
+	painelTextoSlide.className='painelLateralTextoSlide';
+	nextBtn.className='painelLateralNext';
+	previousBtn.className='painelLateralPrevious';
+
+	painelTextoSlide.innerHTML="";
+	var questionContainer = document.createElement('div');
+	questionContainer.setAttribute('id','questionContainer');
+	//painelTextoSlide.appendChild(questionContainer);
+	//questionContainer.innerHTML=questionNode+"<p>";
+	questionContainer.className="questionContainer";
+
+	//painelTitleSlide.innerHTML="<h1>MÃºltiplas QuestÃµes!</h1>";
+	painelTitleSlide.innerHTML="<h2>"+questionNode;
+	painelTitleSlide.className="painelTitleSlide";
+
+
+	for(i=1; i < multipleQuestionsNodes.length; i++){
+	//console.log(multipleQuestionsNodes) 
+		var answerNode = document.querySelectorAll('div[id*="Slide"] + div[id*="accStr"]')[0].children[0].innerHTML.replace('Multiple Question!','').split('  ')[i]
+
+		var answerContainer = document.createElement('div');
+		answerContainer.setAttribute('id','answerContainer'+[i]);
+		painelTextoSlide.appendChild(answerContainer);
+		answerContainer.className="answerContainer"
+
+		var answerNumber = document.createElement('div');
+		answerNumber.setAttribute('id', 'answerNumber'+[i]);
+		answerNumber.className="answerNumber";
+		answerContainer.appendChild(answerNumber)
+		answerNumber.innerHTML="<span>"+[i]
+
+
+
+		var answerButton = document.createElement('input')
+		answerButton.setAttribute('id','answerButton'+[i])
+		answerContainer.appendChild(answerButton)
+		answerButton.type = 'checkbox';
+		answerButton.className="answerButton";
+		//answerButton.value=answerNode.indexOf('[correta]') > -1;
+		answerButton.score=answerNode.indexOf('[correta]') > -1;
+		//console.log(cpQuizInfoCurrentAttempt)
+		if(answerButton.score.length >= answerButton.score.length){
+			console.log('content')
+		}
+		var answerLabel = document.createElement('label');
+		answerContainer.appendChild(answerLabel);
+		answerLabel.innerHTML=answerNode.split('[correta]')[0];
+		answerLabel.className="answerLabel"
+		answerLabel.setAttribute('for','answerButton'+[i])
+
+		console.log("Score: "+scoreSlides)
+
+		answerButton.addEventListener(changeClick,function(e){
+		if(this.score == true){
+       		console.log('Correto')
+       		answerButton.className="answerButtonCorrect"
+       		scoreSlides++;
+       		try{
+       			//SCORM_CallLMSSetValue('cmi.core.score.max', 1000);
+				SCORM_CallLMSSetValue('cmi.core.score.raw', scoreSlides);		
+				//console.log('Score: '+SCORM_CallLMSGetValue('cmi.core.score.raw'));
+       		}
+       		catch(e){}
+   			}
+   			else{
+    		}
+		})
+		//answerContainer[i].innerHTML=answerNode;
+		//console.log(answerContainer)
+		//console.log(answerNode)
+		//console.log(answerNode.indexOf('[correta]') > -1);
+		//console.log(answerButton.value)
+	}	
+	changeColors();
+	painelAutoHeight();
+}
+
+function painelAutoHeight(){
+	if(document.documentElement.clientWidth < 420 )
+	{
+		painelTextoSlide.style.height=(painel.clientHeight-135)-(painelTitleSlide.clientHeight)+'px';
+	}
+	else
+	{
+		var painelHeight  = painelTextoSlide.clientHeight;
+		painelTextoSlide.style.maxHeight=(painel.clientHeight-painelTitleSlide.clientHeight)-30+'px';
+		painelTextoSlide.style.height='auto';
+	}
+}
 
 function painelLateral(){
 	showPainelContent();
@@ -2734,7 +2969,7 @@ function beneficios(){
 	var beneficioGroup = document.createElement("div");
 	beneficioGroup.setAttribute("id", "beneficioGroup");
 	$(painelTextoSlide).append(beneficioGroup);
-	beneficioGroup.innerHTML="<span>"+nomeAluno+" veja os benefícios que você irá adquirir ao realizar este curso."+"</span>";
+	beneficioGroup.innerHTML="<span>"+nomeAluno+" veja os benefÃ­cios que vocÃª irÃ¡ adquirir ao realizar este curso."+"</span>";
 
 	var beneficio1 = document.createElement("div");
 	beneficio1.setAttribute("id", "beneficio1");
@@ -2925,11 +3160,11 @@ function positionPainel(){
 function topicLanguage(){
 	if(pageUrl == 'moodle.dominiosistemas.com.br' || pageUrl == 'qamoodle.dominiosistemas.com.br')
 	{
-		msgFinalTopico = 'Para continuar, selecione o <br>próximo tópico no campo acima.<br><br>Dúvidas? Envie um e-mail para<br>'+cpinfoEmailTR;
+		msgFinalTopico = 'Para continuar, selecione o <br>prÃ³ximo tÃ³pico no campo acima.<br><br>DÃºvidas? Envie um e-mail para<br>'+cpinfoEmailTR;
 	}
 	else
 	{
-		msgFinalTopico = 'Para continuar, na barra superior,<br>clique no botão Avançar.<br><br>Dúvidas? Envie um e-mail para<br>'+cpinfoEmailTR;
+		msgFinalTopico = 'Para continuar, na barra superior,<br>clique no botÃ£o AvanÃ§ar.<br><br>DÃºvidas? Envie um e-mail para<br>'+cpinfoEmailTR;
 	}
 	$('#soundBtn p').html('<p><i class="fa fa-volume-up fa-3x"></i><br>SOM</p>');
 	$('#painelBtn p').html('<p><i class="fa fa-list-alt fa-3x"></i><br>PAINEL</p>');
@@ -2957,7 +3192,7 @@ function messageFailureToPanel(){
 			painelTextoSlide.innerHTML=failureCaption;
 		}
 		else{
-			painelTextoSlide.innerHTML='Clique na seta para Avançar.';	
+			painelTextoSlide.innerHTML='Clique na seta para AvanÃ§ar.';	
 		}
 	}
 }

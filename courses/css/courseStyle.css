@@ -1,4 +1,4 @@
- /*PRODUCTION CSS FOR COURSES*/
+ /*TEST CSS FOR COURSES*/
 
 /*@import url(https://fonts.googleapis.com/css?family=Questrial);
 
@@ -11,6 +11,468 @@ body{
   font-family: 'KnowledgeRegular'!important;
 }
 
+
+@import url('//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css');
+
+
+.feedbackTextareaStart{
+  -webkit-transition: all 250ms ease;
+  flex-grow: 1;
+  opacity: 0;
+  height:0;
+  margin: 0px;
+
+}
+.feedbackTextareaFinish{
+  opacity: 1;
+  -webkit-transition: all 250ms ease;
+  height:40px;
+  margin: 15px;
+  font-weight: 200;
+  font-size:16px;
+  width:100%;
+}
+.feedbackText{
+  resize: none;
+  width:100%;
+  padding: 0px;
+  font-family: sans-serif;
+}
+.feedbackContainer{
+    display: flex;
+    position: absolute;
+    margin-left:25%;
+    margin-top:25%;
+    z-index: 200;
+    width: 50vw;
+    background-color: white;
+    flex-wrap: wrap;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+    -webkit-animation: opacityOut .5s ease-out forwards;
+}
+
+.opacityIn{
+      -webkit-animation: opacityIn .5s ease-out forwards;
+}
+
+.opacityOut{
+      -webkit-animation: opacityOut .5s ease-out forwards;
+}
+
+@keyframes opacityOut{
+  from { opacity:0;}to { opacity:1;}
+}
+
+@keyframes opacityIn{
+  from { opacity:1;}to { opacity:0;}
+}
+
+.feedbackStarRating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  text-shadow: -1px 1px 30px #ffc;
+}
+.feedbackStarRating > span {
+  display: inline-block;
+  position: relative;
+  font-size: 3em;
+  user-select:none;
+}
+.feedbackStarRating > span:hover:before,
+.feedbackStarRating > span:hover ~ span:before {
+   content: "\2605";
+   position: absolute;
+}
+
+.answerNumber{
+    background-color: #ff8000;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.answerNumber > span{
+  color:white;
+  font-weight: bold;
+}
+.answerContainer{
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding:10px;
+}
+.answerContainer:nth-child(odd){
+  background-color:rgba(0,0,0,.1);
+}
+
+.answerLabel{
+    font-size: 1em;
+    width: 80%;
+    height: 80px;
+    overflow-y: scroll;
+    -webkit-animation: changeBackground .2s ease-out forwards;
+}
+
+input[type="checkbox"]{
+  content: '';
+  background: transparent;
+  border-radius: 100%;
+  border: 5px solid white;
+  width: 2.4em;
+  height: 2.4em;
+  cursor: pointer;
+  text-align: center;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+  -webkit-appearance: none !important;
+}
+input[type="checkbox"]:hover{
+  opacity:.5;
+  background: white;
+  border-radius: 100%;
+  border: 0px solid white;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+  -webkit-appearance: none !important;
+}
+input[type="checkbox"]:checked{
+  opacity:1;
+  border-radius: 100%;
+  border: 5px solid #ff8000;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+  -webkit-appearance: none !important;
+}
+
+
+
+.questionContainer{
+  font-size:2em;
+}
+
+.progressBarContainer{
+    width: 60%;
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+    display:inline-flex;
+}
+.progressBar{
+    width: 98%;
+    height: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    background: -webkit-linear-gradient(left, #74d00f , white); 
+    background: linear-gradient(to right, #74d00f , white);
+}
+
+.certificationOut{
+  -webkit-animation: certificationOut .5s ease-out forwards!important;
+}
+
+@-webkit-keyframes certificationOut{
+    0%{
+      opacity:1;
+      transform:translateY(0);
+      -webkit-filter: blur(0px)
+    }
+    100% {
+      opacity: 0;
+      position:absolute;
+    }
+}
+
+.certificationLogo{
+    -webkit-animation: certificationLogo 1s ease-out forwards;
+    top: 50%;
+    left: 50%;
+    position:relative!important;
+    width:10em;
+}
+@keyframes certificationLogo{
+  from { opacity:0;-webkit-filter: blur(10px);transform: translate(-50%, -50%) scale(5);width:15em;}
+  to { opacity:1;-webkit-filter: blur(0px);transform: translate(-50%, 0%)}
+}
+
+div[id="fimMarketingIcon"] > span:hover{
+  -webkit-animation: glowCircle 250ms ease-out forwards;
+}
+
+div[id*="certification"] > span{
+  font-size:60px;
+}
+
+.certification{
+    width: 10em;
+    display: -webkit-inline-box;
+    text-align:-webkit-center;
+    font-size:18px;
+    line-height:28px;
+    font-family: 'KnowledgeLight'!important;
+    margin:20px;
+}
+
+.certificationActive{
+    text-shadow: -1px 1px 30px #ffc;
+    -webkit-filter: blur(0px);
+    opacity:1;
+    background-color:white;
+    border-radius:100%;
+    padding:20px;
+    color:#00BEFF;
+}
+
+div[id="certificationGroup"]{
+    display:flex;
+    width:100%;
+    height:400px;
+    flex-wrap: wrap;;
+    align-self: center;
+    justify-content: center;
+    font-size:17px;
+    margin-left: inherit;
+    max-width: inherit;
+}
+
+div[id="certificationGroup"] > span{
+    width:100%;
+    font-size:30px;
+}
+
+div[id="certification1"]{
+    -webkit-animation: blurIn .5s ease-out forwards;
+}
+div[id="certification1"] > span:hover{
+  -webkit-animation: glowCircle 250ms ease-out forwards;
+}
+
+div[id="certification2"]{
+    -webkit-animation: blurIn 1s ease-out forwards;
+}
+div[id="certification2"] > span:hover{
+  -webkit-animation: glowCircle 250ms ease-out forwards;
+}
+
+div[id="certification3"]{
+    -webkit-animation: blurIn 1.5s ease-out forwards; 
+}
+div[id="certification3"] > span:hover{
+  -webkit-animation: glowCircle 250ms ease-out forwards;
+}
+
+div[id="certification4"]{
+    -webkit-animation: blurIn 2s ease-out forwards;
+}
+div[id="certification4"] > span:hover{
+  -webkit-animation: glowCircle 250ms ease-out forwards;
+}
+
+
+.blink:after{
+    z-index: 200000;
+    content: '';
+    position:absolute;
+    width: 56px;
+    height: 40px;
+    background: url(https://moodle.dominiosistemas.com.br/assets/imagesTR/spriteClickHere.png) no-repeat;
+    -webkit-animation: blink .9s steps(30) infinite;
+    margin:5%;
+}
+
+@keyframes blink {
+  0% { background-position: 0 0 ;}
+  100% { background-position: -1680px 0; }
+}
+
+.fimLogo{
+  position:relative!important;
+  -webkit-animation: blurIn 1s ease-out forwards;
+  width:355px;
+  height:355px;
+}
+
+.fimContainer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    display: flex!important;
+    visibility: visible;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background:#999999;
+}
+
+.fimText{
+    font-size: 125%;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-weight: lighter;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    z-index:100;
+}
+.fimMarketingContainer{
+    /* width: 95px; */
+    /* height: 95px; */
+    /* font-size: 3em; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* color: white; */
+    /* border: 5px solid white; */
+    /* border-radius: 100%; */
+}
+.fimMarketingContainerBlue{
+  margin-top:170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fimMarketingIconBlue{
+  color:#00b1f1!important;
+  border:#00b1f1 5px solid!important;
+}
+
+.fimMarketingBlue{
+  color:#00b1f1!important;
+  margin-left:20px;
+}
+
+.fimMarketingIcon{
+    width: 95px;
+    height: 95px;
+    font-size: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border: 5px solid white;
+    border-radius: 100%;
+}
+
+.fimMarketingIconText{
+    font-size: large;
+}
+
+.fimMarketingBackground{
+  bottom: -25%!important;
+  z-index: 100;
+}
+.fimMarketingBackgroundStart{
+  width: 100%;
+  height: 480px;
+  position: absolute;
+  bottom: -70%;
+  background-repeat: repeat-x;
+  background-position: -30px 0px;
+  background-image: url(https://moodle.dominiosistemas.com.br/assets/imagesTR/marketingCloudsBackground.svg);
+  background-size: 1150px;
+}
+
+.fimMarketingCursosContainer{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height:230px;
+}
+
+.fimMarketingCurso{
+  width:150px;
+  height:150px;
+  /*background:white;*/
+  border-radius:5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align:center;
+  /*box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);*/
+  flex-direction: column;
+}
+
+.fimMarketingCurso > a{
+  width:100px;
+  height:100px;
+  font-size: medium;
+  color:#999999;
+  padding:0;
+  background:transparent;
+}
+
+.fimMarketingCurso > a > img{
+  width:100px;
+  height:100px;
+  font-size: medium;
+  padding:0;
+  background:transparent;
+}
+
+.fimMarketingCurso > a:hover{
+  -webkit-animation: scaleIn 250ms ease-out forwards;
+}
+
+.goUp{
+  -webkit-animation: goUp 1s ease-out forwards; 
+  flex-wrap: wrap;
+}
+
+.goUpBlur{
+  -webkit-animation: goUpBlur 1s ease-out forwards; 
+}
+
+@keyframes goUp{
+  from{ 
+    transform: translateY(0);
+    opacity: 0;
+  }
+  to{ 
+    transform: translateY(-40%);
+    opacity: 1;
+  }
+}
+
+@keyframes goUpBlur{
+  from{ 
+    transform: translateY(0);
+    -webkit-filter: blur(0px);
+    opacity: 1;
+  }
+  to{ 
+    transform: translateY(-40%);
+    -webkit-filter: blur(3px);
+    opacity: .7;
+  }
+}
+
+@keyframes glowCircle{
+  from { 
+    text-shadow: -1px 1px 0px #ffc;
+    color:transparent;
+    border-radius:100%;
+    opacity:0;
+    -webkit-filter: blur(10px);
+  }
+  to { 
+    text-shadow: -1px 1px 30px #ffc;
+    -webkit-filter: blur(0px);
+    opacity:1;
+    background-color:white;
+    border-radius:100%;
+    padding:20px;
+    color:#00BEFF;
+  }
+}
+
+
 .painelNormal > #infoTopico{
     bottom: 10%;
     position: absolute;   
@@ -22,7 +484,7 @@ body{
     color: rgb(255, 255, 255);
     position: fixed;
     text-align: -webkit-center;
-    left: 44%;
+    width:100%;
 }
 
 .painelLateralWelcome > #infoTopico{
@@ -30,14 +492,14 @@ body{
     color: rgb(255, 255, 255);
     position: fixed;
     text-align: -webkit-center;
-    left: 69%;
+    width:100%;
 }
 
 .painelNormalTextoSlide{
-    width:88%!important;
-    margin-left:0!important;
-    max-width:88%!important;
-    height:80%;
+  width:88%!important;
+  margin-left:0!important;
+  max-width:88%!important;
+  height:80%;
 }
 
 .ranger{
@@ -51,13 +513,13 @@ body{
 }
 
 input[type="range"] {
-    -webkit-appearance: none !important;
-    width: 100%;
-    height: 2px;
-    background-color: #ff8000;
-    border-radius: 10px;
-    margin: auto;
-    transition: all 0.3s ease;
+  -webkit-appearance: none !important;
+  width: 100%;
+  height: 5px;
+  background-color: #ff8000;
+  border-radius: 10px;
+  margin: auto;
+  transition: all 0.3s ease;
 }
 input[type="range"]:hover {
 
@@ -79,7 +541,6 @@ input[type="range"]::-webkit-slider-thumb:hover {
 input[type="range"]::-webkit-slider-thumb:active {
   outline:none;
 }
-
 
 
 #sidePainel {
@@ -105,12 +566,13 @@ input[type="range"]::-webkit-slider-thumb:active {
   position:absolute;
   transition: all 0.3s ease-out;
 }
-
 .fvmIntro{
   width: 457px;
   height: 459px;
+  left: 40px;
+  top: 135px;
   display: block;
-  transform: translateY(-31%) translateX(10%);
+  position: absolute;
 }
 
 .successCaption{
@@ -132,26 +594,16 @@ input[type="range"]::-webkit-slider-thumb:active {
 -webkit-animation: scaleOut 1s ease-out forwards;
 }
 
-.beneficiosCourseLogo{
+.beneficiosCourseLogo {
     -webkit-animation: beneficiosCourseLogo 1s ease-out forwards;
     top: 50%;
     left: 50%;
     position:relative!important;
-}
+    }
 
 @keyframes beneficiosCourseLogo{
-    from{ 
-        opacity:0;
-        -webkit-filter: blur(10px);
-        transform: translate(-50%, -50%) scale(5);
-        width:15em;
-    }
-    to{
-        opacity:1;
-        -webkit-filter: blur(0px);
-        transform: translate(-50%, 0%);
-        width:10em;
-    }
+  from { opacity:0;-webkit-filter: blur(10px);transform: translate(-50%, -50%) scale(5);width:15em;}
+  to { opacity:1;-webkit-filter: blur(0px);transform: translate(-50%, 0%);width:10em;}
 }
 div[id*="beneficio"] > span{
   font-size:80px;
@@ -161,7 +613,7 @@ div[id*="beneficio"] > span{
 div[id*="beneficio"]{
     width: 250px;
     display: -webkit-inline-box;
-    text-align:center;
+    text-align:-webkit-center;
     font-size:18px;
     line-height:28px;
     font-family: 'KnowledgeLight'!important;
@@ -186,17 +638,18 @@ div[id="beneficioGroup"] > span{
 }
 
 div[id="beneficio1"]{
-    -webkit-animation: blurIn 1s ease-out forwards;
+    -webkit-animation: blurIn .5s ease-out forwards;
     
 
 }
 div[id="beneficio2"]{
-    -webkit-animation: blurIn 2s ease-out forwards;
-    
+    -webkit-animation: blurIn 1s ease-out forwards;
 }
 div[id="beneficio3"]{
-    -webkit-animation: blurIn 3s ease-out forwards;
-    
+    -webkit-animation: blurIn 1.5s ease-out forwards;
+}
+div[id="beneficio4"]{
+    -webkit-animation: blurIn 2s ease-out forwards;
 }
 
 div[id*="Click_Box"],div[id*="Highlight_Box"]{
@@ -220,14 +673,8 @@ video::-webkit-media-controls {
 }
 
 @keyframes logoCoursefvmFinal {
-    0% { 
-        opacity:0;
-        transform:translate3d(460%,170%,0)
-    }
-    100% { 
-        opacity:1;
-        transform:translate3d(220%,170%,0)
-    }
+  0% { opacity:0;transform:translate3d(460%,170%,0)}
+  100% { opacity:1;transform:translate3d(220%,170%,0)}
 }
 
 @keyframes avaliacaoPraticafvmFinal {
@@ -288,21 +735,6 @@ center{
     margin: auto;
 }
 
-.blink{
-    z-index: 200000;
-    position:absolute;
-    width: 56px;
-    height: 40px;
-    background: url(../images/spriteClickHere.png) no-repeat;
-    right:0;
-    bottom:0;
-    -webkit-animation: blink .9s steps(30) infinite;
-}
-
-@keyframes blink {
-  0% { background-position: 0 0 ;}
-  100% { background-position: -1680px 0; }
-}
 
 .tooltip {
   text-decoration: none;
@@ -442,6 +874,8 @@ h1{
 }
 h2{
   font-size: 1.3em;font-weight:100;text-transform:uppercase;
+      -webkit-margin-before: 0.0em;
+    -webkit-margin-after: 0.0em;
 }
 
 h4{
@@ -465,7 +899,7 @@ div[id*="Video"], div[id*="re-Video"], div[class*="cp-eventVideo"], video{
 }
 
 .borderColor:hover{
-  -webkit-transform: scale(.98);opacity: .15;transition: all 0.3s ease-out;
+    -webkit-transform: scale(.98);opacity: .15;transition: all 0.3s ease-out;
 }
 
 .closeTurnImage{
@@ -545,7 +979,13 @@ body {
 } */ 
 
 #character{
-  top:130px;left:600px;width: 140px;z-index: 98;height: 430px;position: absolute;pointer-events:none;
+  top: 130px;
+  left: 600px;
+  width: 140px;
+  z-index: 250;
+  height: 430px;
+  position: absolute;
+  pointer-events: none;
 }
 
 .noselect {
@@ -613,7 +1053,6 @@ body {
   transition: all 0.8s ease-in;
 }
 
-
 .scaleBorderAnimation {
   border-radius: 100%;-webkit-transition: all 0.2s ease-in;transition: all 0.2s ease-in;
 }
@@ -633,21 +1072,19 @@ body {
 }
 
 .fadeOut{
-    -webkit-filter: opacity(0);
-    opacity: 0;
-    visibility: hidden;
-    -webkit-transition: all .5s ease-in;
-    transition: all .5s ease-in;
-    display: none;
-    z-index:0;
+  -webkit-filter: opacity(0);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+  display:none;
 }
+
 .fadeIn{
-    opacity: 1!important;
-    visibility: visible;
-    -webkit-transition: opacity 1s ease-in;
-    transition: opacity 1s ease-in;
-    display: block;
-    z-index:100;
+  opacity: 1!important;
+  visibility: visible;
+  -webkit-transition: opacity .2s ease-in;
+  transition: opacity .2s ease-in;
 }
 
 .moveOut{
@@ -717,7 +1154,7 @@ li{
 
 li:before {
     content: '';
-    background: url("../images/sprite.png") no-repeat left top;
+    background: url("https://moodle.dominiosistemas.com.br/assets/imagesTR/sprite.png") no-repeat left top;
     height: 20px;
     width: 20px;
     position: absolute;
@@ -792,6 +1229,7 @@ li:nth-child(16){
   }
 }
 
+
 .blurNothing{
  -webkit-filter: blur(0px);
  opacity:1;
@@ -800,7 +1238,6 @@ li:nth-child(16){
 
 .blurOut {
     -webkit-animation: blurOut 0.5s ease-out forwards;
-
 }
 
 @keyframes blurOut{
@@ -811,9 +1248,10 @@ li:nth-child(16){
   }
   to
   {
-   opacity:0;
+    opacity:0;
     -webkit-filter: blur(10px);
     visibility: hidden;
+    display:none;
   }
 }
 
@@ -853,14 +1291,15 @@ li:nth-child(16){
   background-color:#666666;transform: translateY(8em) translateX(5em);height:10em;
 }
 
+
+
 .painelLateral{
   -webkit-transform: translateY(-235px) translateX(50px);
     height:80%;
     width:86.5%;
     background:rgba(0,0,0,0);
     visibility: visible;
-    /*-webkit-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;*/
+    
     z-index:200!important;
 }
 .painelLateralNext{
@@ -875,9 +1314,10 @@ transform:translate3d(40em,29em,0)
 .painelLateralPrevious800{
 transform:translate3d(-2em,29em,0)
 }
-
 .painelNormal{
-  width:80%;border-radius: 5px;color:white;
+  width:80%;
+  border-radius: 5px;
+  color:white;
 }
 .painelNormalPrevious{
 transform:translate3d(46em,6em,0)
@@ -960,7 +1400,16 @@ hr{
    background-color:white;opacity:0;height:30%;width:22%;top:48%;left:73%;position:absolute;cursor:pointer;
 }
 #logoCompanyContainer{
-  position: absolute; height: 100%; width:100%; top:88%; opacity: 0; display: block;background-size:30%!important; background-position: 50% 0 !important;pointer-events:none;webkit-transition: opacity .5s ease-out; transition: opacity .5s ease-out;background-repeat:no-repeat!important;
+  position: absolute; 
+  height: 100%; 
+  width:100%;
+  top:88%;
+  display: block;
+  background-size:30%!important;
+  background-position: 50% 0 !important;
+  pointer-events:none;
+  background-repeat:no-repeat!important;
+  z-index:10;
 }
 .welcomeLogoCourse{
   height:35.5%!important;width:25%!important;transform:translate3d(260%,135%,0);position:absolute;animation:fadeInMoveIn 1s;
@@ -969,7 +1418,7 @@ hr{
   display:table-cell;margin:10px;
 }
 div[id*="Image"]{
-  /*removed on Conceitos do Esocial user need to click on the envelope of the topic "Envio das Informações"
+  /*removed on Conceitos do Esocial user need to click on the envelope of the topic "Envio das InformaÃ§Ãµes"
   /*pointer-events:none;*/
 }
 #logoCourse{
@@ -1042,16 +1491,25 @@ color:white!important;
 
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-.ranger{
-    pointer-events: all;
-    top: 98vh;
-    position: absolute;
-    z-index: 1000;
-    color: rgb(255, 255, 255);
-    text-align: -webkit-center;
-    width: 100vw;
-}
-  
+    .ranger{
+        pointer-events: all;
+        top: 98vh;
+        position: absolute;
+        z-index: 1000;
+        color: rgb(255, 255, 255);
+        text-align: -webkit-center;
+        width: 100vw;
+    }
+    
+    #character{
+        top: 120px;
+        left: 230px;
+        width: 140px;
+        z-index: 250;
+        height: 430px;
+        position: absolute;
+        pointer-events: none;
+    }
     .painelLateralWelcome{
         width: 100%;
         display: flex!important;
@@ -1064,7 +1522,7 @@ color:white!important;
         right: 0;
         height: 100%;
         top: 30px;
-     }
+    }
   .painelTitleSlide{
     font-size:1em!important;
     font-weight: 300;
@@ -1092,16 +1550,18 @@ color:white!important;
     justify-content: center;
     align-items: center;
     padding:0!important;
-    transform:translateY(0) translateX(0)!important; 
+    transform: translateY(0) translateX(0)!important; 
     background: -webkit-linear-gradient(top, rgba(90,90,90,0), rgb(90, 90, 90));
     position: fixed;
     left: 0;
     right: 0;
     height:100%;
     top:30px;
+    -webkit-transition: all .3s ease-out; 
+    transition: all .3s ease-out; 
   }
   .translateBackground{
-    webkit-transition: all .5s ease-out; 
+    -webkit-transition: all .5s ease-out; 
     transition: all .5s ease-out; 
     visibility: visible;
   }
@@ -1126,53 +1586,55 @@ color:white!important;
     margin-left: 0!important;
 
   }
-  .painelLateralTextoSlide{
-    overflow-y: scroll !important;
-    transform:translateY(0) translateX(0)!important; 
-    width: 80vw !important;
-    max-height: 78%!important;
-
-  }
-  .motion{
-    height:auto!important;
-    margin: auto;
-    flex-direction: column;
-    overflow-y: auto;
-    display: flex;
-    align-items: center;
-    -webkit-user-select: auto;
-    flex-wrap: wrap;
-    overflow-wrap: break-word;
-    overflow: visible;
-    width:auto!important;
-  }
-  ::-webkit-scrollbar {
-    width: 2px; /* 1px wider than Lion. */
-      /* This is more usable for users trying to click it. */
-    background-color: rgba(0,0,0,0);
-    -webkit-border-radius: 100px;
-  }
-      .painelNormalMobile{
-          width:95vw!important;height:50px!important;border-radius: 0px!important;transform:translateY(-280px) translateX(0%)!important;color:white;
-       }
-      .openTurnImage{                                 
+    .painelLateralTextoSlide{
+        overflow-y: scroll !important;
+        transform:translateY(0) translateX(0)!important; 
+        width: 80vw !important;
+        max-height: 78%!important;
+    }
+    .motion{
+       height:auto!important;
+       margin: auto;
+       flex-direction: column;
+       overflow-y: auto;
+       display: flex;
+       align-items: center;
+       -webkit-user-select: auto;
+       flex-wrap: wrap;
+       overflow-wrap: break-word;
+       overflow: visible;
+       width:auto!important;
+    }
+    ::-webkit-scrollbar {
+        width: 2px; /* 1px wider than Lion. */
+        /* This is more usable for users trying to click it. */
+        background-color: rgba(0,0,0,0);
+       -webkit-border-radius: 100px;
+    }
+    .painelNormalMobile{
+        width:95vw!important;height:50px!important;border-radius: 0px!important;transform:translateY(-280px) translateX(0%)!important;color:white;
+    }
+    .openTurnImage{                                 
         overflow-y:none;overflow-x:auto;
-      }
-     div[class*="cp-shape"],[width*="1024"],[height*="768"]{
+    }
+    div[class*="cp-shape"],[width*="1024"],[height*="768"]{
         /*opacity:.5;*/
-      }
-        div[id*="Image"]{
-          pointer-events:none;
-        }
-        div[id*="mobile"],canvas[id*="mobile"] {
-         position:relative;left:0!important;top:0!important;width:inherit!important;display:flex;align-items: center;justify-content: center;
-        }
-        div[id*="re-Video"], div[class*="cp-eventVideo"], video{
-          width: 100vw!important;height:100vh!important;top:0!important;left:0!important;
-        }
-      #welcomeIcon{
+    }
+    div[id*="Image"]{
+        pointer-events:none;
+    }
+    /*div[id*="mobile"],canvas[id*="mobile"] {
+        position:relative;left:0!important;top:0!important;width:inherit!important;display:flex;align-items: center;justify-content: center;
+    }*/
+    div[id*="re-Video"], div[class*="cp-eventVideo"], video{
+        width: 100vw!important;
+        height:100vh!important;
+        top:0!important;
+        left:0!important;
+    }
+    #welcomeIcon{
         visibility: hidden;
-      }
+    }
       .topicoNormalLogoCourse{
         width:100vw!important; height:60vh!important;transform:translate3d(0,0,0);opacity:1;position:absolute;animation: fadeInMoveIn 1.5s;
       }
@@ -1236,7 +1698,17 @@ color:white!important;
         width:35vw!important;
       }
       #logoCompanyContainer{
-      position: absolute; height: 15vh !important; width: 100vw !important; top: 85vh !important; opacity: 1; display: block; -webkit-filter: brightness(3.3) grayscale(1); background-image: url(../images/logoCompanyMobile.png) !important; background-size: 10vh !important; background-position: 42.5vw 0 !important;pointer-events:none;webkit-transition: opacity .5s ease-out; transition: opacity .5s ease-out;
+        position: absolute; 
+        height: 15vh !important; 
+        width: 100vw !important; 
+        top: 85vh !important; 
+        display: block; 
+        -webkit-filter: brightness(3.3) grayscale(1); 
+        background-image: url(../imagesTR/logoThomson.png) !important; 
+        background-size: 10vh !important; 
+        background-position: 42.5vw 0 !important;
+        pointer-events:none;
+        z-index:10;
       }
       #warningElementText{
         width:100vw!important;height:100vh!important;
@@ -1250,7 +1722,10 @@ color:white!important;
       .moveIn{
       -webkit-transform: translateX(100%); transform: translateX(100%); -webkit-transition: all 0.3s ease-out;
       transition: all 0.3s ease-out; visibility: hidden;
-      }   
+      }
+      
+
+
       .painelNormalMobile{
       width:95vw!important;height:50px!important;border-radius: 0px!important;transform:translateY(-280px) translateX(0%)!important;background-color:#666666!important;color:white;box-shadow: 0px 11px 68px rgba(0, 0, 0, 0.2);
       }
