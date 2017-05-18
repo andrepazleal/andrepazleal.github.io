@@ -1009,8 +1009,9 @@ function fimIntro(){
 
 function feedback(){
 	var feedback = document.createElement('div');
-	painel.appendChild(feedback);
-
+	painelTitleSlide.innerHTML="";
+	painelTextoSlide.innerHTML="";
+	painelTextoSlide.appendChild(feedback);
 	feedback.setAttribute('id','feedback');
 	feedback.className="feedbackContainer"
 
@@ -1057,49 +1058,7 @@ function feedback(){
 	feedbackStar0.addEventListener(changeClick, function(e){
 		feedbackTextarea.className="feedbackTextareaStart";
 	});
-
-	
-
-	/*var feedbackStar1 = document.createElement('input')
-	feedbackStar1.setAttribute('id','feedbackStar1')
-	//feedbackStar1.setAttribute('type','radio')
-	feedbackStar1.type = 'radio'
-	feedbackStarContainer.appendChild(feedbackStar1)
-	feedbackStar1.setAttribute('style','width:16px;height:16px;color:#FFCC00;overflow:hidden;-webkit-appearance:radio;')
-	//var feedbackStar1Label = document.createElement('label')
-	//feedbackStar1.appendChild(feedbackStar1Label)
-	//feedbackStar1Label.setAttribute('for','feedbackStar1')
-	//feedbackStar1Label.innerHTML = "TEST"
-
-	var feedbackStar2 = document.createElement('div')
-	feedbackStarContainer.appendChild(feedbackStar2)
-	feedbackStar2.setAttribute('id','feedbackStar1')
-	feedbackStar2.setAttribute('style','display:inline;color:#BEBEBE')
-	feedbackStar2.innerHTML = "<i class='fa fa-star fa-3x'></i>"
-
-	var feedbackStar3 = document.createElement('div')
-	feedbackStarContainer.appendChild(feedbackStar3)
-	feedbackStar3.setAttribute('id','feedbackStar1')
-	feedbackStar3.setAttribute('style','display:inline;color:#BEBEBE')
-	feedbackStar3.innerHTML = "<i class='fa fa-star fa-3x'></i>"
-
-	var feedbackStar4 = document.createElement('div')
-	feedbackStarContainer.appendChild(feedbackStar4)
-	feedbackStar4.setAttribute('id','feedbackStar1')
-	feedbackStar4.setAttribute('style','display:inline;color:#BEBEBE')
-	feedbackStar4.innerHTML = "<i class='fa fa-star fa-3x'></i>"
-
-	var feedbackStar5 = document.createElement('div')
-	feedbackStarContainer.appendChild(feedbackStar5)
-	feedbackStar5.setAttribute('id','feedbackStar5')
-	$(feedbackStar5).bind(changeClick,function(e){
-	//feedbackStar5.addEventListener('click',function(){
-		this.className='scaleUp';
-		//console.log(feedbackTextarea.value)
-	})
-	feedbackStar5.setAttribute('style','display:inline;color:#BEBEBE')
-	feedbackStar5.innerHTML = "<i class='fa fa-star fa-3x'></i>"*/
-	logoCourse.parentNode.insertBefore(feedback, logoCourse.nextSibling);
+	//logoCourse.parentNode.insertBefore(feedback, logoCourse.nextSibling);
 }
 
 function scoreValues(){
@@ -2701,7 +2660,7 @@ function topicType(){
 		showPainelContent();
 	}
 }
-
+//this function will create a search field so that the user can search thru the whole content and find easier what he is looking for.
 function microLearning(){
 	//console.log(cp.model.data)
 
@@ -2825,6 +2784,7 @@ function multipleQuestions(){
 	}	
 	changeColors();
 	painelAutoHeight();
+	painelAutoWidth();
 }
 
 function painelAutoHeight(){
@@ -2838,6 +2798,40 @@ function painelAutoHeight(){
 		painelTextoSlide.style.maxHeight=(painel.clientHeight-painelTitleSlide.clientHeight)-30+'px';
 		painelTextoSlide.style.height='auto';
 	}
+}
+
+function painelAutoWidth(){
+	var imageExist = document.querySelector("[id*='Image_']")
+	if(imageExist == null || imageExist == undefined){
+		TweenLite.to(painelTextoSlide, .2, {width:'100%'});
+		TweenLite.to(painelTextoSlide, .2, {'max-width':'100%'});
+		TweenLite.to(painelTextoSlide, .2, {'margin-left':''});
+		TweenLite.to(painelTitleSlide, .2, {'margin-left':''});
+	}
+	else{
+		var imageExistFinal = (parseInt(imageExist.style.width)-(Math.abs(parseInt(imageExist.style.left))));
+		var imageExistRound = $("canvas[id*='Image_']")
+		for(i=0; i < imageExistRound.length; i++){
+			if(imageExistRound[i].width == imageExistRound[i].height){
+					imageExistRound[i].className = 'scaleBorderAnimation' ;
+			}
+		}
+		$(painelTextoSlide).css("font-size",'100%');
+		if(parseInt(imageExist.style.left) >= 299){
+            TweenLite.to(painelTextoSlide, .2,{'width':(parseInt(imageExist.style.left)-80)})
+			TweenLite.to(painelTextoSlide, .2, {'max-width':'520px'});		
+			TweenLite.to(painelTextoSlide, .2, {'margin-left':'0'});
+			TweenLite.to(painelTitleSlide, .2, {'margin-left':'0'});
+		}
+		else{
+            var imageWidthLeft = (parseInt(imageExist.style.left)+parseInt(imageExist.style.width))-20;
+			TweenLite.to(painelTitleSlide, .2, {'width':''});	
+			TweenLite.to(painelTitleSlide, .2, {'margin-left':imageWidthLeft});	
+			TweenLite.to(painelTextoSlide, .2, {'width':''});	
+			TweenLite.to(painelTextoSlide, .2, {'margin-left':imageWidthLeft});	
+			TweenLite.to(painelTextoSlide, .2, {'max-width':'405px'});		
+		}
+	}	
 }
 
 function painelLateral(){
@@ -2857,75 +2851,13 @@ function painelLateral(){
 		painel.className='painelLateralWelcome'
 	}catch(e){}
 	//Set height automatic
-	if(document.documentElement.clientWidth < 420 )
-	{
-		try{
-			var imageExistMobile = document.querySelector("[id*='Image_']")
-			imageExistMobile.className = 'scaleBorderAnimation';
-			painelTextoSlide.style.height=(painel.clientHeight-135)-(painelTitleSlide.clientHeight)+'px';
-		}catch(e){}
+	painelAutoHeight();
+	painelAutoWidth()
+	if(screenSizeHeight != 600){
 	}
-	else
-	{
-		var painelHeight  = painelTextoSlide.clientHeight;
-		painelTextoSlide.style.maxHeight=(painel.clientHeight-painelTitleSlide.clientHeight)-25+'px';
-		painelTextoSlide.style.height='auto';
-		//TODO: split the video and the images
-		//var imageExist = document.querySelector("[id*='Image_'],[id^='Video_']")
-		var imageExist = document.querySelector("[id*='Image_']")
-		if(imageExist == null || imageExist == undefined)
-		{
-			TweenLite.to(painelTextoSlide, .2, {width:'100%'});
-			TweenLite.to(painelTextoSlide, .2, {'max-width':'100%'});
-			TweenLite.to(painelTextoSlide, .2, {'margin-left':''});
-			TweenLite.to(painelTitleSlide, .2, {'margin-left':''});
-		}
-		else
-		{
-			var imageExistFinal = (parseInt(imageExist.style.width)-(Math.abs(parseInt(imageExist.style.left))));
-			var imageExistRound = $("canvas[id*='Image_']")
-			for(i=0; i < imageExistRound.length; i++){
-				if(imageExistRound[i].width == imageExistRound[i].height){
-					imageExistRound[i].className = 'scaleBorderAnimation' ;
-				}
-			}
-			$(painelTextoSlide).css("font-size",'100%');
-
-			if(parseInt(imageExist.style.left) >= 299)
-			{
-                TweenLite.to(painelTextoSlide, .2, {'width':(parseInt(imageExist.style.left)-80)});	
-				TweenLite.to(painelTextoSlide, .2, {'max-width':'520px'});		
-				TweenLite.to(painelTextoSlide, .2, {'margin-left':'0'});
-				TweenLite.to(painelTitleSlide, .2, {'margin-left':'0'});
-			}
-			else
-			{
-                //move painel content to the right
-                var imageWidthLeft = (parseInt(imageExist.style.left)+parseInt(imageExist.style.width))-20;
-				TweenLite.to(painelTitleSlide, .2, {'width':''});	
-				TweenLite.to(painelTitleSlide, .2, {'margin-left':imageWidthLeft});	
-				TweenLite.to(painelTextoSlide, .2, {'width':''});	
-				TweenLite.to(painelTextoSlide, .2, {'margin-left':imageWidthLeft});	
-				TweenLite.to(painelTextoSlide, .2, {'max-width':'405px'});		
-			}
-			if(parseInt(imageExist.style.top) <= 150)   
-			{
-				
-			}
-			else
-			{
-			}
-		}
-		
-		if(screenSizeHeight != 600)
-		{
-			
-		}
-		else
-		{
-			nextBtn.className='painelLateralNext800';
-			previousBtn.className='painelLateralPrevious800';
-		}
+	else{
+		nextBtn.className='painelLateralNext800';
+		previousBtn.className='painelLateralPrevious800';
 	}
 }
 
@@ -2991,6 +2923,8 @@ function beneficios(){
 
 	var beneficio3text = document.querySelectorAll('div[id*="Slide"] + div[id*="accStr"]')[0].children[0].innerHTML.replace('Beneficios!','').split('  ')[2]
 	beneficio3.innerHTML='<span class="lnr lnr-thumbs-up"></span><br><br>'+beneficio3text;
+	painelAutoHeight();
+	painelAutoWidth();
 }
 
 function translateBackground(){
