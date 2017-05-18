@@ -1,7 +1,13 @@
 /*TEST SCRIPT FOR COURSES*/
 $('head').append('<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">');
 $('head').append('<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">');
+try{
 $('head').append('<link rel="stylesheet" type="text/css" href="../css/courseStyle.css">');
+}
+catch(e){
+$('head').append('<link rel="stylesheet" type="text/css" href="andrepazleal.github.io/courses/css/courseStyle.css">');
+}
+
 
 cp.movie.am.pauseCurrentSlideAudioForInteractiveClick();
 
