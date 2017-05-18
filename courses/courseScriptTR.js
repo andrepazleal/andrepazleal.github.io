@@ -3,9 +3,8 @@ $('head').append('<link rel="stylesheet" type="text/css" href="https://maxcdn.bo
 $('head').append('<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">');
 try{
 $('head').append('<link rel="stylesheet" type="text/css" href="../css/courseStyle.css">');
-$('head').append('<link rel="stylesheet" type="text/css" href="https://andrepazleal.github.io/courses/css/courseStyle.css">');
-}catch(e){}
 
+}catch(e){$('head').append('<link rel="stylesheet" type="text/css" href="https://andrepazleal.github.io/courses/css/courseStyle.css">');}
 
 cp.movie.am.pauseCurrentSlideAudioForInteractiveClick();
 
@@ -258,7 +257,8 @@ function carregandoTela(){
 }
 
 function companyName(){
-	companyName = (cpInfoCompany.split(' '));
+	try{
+		companyName = (cpInfoCompany.split(' '));
 	if(companyName[0] == 'Thomson')
 	{
 		companyName = 'logoThomson.png';
@@ -279,6 +279,8 @@ function companyName(){
 	{
 		companyName = 'fiscosoftLogo.png';
 	}
+	}
+	catch(e){}
 }
 
 function courseName(){
@@ -1012,6 +1014,15 @@ function fimIntro(){
 }
 
 function feedback(){
+	painelAutoWidth();
+	painelAutoHeight()
+	//div_Slide.className='moveInDivSlide';
+	logoCompanyContainer.className="fadeIn";
+	painel.className='painelLateral'
+	painelTextoSlide.className='painelFeedback'
+	nextBtn.className='painelLateralNext';
+	previousBtn.className='painelLateralPrevious';
+
 	var feedback = document.createElement('div');
 	painelTitleSlide.innerHTML="";
 	painelTextoSlide.innerHTML="";
@@ -1029,7 +1040,7 @@ function feedback(){
 	feedbackTitle.style.textAlign="center"
 
 	$(feedbackTitle).css("font-size","14px");
-	feedbackTitle.innerHTML = "COM 144 LETRAS DEIXE SUA OPINIÃƒO DE COMO PODEMOS MELHORAR OS CURSOS!"
+	feedbackTitle.innerHTML = "O QUE VOCÊ ACHOU DESSE CURSO?<BR>COM 144 LETRAS DEIXE SUA OPINIÃO DE COMO PODEMOS MELHORAR!"
 
 	var feedbackTextarea = document.createElement('div')
 	feedback.appendChild(feedbackTextarea)
@@ -2905,7 +2916,7 @@ function beneficios(){
 	var beneficioGroup = document.createElement("div");
 	beneficioGroup.setAttribute("id", "beneficioGroup");
 	$(painelTextoSlide).append(beneficioGroup);
-	beneficioGroup.innerHTML="<span>"+nomeAluno+" veja os benefÃ­cios que vocÃª irÃ¡ adquirir ao realizar este curso."+"</span>";
+	beneficioGroup.innerHTML="<span>"+nomeAluno+" veja os benefícios que você irá adquirir ao realizar este curso."+"</span>";
 
 	var beneficio1 = document.createElement("div");
 	beneficio1.setAttribute("id", "beneficio1");

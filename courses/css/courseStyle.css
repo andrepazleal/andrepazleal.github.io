@@ -14,6 +14,11 @@ body{
 
 @import url('//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css');
 
+.painelFeedback{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .feedbackTextareaStart{
   -webkit-transition: all 250ms ease;
@@ -21,6 +26,7 @@ body{
   height:0;
   margin: 0px;
   overflow:hidden;
+  width:0;
 }
 .feedbackTextareaFinish{
   opacity: 1;
@@ -40,9 +46,11 @@ body{
 
 }
 .feedbackContainer{
+    margin:20px;
     display: flex;
     overflow:overlay;
     z-index: 200;
+    max-width:500px;
     border-radius:5px;
     background-color: white;
     flex-wrap: wrap;
@@ -864,10 +872,6 @@ h5{
   -webkit-border-radius: 100px;
 }
 
-table{
-  border:1px;border-collapse: separate;border-style:solid;padding:3px;text-align: center;border-spacing:px;-webkit-animation: changeBackground .5s ease-out forwards;border-radius:0px;width:100%!important;min-height: 100%;
-}
-
 h1{
   font-weight: 100;text-transform:uppercase;-webkit-margin-after:0px!important;-webkit-margin-before:0px!important;line-height:1;/*removed affecting the height value -webkit-animation: changeBackground .2s ease-out forwards;*/
 }
@@ -1130,14 +1134,30 @@ body {
 }
 
 table{
-  border:1;border-collapse: separate;border-style:solid;padding:3px;text-align: center;border-spacing:px;-webkit-animation: changeBackground .5s ease-out forwards;border-radius:5px;
+    border: 0;
+    border-collapse: separate;
+    padding: 3px;
+    text-align: center;
+    -webkit-animation: changeBackground .5s ease-out forwards;
+    /* border-radius: 5px; */
 }
 td{
-  border:0;border-collapse: separate;border-style:solid;background-color:rgba(255,255,255,0.1);min-height: 20px;min-width: 20px;
+    border: 0;
+    border-collapse: separate;
+    padding: 20px;
+    border-style: solid;
+    background-color: rgba(47, 47, 47, 0.18);
+    min-height: 20px;
+    min-width: 20px;
 
 }
 th{
-  border:0;border-collapse: separate;border-style:solid;background-color:rgba(255,255,255,0.5);
+    border: 0;
+    border-collapse: separate;
+    padding: 10px;
+    color: #ff8000;
+    border-style: solid;
+    background-color: rgba(255,255,255,0.5);
 }
 
 .tableBorder{
@@ -1331,7 +1351,9 @@ transform:translate3d(46em,1em,0)
 }
 
 #painel{
-  z-index:150;padding:10px;pointer-events:none;
+  z-index:150;
+  padding:10px;
+  pointer-events:none;
 }
 #nextBtn, #previousBtn{
 height:50px!important; width:78px!important; top:0;display:table; pointer-events:fill; position:absolute; -webkit-user-select:none;text-shadow:1px 1px 12px rgba(0,0,0,.5);
@@ -1341,7 +1363,12 @@ height:50px!important; width:78px!important; top:0;display:table; pointer-events
   color:white!important; transition:all .2s ease-in;
 }
 #painelTextoSlide{
-  overflow-y:auto;font-weight: lighter;pointer-events:auto;line-height:1.1;-webkit-overflow-scrolling: touch;
+  overflow-y:auto;
+  font-weight: lighter;
+  pointer-events:auto;
+  line-height:1.1;
+  -webkit-overflow-scrolling: touch;
+
 }
 
 #painelNomeTopico{
