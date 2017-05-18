@@ -3,10 +3,8 @@ $('head').append('<link rel="stylesheet" type="text/css" href="https://maxcdn.bo
 $('head').append('<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">');
 try{
 $('head').append('<link rel="stylesheet" type="text/css" href="../css/courseStyle.css">');
-}
-catch(e){
-$('head').append('<link rel="stylesheet" type="text/css" href="andrepazleal.github.io/courses/css/courseStyle.css">');
-}
+$('head').append('<link rel="stylesheet" type="text/css" href="https://andrepazleal.github.io/courses/css/courseStyle.css">');
+}catch(e){}
 
 
 cp.movie.am.pauseCurrentSlideAudioForInteractiveClick();
