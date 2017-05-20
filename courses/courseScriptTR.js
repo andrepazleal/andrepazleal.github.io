@@ -2545,7 +2545,6 @@ function changeColors(){
 }
 
 function createCharacter(){
-
 	character = document.createElement("div");
 	character.setAttribute("id", "character");
 	document.getElementById("project_main").appendChild(character);
@@ -2563,11 +2562,13 @@ function createCharacter(){
 	try{
 		if(cp.movie.am.currentSlideAudio == undefined)
 		{
-			TweenLite.to(character,.250,{opacity:0});   
+			//TweenLite.to(character,.250,{opacity:0});   
+			character.style.display="none"
 		}
 		else
 		{
-			TweenLite.to(character,.250,{opacity:1});   
+			//TweenLite.to(character,.250,{opacity:1});   
+			character.style.display="block"
 		}
 		if(cp.movie.am.pace == null){
 			character.className = 'idle';
@@ -2713,7 +2714,7 @@ var scoreSlides = 0;
 function multipleQuestions(){
 	try{
 		console.log(SCORM_CallLMSGetValue('cmi.core.score.raw'));
-		if(SCORM_CallLMSGetValue('cmi.core.score.raw') <= 0){
+		if(SCORM_CallLMSGetValue('cmi.core.score.raw') <= 0 || scoreSlides <= 0){
 			console.log('Restart?')
 		}
 	}catch(e){}
