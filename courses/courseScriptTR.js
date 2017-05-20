@@ -3,8 +3,8 @@ $('head').append('<link rel="stylesheet" type="text/css" href="https://maxcdn.bo
 $('head').append('<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">');
 try{
 $('head').append('<link rel="stylesheet" type="text/css" href="../css/courseStyle.css">');
-
-}catch(e){$('head').append('<link rel="stylesheet" type="text/css" href="https://andrepazleal.github.io/courses/css/courseStyle.css">');}
+$('head').append('<link rel="stylesheet" type="text/css" href="https://andrepazleal.github.io/courses/css/courseStyle.css">');
+}catch(e){}
 
 cp.movie.am.pauseCurrentSlideAudioForInteractiveClick();
 
@@ -259,26 +259,26 @@ function carregandoTela(){
 function companyName(){
 	try{
 		companyName = (cpInfoCompany.split(' '));
-	if(companyName[0] == 'Thomson')
-	{
-		companyName = 'logoThomson.png';
-	}
-	if(companyName[0] == 'DomÃ­nio')
-	{
-		companyName = 'logoDominio.svg';
-	}
-	if(companyName[0] == 'Novajus')
-	{
-		companyName = 'logoNovajus.svg';
-	}
-	if(companyName[0] == 'Mastersaf')
-	{
-		companyName = 'logoMastersaf.svg';
-	}
-	if(companyName[0] == 'Fiscosoft')
-	{
-		companyName = 'fiscosoftLogo.png';
-	}
+		if(companyName[0] == 'Thomson')
+		{
+			companyName = 'logoThomson.png';
+		}
+		if(companyName[0] == 'DomÃ­nio')
+		{
+			companyName = 'logoDominio.svg';
+		}
+		if(companyName[0] == 'Novajus')
+		{
+			companyName = 'logoNovajus.svg';
+		}
+		if(companyName[0] == 'Mastersaf')
+		{
+			companyName = 'logoMastersaf.svg';
+		}
+		if(companyName[0] == 'Fiscosoft')
+		{
+			companyName = 'fiscosoftLogo.png';
+		}
 	}
 	catch(e){}
 }
