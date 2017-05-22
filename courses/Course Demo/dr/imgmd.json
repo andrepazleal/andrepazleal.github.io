@@ -16,7 +16,6 @@ cp.imagesJSONCacheForLocal=true;cp.imageToJSONPathMap={
 "dr/6556_260_525.png": "img3.json",
 "dr/6562_260_525.png": "img3.json",
 "dr/6859.png": "img3.json",
-"dr/6984.png": "img3.json",
 "dr/Failure_Caption_1.png": "img3.json",
 "dr/mobile_12.png": "img3.json",
 "dr/mobile_15.png": "img3.json",
@@ -50,4 +49,5 @@ cp.imagesJSONCacheForLocal=true;cp.imageToJSONPathMap={
 "dr/Slide7021_thnail.jpg": "img3.json",
 "dr/Slide7118_thnail.jpg": "img3.json",
 "dr/Slide7192_thnail.jpg": "img3.json",
+"dr/Slide7225_thnail.jpg": "img3.json",
 "___":"___"};
