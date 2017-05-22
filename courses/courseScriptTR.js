@@ -259,11 +259,16 @@ function carregandoTela(){
 function companyName(){
 	try{
 		companyName = (cpInfoCompany.split(' '));
+		//console.log('logo'+companyName[0]+.'svg')
 		if(companyName[0] == 'Thomson')
 		{
-			companyName = 'logoThomson.png';
+			companyName = 'logoThomson.svg';
 		}
-		if(companyName[0] == 'DomÃ­nio')
+		if(companyName[0] == 'Andre')
+		{
+			companyName = 'logoAndre.svg';
+		}
+		if(companyName[0] == 'Domínio')
 		{
 			companyName = 'logoDominio.svg';
 		}
@@ -549,7 +554,7 @@ function createElements(){
 	//$(logoCompanyContainer).css('width','100%');
 	//$(logoCompanyContainer).css('top','88%');
 	//$(logoCompanyContainer).css('opacity',0);
-	$(logoCompanyContainer).css('background-image','url(https://moodle.dominiosistemas.com.br/assets/imagesTR/'+companyName+')');
+	$(logoCompanyContainer).css('background-image','url(../images/'+companyName+')');
 	//$(logoCompanyContainer).css('background-repeat','no-repeat');
 	//$(logoCompanyContainer).css('background-position','50% 0');
 	//$(logoCompanyContainer).css('background-size','35%');
