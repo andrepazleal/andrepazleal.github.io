@@ -1732,7 +1732,7 @@ and (max-device-width : 480px){
         top: 85vh !important; 
         display: block; 
         -webkit-filter: brightness(3.3) grayscale(1); 
-        background-image: url(../logoThomson.png) !important; 
+        background-image: url(../images/logoThomson.png) !important; 
         background-size: 10vh !important; 
         background-position: 42.5vw 0 !important;
         pointer-events:none;
