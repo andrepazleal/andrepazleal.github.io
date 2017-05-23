@@ -51,11 +51,18 @@ if(cpinfoEmail=="tutor@dsmail.com.br")
 
 
 function showPainelContent(){
-	var isIOs = ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPad/i))) != null;
+	var currentSlide = cp.movie.playbackController.currentSlide
+	//var multipleQuestionsNodes = document.querySelectorAll('div[id*="Slide"] + div[id*="accStr"]')[0].children[0].innerHTML.replace('Multiple Question!','').split('  ')
+	
+	painelAccstr = cp.model.data[currentSlide].accstr.replace('Side!','').replace('','<h1>').replace('<span>','</h1>').split('<title>')[0]
+	painelAccstr2 = cp.model.data[currentSlide].accstr.split('<title>')[1];	
+	painelAccstrNormal = cp.model.data[currentSlide].accstr.split('<title>')[0];	
+
+	/*var isIOs = ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPad/i))) != null;
 	if(isIOs == true){
 		try{
 			slideNumber = cp.movie.playbackController.currentSlide;
-		painelAccstr = cp.model.data[slideNumber].accstr.replace('Painel Lateral!','').replace('','<h1>').replace('<span>','</h1>').split('<title>')[0]
+		painelAccstr = cp.model.data[slideNumber].accstr.replace('Side!','').replace('','<h1>').replace('<span>','</h1>').split('<title>')[0]
 		painelAccstr2 = cp.model.data[slideNumber].accstr.split('<title>')[1];	
 		painelAccstrNormal = cp.model.data[slideNumber].accstr.split('<title>')[0];	
 		}
@@ -63,21 +70,21 @@ function showPainelContent(){
 	}
 	else{
 		try{
-		var painelAccstr = document.querySelectorAll('div[id*="Slide"] + div[id*="accStr"]')[0].children[0].innerHTML.replace('Painel Lateral!','<h1>').replace('<title>','</h1>').replace('</title>','').split('</h1>')[0];
+		var painelAccstr = document.querySelectorAll('div[id*="Slide"] + div[id*="accStr"]')[0].children[0].innerHTML.replace('Side!','<h1>').replace('<title>','</h1>').replace('</title>','').split('</h1>')[0];
 		var painelAccstr2 = document.querySelectorAll('div[id*="Slide"] + div[id*="accStr"]')[0].children[0].children[0].textContent;
-		//var painelAccstr2 = document.querySelectorAll('div[id*="Slide"] + div[id*="accStr"]')[0].children[0].innerHTML.replace('Painel Lateral!','').split("<title>")[1]
-		//var painelAccstr2 = document.querySelectorAll('div[id*="Slide"] + div[id*="accStr"]')[0].children[0].innerHTML.replace('Painel Lateral!','<h1>').replace('<title>','</h1>').replace('</title>','').split('</h1>')[0];
+		//var painelAccstr2 = document.querySelectorAll('div[id*="Slide"] + div[id*="accStr"]')[0].children[0].innerHTML.replace('Side!','').split("<title>")[1]
+		//var painelAccstr2 = document.querySelectorAll('div[id*="Slide"] + div[id*="accStr"]')[0].children[0].innerHTML.replace('Side!','<h1>').replace('<title>','</h1>').replace('</title>','').split('</h1>')[0];
 		//var painelAccstr2 = document.querySelectorAll('div[id*="Slide"] + div[id*="accStr"]')[0].children[0].children[0].innerText;
-		//var painelAccstr2 = document.querySelectorAll('div[id*="Slide"] + div[id*="accStr"]')[0].children[0].innerHTML.replace('Painel Lateral!','<h1>').replace('<title>','</h1>').replace('</title>','').split('</h1>')[1].replace('&lt;','<').replace('&gt;','>');
-		//var painelAccstr2 = document.querySelectorAll('div[id*="Slide"] + div[id*="accStr"]')[0].children[0].innerHTML.replace('Painel Lateral!','<h1>').replace('<title>','</h1>').replace('</title>','').split('</h1>')[1].replace('&lt;','<').replace('&gt;','>');
-		//var painelAccstr2 = document.querySelectorAll('div[id*="Slide"] + div[id*="accStr"]')[0].children[0].outerHTML.replace('Painel Lateral!','<h1>').replace('<title>','</h1>').replace('</title>','').split('</h1>')[1];		
+		//var painelAccstr2 = document.querySelectorAll('div[id*="Slide"] + div[id*="accStr"]')[0].children[0].innerHTML.replace('Side!','<h1>').replace('<title>','</h1>').replace('</title>','').split('</h1>')[1].replace('&lt;','<').replace('&gt;','>');
+		//var painelAccstr2 = document.querySelectorAll('div[id*="Slide"] + div[id*="accStr"]')[0].children[0].innerHTML.replace('Side!','<h1>').replace('<title>','</h1>').replace('</title>','').split('</h1>')[1].replace('&lt;','<').replace('&gt;','>');
+		//var painelAccstr2 = document.querySelectorAll('div[id*="Slide"] + div[id*="accStr"]')[0].children[0].outerHTML.replace('Side!','<h1>').replace('<title>','</h1>').replace('</title>','').split('</h1>')[1];		
 		//var painelAccstr2 = document.querySelectorAll('div[id*="Slide"] + div[id*="accStr"]')[0].children[0].children[0].children[0].innerText;
 		}
 
 		catch(e){}
 		var painelAccstrNormal = document.querySelectorAll('div[id*="Slide"] + div[id*="accStr"]')[0].children[0].innerHTML;
-	}
-	if(cpInfoCurrentSlideLabel == "Painel Lateral!"){
+	}*/
+	if(cpInfoCurrentSlideLabel == "Side!"){
 		//painel.appendChild(painelAccstr)
 		$(painelTitleSlide).css('display','block');	
 		painelTitleSlide.innerHTML=painelAccstr;
@@ -2459,7 +2466,7 @@ function mostrarOcultar(parameter){
 	}
 	else 
 	{
-		if(cpInfoCurrentSlideLabel == "Painel Lateral!"){
+		if(cpInfoCurrentSlideLabel == "Side!"){
 			painel.className='painelLateral';
 		}
 		else{
@@ -2486,7 +2493,7 @@ function mostrarOcultar(parameter){
 	}
 	else 
 	{
-		if(cpInfoCurrentSlideLabel == "Painel Lateral!"){
+		if(cpInfoCurrentSlideLabel == "Side!"){
 			painel.className='painelLateral';
 		}
 		else{
@@ -2648,7 +2655,7 @@ function topicType(){
 			previousBtn.className='painelLateralPrevious800';
 		}
 	}
-	else if(cpInfoCurrentSlideLabel == "Painel Lateral!")
+	else if(cpInfoCurrentSlideLabel == "Side!")
 	{
 		painelLateral();
 	
@@ -2724,9 +2731,14 @@ function multipleQuestions(){
 		}
 	}catch(e){}
 
-	var multipleQuestionsNodes = document.querySelectorAll('div[id*="Slide"] + div[id*="accStr"]')[0].children[0].innerHTML.replace('Multiple Question!','').split('  ')
-	var questionNode = document.querySelectorAll('div[id*="Slide"] + div[id*="accStr"]')[0].children[0].innerHTML.replace('Multiple Question!','').split('  ')[0];
+	var currentSlide = cp.movie.playbackController.currentSlide
+	//var multipleQuestionsNodes = document.querySelectorAll('div[id*="Slide"] + div[id*="accStr"]')[0].children[0].innerHTML.replace('Multiple Question!','').split('  ')
+	var multipleQuestionsNodes = cp.model.data[currentSlide].accstr.replace('Multiple Question!','').split('  ')
+	//var questionNode = document.querySelectorAll('div[id*="Slide"] + div[id*="accStr"]')[0].children[0].innerHTML.replace('Multiple Question!','').split('  ')[0];
+	var questionNode = cp.model.data[currentSlide].accstr.replace('Multiple Question!','').split('  ')[0];
 	
+	//console.log(questionNode)
+
 	painelNomeTopico.style.visibility="hidden";
 
 	painel.className='painelLateral';
@@ -2748,7 +2760,7 @@ function multipleQuestions(){
 
 	for(i=1; i < multipleQuestionsNodes.length; i++){
 	//console.log(multipleQuestionsNodes) 
-		var answerNode = document.querySelectorAll('div[id*="Slide"] + div[id*="accStr"]')[0].children[0].innerHTML.replace('Multiple Question!','').split('  ')[i]
+		var answerNode = multipleQuestionsNodes[i]
 
 		var answerContainer = document.createElement('div');
 		answerContainer.setAttribute('id','answerContainer'+[i]);
@@ -2936,13 +2948,19 @@ function beneficios(){
 	beneficio3.setAttribute("id", "beneficio3");
 	$(beneficioGroup).append(beneficio3);
 
-	var beneficio1text = document.querySelectorAll('div[id*="Slide"] + div[id*="accStr"]')[0].children[0].innerHTML.replace('Beneficios!','').split('  ')[0];
+	var currentSlide = cp.movie.playbackController.currentSlide
+	//var multipleQuestionsNodes = document.querySelectorAll('div[id*="Slide"] + div[id*="accStr"]')[0].children[0].innerHTML.replace('Multiple Question!','').split('  ')
+	
+	var beneficio1text = cp.model.data[currentSlide].accstr.replace('Beneficios!','').split('  ')[0]
+	//var beneficio1text = document.querySelectorAll('div[id*="Slide"] + div[id*="accStr"]')[0].children[0].innerHTML.replace('Beneficios!','').split('  ')[0];
 	beneficio1.innerHTML='<span class="lnr lnr-sync"></span><br><br>'+beneficio1text;
 
-	var beneficio2text = document.querySelectorAll('div[id*="Slide"] + div[id*="accStr"]')[0].children[0].innerHTML.replace('Beneficios!','').split('  ')[1]
+	//var beneficio2text = document.querySelectorAll('div[id*="Slide"] + div[id*="accStr"]')[0].children[0].innerHTML.replace('Beneficios!','').split('  ')[1]
+	var beneficio2text = cp.model.data[currentSlide].accstr.replace('Beneficios!','').split('  ')[1]
 	beneficio2.innerHTML='<span class="lnr lnr-graduation-hat"></span><br><br>'+beneficio2text;
 
-	var beneficio3text = document.querySelectorAll('div[id*="Slide"] + div[id*="accStr"]')[0].children[0].innerHTML.replace('Beneficios!','').split('  ')[2]
+	//var beneficio3text = document.querySelectorAll('div[id*="Slide"] + div[id*="accStr"]')[0].children[0].innerHTML.replace('Beneficios!','').split('  ')[2]
+	var beneficio3text = cp.model.data[currentSlide].accstr.replace('Beneficios!','').split('  ')[2]
 	beneficio3.innerHTML='<span class="lnr lnr-thumbs-up"></span><br><br>'+beneficio3text;
 	painelAutoHeight();
 	painelAutoWidth();
@@ -3124,7 +3142,7 @@ function topicLanguage(){
 	$('#soundBtn p').html('<p><i class="fa fa-volume-up fa-3x"></i><br>SOM</p>');
 	$('#painelBtn p').html('<p><i class="fa fa-list-alt fa-3x"></i><br>PAINEL</p>');
 	$(infoTopicoText).html("TELA "+cpInfoCurrentSlide+" DE "+cpInfoSlideCount);
-	if(cpInfoCurrentSlideLabel == "Painel Lateral!" || cpInfoCurrentSlideLabel == "Character!" )
+	if(cpInfoCurrentSlideLabel == "Side!" || cpInfoCurrentSlideLabel == "Character!" )
 	{
 	}
 	else
@@ -3204,7 +3222,7 @@ function updateSlideElements(){
 		{
 			$(logoCompanyContainer).css('display',"block");
 		}
-		if(cpInfoCurrentSlideLabel == "Painel Lateral!")
+		if(cpInfoCurrentSlideLabel == "Side!")
 		{
 			$(logoCompanyContainer).css('display',"block");
 		}
