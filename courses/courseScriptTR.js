@@ -2740,7 +2740,7 @@ function multipleQuestions(){
 	//console.log(questionNode)
 
 	painelNomeTopico.style.visibility="hidden";
-
+	painelTitleSlide.style.display="block"
 	painel.className='painelLateral';
 	painelTextoSlide.className='painelLateralTextoSlide';
 	nextBtn.className='painelLateralNext';
