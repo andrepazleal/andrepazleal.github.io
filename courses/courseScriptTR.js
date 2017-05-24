@@ -2534,7 +2534,7 @@ function changeColors(){
 
 	if(backgroundColorSlide != 'rgb(255, 255, 255)' || backgroundColor != false || backgroundColorIpad == 'cp-gf' || cpInfoCurrentSlide == cpInfoSlideCount){
 	//if(backgroundColorSlide == 'rgb(255, 255, 255)' || backgroundColorIpad == 'cp-gf' || cpInfoCurrentSlide == cpInfoSlideCount){
-		$(logoCompanyContainer).css('-webkit-filter',"brightness(2.3) grayscale(1)");	
+		$(logoCompanyContainer).css('-webkit-filter',"brightness(4) grayscale(1)");	
 		$('p').css('color', 'rgba(255, 255, 255, 1)');
 		painelTitleSlide.className+=" changeColorsClear";
 		painelTextoSlide.className+=" changeColorsClear";
@@ -2688,6 +2688,7 @@ function topicType(){
 		showPainelContent();
 	}
 }
+
 //this function will create a search field so that the user can search thru the whole content and find easier what he is looking for.
 function microLearning(){
 	//console.log(cp.model.data)
@@ -2724,12 +2725,11 @@ function microLearning(){
 var scoreSlides = 0;
 
 function multipleQuestions(){
-	try{
-		console.log(SCORM_CallLMSGetValue('cmi.core.score.raw'));
-		if(SCORM_CallLMSGetValue('cmi.core.score.raw') <= 0 || scoreSlides <= 0){
-			console.log('Restart?')
-		}
-	}catch(e){}
+	
+	if(/*SCORM_CallLMSGetValue('cmi.core.score.raw') <= 0 || */scoreSlides <= 0){
+		console.log('Restart?')
+		
+	}
 
 	var currentSlide = cp.movie.playbackController.currentSlide
 	//var multipleQuestionsNodes = document.querySelectorAll('div[id*="Slide"] + div[id*="accStr"]')[0].children[0].innerHTML.replace('Multiple Question!','').split('  ')
@@ -2893,8 +2893,6 @@ function painelLateral(){
 		previousBtn.className='painelLateralPrevious800';
 	}
 }
-
-
 
 function beneficios(){
 	console.log("Beneficios")
