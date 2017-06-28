@@ -2456,6 +2456,8 @@ function checkWidget(){
 function mostrarOcultar(parameter){
 	$(parameter).css('box-shadow', '1px 1px 50px rgba(0,0,0,0.5)')
 	var mostrarOcultarAtivo = document.querySelectorAll("[class=mostrarOcultarAtivo]");
+	var slideBackground = document.querySelectorAll('div[id*="re-Image"] + style[width*="1024"]');
+	console.log(slideBackground)
 	for(i=0; i < mostrarOcultarAtivo.length; i++){
 		mostrarOcultarAtivo[i].className="mostrarOcultarInativo";
 	}
