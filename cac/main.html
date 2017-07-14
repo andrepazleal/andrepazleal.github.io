@@ -2,6 +2,12 @@
 <html>
 <head>
 	<title></title>
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<script> 
+      $(function(){
+        $("#header").load("header.html"); 
+      });
+    </script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 	<link rel="stylesheet" href="main.css">
@@ -10,36 +16,7 @@
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
 </head>
 <body>
-	<header id="fotoTurma" class="header fotoTurma">
-		<div id="topInfo" class="topInfo row-fluid">
-			<div id="menu" class="title">
-				<a href="#dropDownMenu" class="lnr lnr-menu">
-				</a>
-				<div id="dropDownMenu" class="dropDownMenu">
-					<ul>
-						<li class="legalResponsible title">
-							<span class="lnr lnr-flag"></span>
-							<a href="/legalReponsible" data-popup="simple" title="Clique aqui para visualizar os responsaveis legais pela criança">Responsáveis</a>
-						</li>
-						<li class="legalResponsible title">
-							<span class="lnr lnr-cog"></span>
-							<a href="/legalReponsible" data-popup="simple" title="Clique aqui para visualizar os responsaveis legais pela criança">Personalizar</a>
-						</li>
-						<li class="legalResponsible title">
-							<span class="lnr lnr-picture"></span>
-							<a href="/legalReponsible" data-popup="simple" title="Clique aqui para visualizar os responsaveis legais pela criança">Mural do dia</a>
-						</li>
-					</ul>
-				</div>
-				</div>
-			<div id="hello" class="title">
-				<p>Bom dia, Andre!</p>
-			</div>
-			<a id="close" href="#close" class="lnr lnr-cross title topInfoClose">
-				</a>
-		</div>
-
-	</header>
+<div id="header"></div>
 	<section id="middleInfo" class="middleInfo">
 		<div class="filhos">
 			<div id="filho" class="filho">
